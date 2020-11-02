@@ -1,0 +1,72 @@
+
+
+
+.header_container {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    background: #fff;
+
+    .netmatters_logo_container:img {
+        flex-shrink: 1;
+    }
+
+    .phone_button {
+        height: 71px;
+        width: 70px;
+        display: flex;
+        text-align: center;
+    }
+    
+    .netmatters_nav_container_inner{
+        display: flex;
+        justify-content: space-between; 
+        color: white;
+        
+
+        .support_button,
+        .contact_button {
+            padding: 5px 15px 5px 15px;
+            border-radius: 5px;
+                
+        }
+        
+        
+       .burger_button {
+           flex-direction: column;
+           text-align: center;
+           height: 63px;
+           width: 56px;
+           font-size: 18px;
+           background: #333645;
+           border-radius: 5px;
+       }
+
+       .burger_menu {
+           font-size: 12px;
+           
+       }
+
+       .fas fa-bars {
+           font-size: 18px;
+       }
+    }
+}
+
+.support_button {
+    background: #4183d7;
+}
+
+.contact_button {
+    background: #999aa2;
+} 
+
+// Media queries -----------------------------------------------------
+
+@media (max-width: 991px) {
+    
+    .support_button,
+    .contact_button {
+        display: none;
+    }
+}

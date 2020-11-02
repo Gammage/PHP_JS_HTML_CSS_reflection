@@ -1,1 +1,77 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+.header_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1em;
+  background: #fff;
+}
+
+.header_container .netmatters_logo_container:img {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
+.header_container .phone_button {
+  height: 71px;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+
+.header_container .netmatters_nav_container_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.header_container .netmatters_nav_container_inner .support_button,
+.header_container .netmatters_nav_container_inner .contact_button {
+  padding: 5px 15px 5px 15px;
+  border-radius: 5px;
+}
+
+.header_container .netmatters_nav_container_inner .burger_button {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 63px;
+  width: 56px;
+  font-size: 18px;
+  background: #333645;
+  border-radius: 5px;
+}
+
+.header_container .netmatters_nav_container_inner .burger_menu {
+  font-size: 12px;
+}
+
+.header_container .netmatters_nav_container_inner .fas fa-bars {
+  font-size: 18px;
+}
+
+.support_button {
+  background: #4183d7;
+}
+
+.contact_button {
+  background: #999aa2;
+}
+
+@media (max-width: 991px) {
+  .support_button,
+  .contact_button {
+    display: none;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
