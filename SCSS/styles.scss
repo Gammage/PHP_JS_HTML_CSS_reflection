@@ -1,72 +1,342 @@
 
+// SHORTCUTS
 
+// CTRL + K, then CTRL + 0 (zero)
 
-.header_container {
-    display: flex;
-    justify-content: center;
-    font-size: 1em;
-    background: #fff;
+//
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: grey;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-    .netmatters_logo_container:img {
-        flex-shrink: 1;
-    }
+header {
+    background-color: white;
+}
 
-    .phone_button {
-        height: 71px;
-        width: 70px;
-        display: flex;
-        text-align: center;
-    }
+.header_container {  
+    background-color: white;
+    height: 128px;
+    padding: 20px 15px 20px 15px;
     
-    .netmatters_nav_container_inner{
+    .netmatters_nav_container_inner { 
         display: flex;
-        justify-content: space-between; 
-        color: white;
+        justify-content: space-between;
+        // color: white;
+        //  border: solid 1px red;
+        width: 100%;
+        height: 70px;
+        padding: 7px 0;
         
+        .netmatters_logo_container {
+            img { // LOGO
+                height: auto; 
+                width: 100%;
+                max-height: 70px;
+                min-height: 52px;
+            }
+        }
 
-        .support_button,
-        .contact_button {
-            padding: 5px 15px 5px 15px;
-            border-radius: 5px;
+        // FLEX BOX PUTS EXCESS SPACE BETWEEN THESE
+
+        .actions_container {
+            display: flex;
+            justify-content: end;
+            flex-wrap: nowrap;
+            .support_button,
+            .contact_button {
+                display: none;
+                justify-content: center;
+                text-align: center;
+                line-height: 46px;
+                padding: 5px 15px 5px 15px;
+                border-radius: 3px;
+                font-size: 18px;
+                color: white;
+                height: 46px;
+    
+                i {
+                    line-height: 56px;
+                    font-size: 30px;
+                    padding-right: 10px;
+                }
+            }
+    
+            .support_button {
+                width: 144px;
+                background: #4183d7;
+            }
+            
+            .contact_button {
+                background: #999aa2;
+                width: 152px;
+                margin-left: 20px;
+            } 
+    
+            .search_field {
+                display: none;
+                input {
+                    padding: 0 0 0 10px;
+                    width: 163px;
+                    height: 54px;
+                    // border-radius: 3px 0 0 3px;
+                    box-shadow: none;
+                    border: solid 1px grey;
+                    border-right: none;
+                }
+            }
+    
+            .search_button {
+                display: none;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                border-radius: 0 3px 3px 0; // top left   top right    bottom right    bottom left
+                height: 56px;
+                width: 63px;
+                background: #999aa2;
+    
+                i {
+                    font-size: 24px;
+                    line-height: 56px;
+                    color: white;
+                }
+            }
+               
+     
+            .phone_button {
+                display: block;
+                height: 71px;
+                width: 70px;
+                text-align: center;
+                // border: solid 1px red;
+                margin-top: -7px;
+                margin-bottom: -7px;
                 
+                i {
+                    font-size: 24px;
+                    line-height: 71px;
+                    color: black;
+                }
+            }
+            
+            .burger_container {
+                height: 56px;
+    
+                .burger_button {
+                    display: flex;
+                    // border: solid 1px red;
+                    justify-content: space-evenly;
+                    flex-direction: column;
+                    text-align: center;
+                    height: 56px;
+                    width: 63px;
+                    background: #333645;
+                    border-radius: 5px;
+                    margin: 0 0 0 20px; // height width 
+        
+                    .line_container {
+                        .burger_line {
+                            display: block;
+                            height: 3px;
+                            width: 33px;
+                            background-color: white;
+                            margin-bottom: 5px;
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                    
+                    .burger_menu {
+                        color: white;
+                        text-transform: uppercase;
+                        padding: 0;
+                        margin: 0;
+                        font-size: 12px;
+        
+                    }
+        
+                }
+        
+            }
         }
         
-        
-       .burger_button {
-           flex-direction: column;
-           text-align: center;
-           height: 63px;
-           width: 56px;
-           font-size: 18px;
-           background: #333645;
-           border-radius: 5px;
-       }
+    }
 
-       .burger_menu {
-           font-size: 12px;
-           
-       }
+    // mobile search box styles
+    .mobile_search_field {
+        border: solid 1px red;
+        border-left: none;
+        border-right: none;
+        margin: 0;
+        padding: 0;
+        input {
+            width: 100%;
+            // border: 0;
+            margin: 0;
+            border-width: 0;
 
-       .fas fa-bars {
-           font-size: 18px;
-       }
+        }
+       
+       
     }
 }
 
-.support_button {
-    background: #4183d7;
+
+
+.hero_image {
+  
+  background-image: url("");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.contact_button {
-    background: #999aa2;
-} 
+.hero_text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 // Media queries -----------------------------------------------------
 
-@media (max-width: 991px) {
+@media (min-width: 768px) {
+
+    .header_container {
+        // width is 18 px smaller than the media query to account for the 19px wide vertical scrollbar width
+        // 750 + 18 = 768px
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .netmatters_nav_container_inner {
+            width: 750px;
+            height: 70px;
+
+            .nevmatters_logo_container {
+                height: 60px;
+                width: 345px;
+            }
+
+
+            .actions_container { // KEEPS THE ACTIONS TOGETHER
+                .search_field,
+                .search_button {
+                    display: inline-block;
+                }
     
-    .support_button,
-    .contact_button {
+                .phone_button {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .mobile_search_field {
         display: none;
     }
+} // -----------------------webpage------------------------ scrollbar
+
+@media (min-width: 993px) {
+    
+    .header_container {
+        width: 975px;
+        .netmatters_nav_container_inner {
+
+            height: 70px;
+            width: 970px;
+            
+            .nevmatters_logo_container {
+                height: 65px;
+                width: 374px;
+            }
+
+            .actions_container {
+
+                height: 70px;
+                width: 565px;
+                padding: 0px 15px 0px 15px;
+
+                .support_button,
+                .contact_button {
+                    display: flex;
+                    font-size: 18px;
+                }
+                
+                // .support_button {
+                // }
+
+                // .contact_button {
+
+                // }
+
+                .search_field {
+                    display: none;
+                }
+
+                .search_button {
+                    border-radius: 3px;
+                    margin-left: 20px;
+                }
+            }
+        }
+
+    }
+
+    // .nav_container {
+    //     display: flex;
+    // }
+
+    .mobile_search_field {
+        display: none;
+
+    }
+}       
+
+@media (min-width: 1260px) {
+
+    .header_container {
+        width: 1200px;
+    
+        .netmatters_nav_container_inner {
+            height: 70px;
+            width: 1200px;
+
+            .netmatters_logo_container {
+                width: 370px;
+                height: 64px;
+            }
+            
+            .actions_container {
+                width: 723px;
+                height: 70px;
+
+                .search_field {
+                    display: inline-block;
+                    width: 240px;
+                    height: 54px;
+                    margin-left: 20px;
+                    
+
+                    input {
+                        width:240px;
+                        height: 54px;
+                        padding: 0px 0px 0px 15px;
+                    }
+                       
+                }
+
+                .support_button {
+                    width: 144px;
+                }
+
+                .search_button {
+                    margin: 0px;
+                }
+            }
+        }
+    }   
 }
