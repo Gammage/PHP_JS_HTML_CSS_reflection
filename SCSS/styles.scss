@@ -5,7 +5,7 @@
 
 //
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: grey;
     margin: 0;
     box-sizing: border-box;
@@ -16,15 +16,16 @@ header {
 
     height: 167px;
     background-color: white;
-    padding: 20px 0;
-    // border-bottom: solid 1px black;
+    // padding: 20px 0;
 
     .header_container {  
-        height: 127px;
-        padding: 0 15px;
+        height: 167px;
+        padding: 20px 15px;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
+        margin: 0px auto;
+        // margin-top: 20px;
         
         .netmatters_nav_container_inner { 
             display: flex;
@@ -37,39 +38,35 @@ header {
                     height: auto; 
                     width: 100%;
                     max-height: 70px;
-                    // min-height: 52px;
                 }
             }
     
             // FLEX BOX PUTS EXCESS SPACE BETWEEN THESE
     
             .actions_container {
-                // border: solid 1px red;
-                height: 70%;
+                height: 70px;
                 display: flex;
                 justify-content: end;
                 flex-wrap: nowrap;
                 padding: 7px 0;
-
-                // At 768px add this
-                // padding: 0 15px;
-
+                margin-left: 20px;
 
                 .support_button,
                 .contact_button {
                     display: none;
                     justify-content: center;
                     text-align: center;
-                    line-height: 46px;
-                    padding: 5px 15px 5px 15px;
+                    line-height: 56px;
                     border-radius: 3px;
                     font-size: 18px;
                     color: white;
-                    height: 46px;
+                    height: 56px;
+                    font-weight: 600;
+                    letter-spacing: 1px;
         
                     i {
-                        line-height: 56px;
-                        font-size: 30px;
+                        // line-height: 18px;
+                        font-size: 18px;
                         padding-right: 10px;
                     }
                 }
@@ -93,11 +90,12 @@ header {
                     input {
                         padding: 0 0 0 10px;
                         width: 163px;
-                        height: 54px;
+                        height: 56px;
                         // border-radius: 3px 0 0 3px;
                         box-shadow: none;
                         border: solid 1px grey;
                         border-right: none;
+                        margin: 0;
                     }
                 }
         
@@ -119,16 +117,15 @@ header {
                 }
                    
                 .phone_button {
-                    border: solid 1px red;
+                    // border: solid 1px red;
                     display: block;
-                    height: 24px;
-                    width: 24px;
+                    height: 56px;
+                    width: 56px;
                     text-align: center;
-                    padding: 23px; //HEIGHT: (23px (padding MINUS 1PX BORDER) 24px (text) 23px (padding) =70px) (WIDTH: 23px (padding MINUS 1PX BORDER) 24px (text) 23px (padding) =70px)
-                    //TLDR: sum of the font-size & padding = button
-                    margin-top: -7px;
-                    margin-bottom: -7px;
-                    
+                    padding: 16px; 
+                    // margin-top: -7px;
+                    // margin-bottom: -7px;
+                    // p 16   t 24    p 16  == 56
                     i {
                         font-size: 24px;
                         line-height: 24px;
@@ -142,9 +139,6 @@ header {
                 }
                 
                 .burger_container {
-                    // border: solid 1px red;
-                    // height: 83px;
-                    // width: 70px;
 
                     margin-left: 20px;
                     height: 56px;
@@ -159,7 +153,6 @@ header {
                         width: 63px;
                         background: #333645;
                         border-radius: 5px;
-                        margin: 0 0 0 20px; // height width 
             
                         .line_container {
                             .burger_line {
@@ -230,11 +223,21 @@ header {
             }
         }
     }
+
+    // NAV MENU
+
+    .nav_menu {
+        display: none;
+        // NAV BUTTONS CONTAINER 
+        // .nav_menu_buttons {
+        // }
+
+    }
 }
 
 .slideshow_container {
     display: none;
-    border: solid red 1px;
+    // border: solid red 1px;
 
     .slide {
         height: 531px; 
@@ -276,33 +279,20 @@ header {
 @media (min-width: 768px) {
 
     header {
-
         height: 110px;
-        width: 750px;
-        padding: 20px 0px;
-        margin-left: auto;
-        margin-right: auto;
 
         .header_container {
             // width is 18 px smaller than the media query to account for the 19px wide vertical scrollbar width
             // 750 + 18 = 768px
             width: 750px;
-            height: 70px;
-            
+            height: 110px;
 
             .netmatters_nav_container_inner {
-                // border: solid 1px black;
-                width: 750px;
                 height: 70px;
-                margin: 0px -15px;
     
                 .netmatters_logo_container {
-
-                    // border: solid 1px black;
-
                     height: 60px;
                     width: 375px;
-                    padding: 0px 15px;
 
                     img {
                         height: 60px;
@@ -315,8 +305,7 @@ header {
                     // border: solid 1px black;
 
                     // At 768px add this (padding done)
-                    padding: 7px 20px;
-                    margin-right: 30px;
+                    padding: 7px 0;
                     width: 340px;
                     height: 70px;
                     
@@ -330,19 +319,19 @@ header {
                     }
 
                     .search_field {
-                        width: 174px;
-                        height: 48px;
-                        padding: 1px;
+                        width: 163px;
+                        height: 54px;
+                        // padding: 1px;
                         margin: 0;
                         // padding: 5px 15px;
 
                     }
 
                     .search_button {
-                        display: flex;
                         width: 63px;
                         height: 56px;
-                        padding: 7px 20px 3px 20px;
+                        padding: 0px 20px 0px 20px;
+                        line-height: 56px;
                     }
 
                     .burger_button {
@@ -356,12 +345,11 @@ header {
                     }
                 }
             }
+
+            .mobile_search_field {
+                display: none;
+            }
         }
-    }
-
-
-    .mobile_search_field {
-        display: none;
     }
 
     .slideshow_container {
@@ -374,63 +362,100 @@ header {
     }
 } // -----------------------webpage------------------------ scrollbar
 
-@media (min-width: 993px) {
+@media (min-width: 992px) {
+
+    header {
+        height: 110px;
     
-    .header_container {
-        width: 975px;
-        .netmatters_nav_container_inner {
-
-            height: 70px;
+        .header_container { 
             width: 970px;
-            
-            .nevmatters_logo_container {
-                height: 65px;
-                width: 374px;
-            }
+            height: 110px;
 
-            .actions_container {
-
+            .netmatters_nav_container_inner {
                 height: 70px;
-                width: 565px;
-                padding: 0px 15px 0px 15px;
+                margin: 0;
 
-                .support_button,
-                .contact_button {
-                    display: flex;
-                    font-size: 18px;
-                }
-
-                .search_field {
-                    display: none;
-
-                    input {
-                        display: none;
+                .nevmatters_logo_container { 
+                    height: 70px;
+                    width: 404px;
+    
+                    img {
+                        width: 374px;
+                        height: 65px;
                     }
                 }
-                
-                // .support_button {
-                // }
 
-                // .contact_button {
+                .actions_container {
+                    height: 70px;
+                    width: 565px;
+                    padding: 7px 0 7px 0;
 
-                // }
+                    .support_button,
+                    .contact_button {
+                        display: block;
+                        font-size: 18px;
+                    }
 
-                .search_button {
-                    border-radius: 3px;
-                    margin-left: 20px;
+                    .search_field {
+                        display: none;
+                    }
+
+                    .search_button {
+                        border-radius: 3px;
+                        margin-left: 20px;
+                    }
                 }
             }
+
         }
 
-    }
+        .nav_menu {
+            display: block;
+            width: 100%;
+            height: 99px;
+            background-color: #333645;
 
-    // .nav_container {
-    //     display: flex;
-    // }
+            .nav_menu_buttons {
+                display: flex;
+                width: 970px;
+                padding: 0px 15px;
+                margin: 0 auto;
 
-    .mobile_search_field {
-        display: none;
+                div[class*=_container] {
+                    width: 154px;
+                    height: 99px;
+                    border: 1px red solid;
 
+                    .nav_button {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        width: 154px;
+                        height: 99px;
+                        color: white;
+                        text-align: center;
+                        text-transform: uppercase;
+                        font-size: 18px;
+                        // font-weight: bold;  
+
+                        a {
+                            display: block;
+                        }
+
+                        i {
+                            padding-bottom: 10px;
+                            // border: yellow 1px solid;
+                            // font-size: 23px;
+                        }
+
+                        small {
+                            font-size: 10px;
+                            line-height: 10px;     
+                        }
+                    }    
+                }
+            }   
+        }
     }
 
     .slideshow_container {
@@ -440,51 +465,83 @@ header {
             }
         }
     }
+
 }       
 
-@media (min-width: 1278px) {
+@media (min-width: 1260px) {
 
-    .header_container {
-        width: 1200px;
-    
-        .netmatters_nav_container_inner {
-            height: 70px;
+    header {
+        .header_container {
             width: 1200px;
-
-            .netmatters_logo_container {
-                width: 370px;
-                height: 64px;
-            }
-            
-            .actions_container {
-                width: 723px;
-                height: 70px;
-
-                .search_field {
-                    display: inline-block;
-                    width: 240px;
-                    height: 54px;
-                    margin-left: 20px;
-                    
-
-                    input {
-                        width:240px;
-                        height: 54px;
-                        padding: 0px 0px 0px 15px;
+        
+            .netmatters_nav_container_inner {
+    
+                .netmatters_logo_container {
+                    width: 400px;
+                    height: 70px;
+                    img {
+                        height: 65px;
                     }
-                       
                 }
+                
+                .actions_container {
+                    width: auto;
+                    height: 70px;
+    
+                    .search_field {
+                        display: inline-block;
+                        width: 240px;
+                        height: 56px;
+                        margin-left: 20px;
+                        // margin-top: -1px;
+                        
+    
+                        input {
+                            width: 240px;
+                            height: 56px;
+                            padding: 0px 0px 0px 15px;
+                        }
+                           
+                    }
 
-                .support_button {
-                    width: 144px;
-                }
-
-                .search_button {
-                    margin: 0px;
+                    .search_button {
+                        border-radius: 0 3px 3px 0;
+                    }
+    
+                    .support_button {
+                        width: 144px;
+                    }
+    
+                    .search_button {
+                        margin: 0px;
+                    }
                 }
             }
         }
-    }   
+        
+        .nav_menu {
+
+            .nav_menu_buttons {
+                width: 1200px;
+                margin-left: auto;
+                margin-right: auto;
+
+                div[class*=_container] {
+                    width: 192px;
+                    height: 99px;
+                    border: 1px red solid;
+
+                    .nav_button {
+                        width: 192px;
+                        height: 99px;
+                    }
+                }
+            }
+        }
+
+
+
+    }
 
     .slideshow_container {
         .slide {
