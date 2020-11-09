@@ -227,12 +227,16 @@ header .nav_menu {
 }
 
 .slideshow_container {
-  display: none;
+  display: block;
+  height: 597px;
+  width: auto;
+  margin: 0;
 }
 
 .slideshow_container .slide {
-  height: 531px;
-  background-image: url("../Images/web_design_slide_image.jpg");
+  height: 597px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75))), url("../images/web_design_slide_image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("../images/web_design_slide_image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -241,19 +245,38 @@ header .nav_menu {
 }
 
 .slideshow_container .slide .slide_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
   width: 100%;
   padding: 0 15px;
   height: 100%;
 }
 
-.slideshow_container .slide .slide_content p, .slideshow_container .slide .slide_content a {
+.slideshow_container .slide .slide_content h1, .slideshow_container .slide .slide_content p, .slideshow_container .slide .slide_content a {
+  color: white;
   padding: 0;
   margin: 0;
 }
 
-.slideshow_container .slide .slide_content p i, .slideshow_container .slide .slide_content a i {
+.slideshow_container .slide .slide_content h1 i, .slideshow_container .slide .slide_content p i, .slideshow_container .slide .slide_content a i {
   padding-left: 20px;
+}
+
+.slideshow_container .slide .slide_content h1 {
+  font-size: 48px;
+}
+
+.slideshow_container .slide .slide_content p {
+  font-size: 20px;
 }
 
 .hero_text {
@@ -288,6 +311,9 @@ header .nav_menu {
     padding: 7px 0;
     width: 340px;
     height: 70px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   header .header_container .netmatters_nav_container_inner .actions_container .search_field,
   header .header_container .netmatters_nav_container_inner .actions_container .search_button {
@@ -318,8 +344,13 @@ header .nav_menu {
   header .header_container .mobile_search_field {
     display: none;
   }
+  .slideshow_container {
+    height: 655px;
+  }
+  .slideshow_container .slide {
+    height: 655px;
+  }
   .slideshow_container .slide .slide_content {
-    width: 750px;
     margin: 0 auto;
   }
 }
@@ -329,7 +360,7 @@ header .nav_menu {
     height: 110px;
   }
   header .header_container {
-    width: 970px;
+    width: 975px;
     height: 110px;
   }
   header .header_container .netmatters_nav_container_inner {
@@ -348,6 +379,9 @@ header .nav_menu {
     height: 70px;
     width: 565px;
     padding: 7px 0 7px 0;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
   header .header_container .netmatters_nav_container_inner .actions_container .support_button,
   header .header_container .netmatters_nav_container_inner .actions_container .contact_button {
@@ -371,14 +405,12 @@ header .nav_menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 970px;
-    padding: 0px 15px;
+    width: 945px;
     margin: 0 auto;
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] {
-    width: 154px;
+    width: 157.5px;
     height: 99px;
-    border: 1px red solid;
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
     display: -webkit-box;
@@ -391,15 +423,17 @@ header .nav_menu {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 154px;
+    width: 157.5px;
     height: 99px;
     color: white;
     text-align: center;
     text-transform: uppercase;
     font-size: 18px;
-  }
-  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_button a {
-    display: block;
+    border-style: inset;
+    border-top: none;
+    border-bottom: none;
+    border-left: solid 1px #434550;
+    border-right: solid 1px #857c91;
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_button i {
     padding-bottom: 10px;
@@ -407,6 +441,96 @@ header .nav_menu {
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_button small {
     font-size: 10px;
     line-height: 10px;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .web_button i {
+    color: #926fb1;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .it_button i {
+    color: #4183d7;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .telecoms_button i {
+    color: #d64541;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .bespoke_button i {
+    color: #67809f;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .digital_button i {
+    color: #2eec71;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .cyber_button i {
+    color: #f62459;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar {
+    display: none;
+    height: 45px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
+    width: 945px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
+    color: white;
+    text-transform: uppercase;
+    line-height: 45px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] span {
+    padding: 0 20px;
+    color: white;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_button {
+    color: white;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_button i {
+    color: white;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_sub_bar {
+    display: block;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .web_button {
+    background-color: #926fb1;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .web_bar {
+    background-color: #79539a;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .it_button {
+    background-color: #4183d7;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .it_bar {
+    background-color: #286abd;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .telecoms_button {
+    background-color: #d64541;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .telecoms_bar {
+    background-color: #bc2c28;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .bespoke_button {
+    background-color: #67809f;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .bespoke_bar {
+    background-color: #526781;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .digital_button {
+    background-color: #2eec71;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .digital_bar {
+    background-color: #25a25a;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .cyber_button {
+    background-color: #f62459;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover .cyber_bar {
+    background-color: #de093f;
+  }
+  .slideshow_container {
+    margin-top: 100px;
   }
   .slideshow_container .slide .slide_content {
     width: 975px;
@@ -449,18 +573,21 @@ header .nav_menu {
     margin: 0px;
   }
   header .nav_menu .nav_menu_buttons {
-    width: 1200px;
+    width: 1170px;
     margin-left: auto;
     margin-right: auto;
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] {
-    width: 192px;
-    height: 99px;
-    border: 1px red solid;
+    width: 194px;
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
-    width: 192px;
-    height: 99px;
+    width: 194px;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
+    width: 1170px;
+  }
+  header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
+    font-size: 16px;
   }
   .slideshow_container .slide .slide_content {
     width: 1200px;

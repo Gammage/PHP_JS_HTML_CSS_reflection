@@ -1,3 +1,6 @@
+@import "_queries.scss";
+@import "_variables.scss";
+
 
 // SHORTCUTS
 
@@ -225,34 +228,42 @@ header {
     }
 
     // NAV MENU
-
     .nav_menu {
         display: none;
-        // NAV BUTTONS CONTAINER 
-        // .nav_menu_buttons {
-        // }
-
     }
 }
 
 .slideshow_container {
-    display: none;
+    // display: none;
+    display: block;
+    height: 597px;
+    width: auto;
+    margin: 0;
     // border: solid red 1px;
 
     .slide {
-        height: 531px; 
-        background-image: url("../Images/web_design_slide_image.jpg");
+        height: 597px;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0.75)), url("../images/web_design_slide_image.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         justify-content: space-around;
+        // background-image: brightness(50%);
+
+
+
         .slide_content {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
             text-align: center;
             width:  100%;
             padding: 0 15px;
             height: 100%;
 
-            p, a {
+            h1, p, a {
+                color: white;
                 padding: 0;
                 margin: 0;
                 // width: calc(100% - 30px);
@@ -261,6 +272,19 @@ header {
                     padding-left: 20px;
                 }
             }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            // .slide_button {
+
+            // }
+
         }
     }
 
@@ -273,8 +297,6 @@ header {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-// Media queries -----------------------------------------------------
 
 @media (min-width: 768px) {
 
@@ -303,11 +325,11 @@ header {
     
                 .actions_container { // KEEPS THE ACTIONS TOGETHER
                     // border: solid 1px black;
-
                     // At 768px add this (padding done)
                     padding: 7px 0;
                     width: 340px;
                     height: 70px;
+                    justify-content: flex-end;
                     
                     .search_field,
                     .search_button {
@@ -353,9 +375,13 @@ header {
     }
 
     .slideshow_container {
+        height: 655px;
+
         .slide {
+            height: 655px;
+
             .slide_content {
-                width: 750px;
+                // width: 750px;
                 margin: 0 auto;
             }
         }
@@ -366,9 +392,9 @@ header {
 
     header {
         height: 110px;
-    
+
         .header_container { 
-            width: 970px;
+            width: 975px;
             height: 110px;
 
             .netmatters_nav_container_inner {
@@ -386,9 +412,11 @@ header {
                 }
 
                 .actions_container {
+                    // border: 1px solid red;
                     height: 70px;
                     width: 565px;
                     padding: 7px 0 7px 0;
+                    justify-content: flex-end;
 
                     .support_button,
                     .contact_button {
@@ -417,48 +445,186 @@ header {
 
             .nav_menu_buttons {
                 display: flex;
-                width: 970px;
-                padding: 0px 15px;
+                width: 945px;
+                // padding: 0px 15px;
                 margin: 0 auto;
+                // border-left: solid 1px $navigation-border-dark;
+                // border-right: solid 1px $navigation-border-light;
 
                 div[class*=_container] {
-                    width: 154px;
+                    width: 157.5px;
                     height: 99px;
-                    border: 1px red solid;
 
                     .nav_button {
                         display: flex;
                         justify-content: center;
                         flex-direction: column;
-                        width: 154px;
+                        width: 157.5px;
                         height: 99px;
                         color: white;
                         text-align: center;
                         text-transform: uppercase;
                         font-size: 18px;
+                        border-style: inset;
+                        border-top: none;
+                        border-bottom: none;
+                        border-left: solid 1px $navigation-border-dark;
+                        border-right: solid 1px $navigation-border-light;
                         // font-weight: bold;  
-
-                        a {
-                            display: block;
-                        }
 
                         i {
                             padding-bottom: 10px;
-                            // border: yellow 1px solid;
-                            // font-size: 23px;
                         }
 
                         small {
                             font-size: 10px;
                             line-height: 10px;     
                         }
-                    }    
+                    }   
+
+                    .web_button {
+                        i {
+                            color: $web;
+                        }
+                    }
+
+                    .it_button {
+                        i {
+                            color: $it;
+                        }
+                    }
+
+                    .telecoms_button {
+                        i {
+                            color: $telecoms;
+                        }
+                    }
+                    
+                    .bespoke_button {
+                        i {
+                            color: $bespoke;
+                        }
+                    }
+
+                    .digital_button {
+                        i {
+                            color: $digital;
+                        }
+                    }
+
+                    .cyber_button {
+                        i {
+                            color: $cyber;
+                        }
+                    }
+
+                    .nav_sub_bar {
+                        display: none;
+                        height: 45px;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+
+                        div[class*=_contents] {
+                            width: 945px;
+                            height: 45px;
+                            margin-left: auto;
+                            margin-right: auto;
+
+                            a {
+                                color: white;
+                                // padding-left: 20px;
+                                text-transform: uppercase;
+                                line-height: 45px;
+                                text-decoration: none; 
+                                font-size: 13px;
+                            }
+
+                            span {
+                                padding: 0 20px;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                div[class*=_container]:hover {
+
+                    // Make all text white.
+                    .nav_button {
+                        color: white;
+                        i {
+                            color: white;
+                        }
+                    }
+
+                    .nav_sub_bar {
+                        display: block;
+                    }
+
+                    // Make button and nav bar the color.
+
+                    // #region Color Values
+                    .web_button {
+                        background-color: $web;
+                    }
+
+                    .web_bar {
+                        background-color: $web_dark;
+                    }
+
+                    .it_button {
+                        background-color: $it;
+                    }
+
+                    .it_bar {
+                        background-color: $it_dark;
+
+                    }
+
+                    .telecoms_button {
+                        background-color: $telecoms;
+                    }
+
+                    .telecoms_bar {
+                        background-color: $telecoms_dark;
+                    }
+
+                    .bespoke_button {
+                        background-color: $bespoke;
+                    }
+
+                    .bespoke_bar {
+                        background-color: $bespoke_dark;
+                    }
+
+                    .digital_button {
+                        background-color: $digital;
+
+                    }
+
+                    .digital_bar {
+                        background-color: $digital_dark;
+                    }
+
+                    .cyber_button {
+                        background-color: $cyber
+                    }
+
+                    .cyber_bar {
+                        background-color: $cyber_dark;
+                    }
+                    // #endregion
+
                 }
             }   
         }
     }
 
     .slideshow_container {
+        // position: absolute;
+        margin-top: 100px; //height from nav_menu (99px)
+
         .slide {
             .slide_content {
                 width: 975px;
@@ -520,27 +686,32 @@ header {
         }
         
         .nav_menu {
-
             .nav_menu_buttons {
-                width: 1200px;
+                width: 1170px;
                 margin-left: auto;
                 margin-right: auto;
 
                 div[class*=_container] {
-                    width: 192px;
-                    height: 99px;
-                    border: 1px red solid;
+                    width: 194px;
+                    // height: 99px;
 
                     .nav_button {
-                        width: 192px;
-                        height: 99px;
+                        width: 194px;
+                        // height: 99px;
+                    }
+
+                    .nav_sub_bar {
+                        div[class*=_contents] {
+                            width: 1170px;
+
+                            a {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
             }
         }
-
-
-
     }
 
     .slideshow_container {
