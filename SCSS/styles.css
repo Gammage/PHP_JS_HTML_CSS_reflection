@@ -1,3 +1,246 @@
+/*
+@mixin card_default {
+    // height: 290px;
+    // padding: 30px;
+    // margin: 30px 15px 0px 15px; // -15px margin left/right refer netmatters parent container
+
+    // text-align: center;
+    // border: 1px solid black;
+
+    // .icon {
+    //     margin: 0px auto 17px auto;
+    //     width: 60px;
+    //     height: 60px;
+    //     background-color: black;
+    //     border-radius: 50%;
+    //     margin-bottom: 17px;
+    //     line-height: 60px;
+
+    //     i {
+    //         font-size: 16px;
+    //     }
+    // }
+
+    // h2 {
+    //     font-size: 18px;
+    //     text-transform: capitalize;
+    //     padding-bottom: 17px;
+    //     margin-bottom: 11px;
+    // }
+
+    // p {
+    //     margin-bottom: 13px;
+    // }
+
+    // // .card_line {
+    // //     display: block;
+    // //     height: 5px;
+    // //     width: 40px;
+    // //     background-color:black;
+    // //     margin-bottom: 5px;
+    // //     margin-left: auto;
+    // //     margin-right: auto;
+    // // }
+
+    // .p {
+    //     font-size: 13px;
+
+    // }
+
+    // .read_more {
+    //     display: block;
+    //     height: 47px;
+    //     width: 129px;
+    //     padding: 5px 15px;
+    //     border-radius: 3px;
+    //     background-color: black;
+    //     font-size: 17px;
+    //     margin: auto;
+    //     line-height: 37px; // height - 5px padding top + bottom
+    //     text-transform: uppercase;
+    // }
+
+}
+
+// card colours ----------------------------------------------------
+
+@mixin Bespoke_theme {
+    .icon,
+    .read_more {
+        background-color: $bespoke;
+    }
+}
+
+@mixin it_theme {
+
+}
+
+@mixin digital_theme {}
+
+@mixin telecom_theme {}
+
+@mixin web_theme {}
+
+@mixin cyber_theme {}
+
+@mixin dev_theme {}
+*/
+.card_web .icon {
+  background-color: #926fb1;
+}
+
+.read_more_web {
+  background-color: #926fb1;
+}
+
+.card_web:hover {
+  background-color: #926fb1;
+  color: white;
+}
+
+.card_web:hover .icon {
+  background-color: white;
+}
+
+.card_web:hover .icon i {
+  color: #926fb1;
+}
+
+.card_web:hover .read_more_web {
+  background-color: white;
+  color: #926fb1;
+}
+
+.card_it .icon {
+  background-color: #4183d7;
+}
+
+.read_more_it {
+  background-color: #4183d7;
+}
+
+.card_it:hover {
+  background-color: #4183d7;
+  color: white;
+}
+
+.card_it:hover .icon {
+  background-color: white;
+}
+
+.card_it:hover .icon i {
+  color: #4183d7;
+}
+
+.card_it:hover .read_more_it {
+  background-color: white;
+  color: #4183d7;
+}
+
+.card_telecoms .icon {
+  background-color: #d64541;
+}
+
+.read_more_telecoms {
+  background-color: #d64541;
+}
+
+.card_telecoms:hover {
+  background-color: #d64541;
+  color: white;
+}
+
+.card_telecoms:hover .icon {
+  background-color: white;
+}
+
+.card_telecoms:hover .icon i {
+  color: #d64541;
+}
+
+.card_telecoms:hover .read_more_telecoms {
+  background-color: white;
+  color: #d64541;
+}
+
+.card_bespoke .icon {
+  background-color: #67809f;
+}
+
+.read_more_bespoke {
+  background-color: #67809f;
+}
+
+.card_bespoke:hover {
+  background-color: #67809f;
+  color: white;
+}
+
+.card_bespoke:hover .icon {
+  background-color: white;
+}
+
+.card_bespoke:hover .icon i {
+  color: #67809f;
+}
+
+.card_bespoke:hover .read_more_bespoke {
+  background-color: white;
+  color: #67809f;
+}
+
+.card_digital .icon {
+  background-color: #2eec71;
+}
+
+.read_more_digital {
+  background-color: #2eec71;
+}
+
+.card_digital:hover {
+  background-color: #2eec71;
+  color: white;
+}
+
+.card_digital:hover .icon {
+  background-color: white;
+}
+
+.card_digital:hover .icon i {
+  color: #2eec71;
+}
+
+.card_digital:hover .read_more_digital {
+  background-color: white;
+  color: #2eec71;
+}
+
+.card_cyber .icon {
+  background-color: #f62459;
+}
+
+.read_more_cyber {
+  background-color: #f62459;
+}
+
+.card_cyber:hover {
+  background-color: #f62459;
+  color: white;
+}
+
+.card_cyber:hover .icon {
+  background-color: white;
+}
+
+.card_cyber:hover .icon i {
+  color: #f62459;
+}
+
+.card_cyber:hover .read_more_cyber {
+  background-color: white;
+  color: #f62459;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: grey;
@@ -287,30 +530,60 @@ header .nav_menu {
 }
 
 .cards_container div[class*=card_] {
-  height: 290px;
-  padding: 30px;
+  display: block;
+  height: 350px;
+  padding: 30px 30px;
   margin: 30px 15px 0px 15px;
   text-align: center;
   border: 1px solid black;
 }
 
 .cards_container div[class*=card_] .icon {
-  margin: auto;
+  margin: 0px auto 17px auto;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 17px;
+  line-height: 60px;
+  color: white;
+}
+
+.cards_container div[class*=card_] .icon i {
+  font-size: 16px;
 }
 
 .cards_container div[class*=card_] h2 {
+  line-height: 19px;
   font-size: 18px;
   text-transform: capitalize;
+  padding-bottom: 17px;
+  margin-bottom: 11px;
+}
+
+.cards_container div[class*=card_] p {
+  line-height: 22px;
+  margin-bottom: 13px;
 }
 
 .cards_container div[class*=card_] .p {
   font-size: 13px;
 }
 
-.cards_container div[class*=card_] span {
+.cards_container div[class*=card_] a {
+  display: block;
   height: 47px;
   width: 129px;
-  padding: 5px 15px;
+  border-radius: 3px;
+  font-size: 17px;
+  margin: auto;
+  line-height: 47px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+.cards_container div[class*=card_] a:hover {
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
@@ -377,6 +650,54 @@ header .nav_menu {
   }
   .slideshow_container .slide .slide_content {
     margin: 0 auto;
+  }
+  .cards_container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    height: 1644px;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .cards_container .card_bespoke,
+  .cards_container .card_it,
+  .cards_container .card_digital {
+    width: 720px;
+    height: 350px;
+  }
+  .cards_container .card_bespoke .h2,
+  .cards_container .card_it .h2,
+  .cards_container .card_digital .h2 {
+    height: 36px;
+    width: 658px;
+  }
+  .cards_container .card_bespoke .p,
+  .cards_container .card_it .p,
+  .cards_container .card_digital .p {
+    height: 44px;
+    width: 658px;
+  }
+  .cards_container .card_telecoms,
+  .cards_container .card_web,
+  .cards_container .card_cyber {
+    width: 312px;
+    height: 345px;
+  }
+  .cards_container .card_telecoms h2,
+  .cards_container .card_web h2,
+  .cards_container .card_cyber h2 {
+    width: 283px;
+    height: 36px;
+  }
+  .cards_container .card_telecoms p,
+  .cards_container .card_web p,
+  .cards_container .card_cyber p {
+    width: 283px;
+    height: 66px;
   }
 }
 
@@ -568,6 +889,28 @@ header .nav_menu {
     margin: 0;
     text-align: left;
   }
+  .cards_container {
+    height: 1056px;
+    width: 970px;
+  }
+  .cards_container .card_bespoke,
+  .cards_container .card_it,
+  .cards_container .card_digital {
+    height: 356px;
+    width: 293px;
+  }
+  .cards_container .card_bespoke p,
+  .cards_container .card_it p,
+  .cards_container .card_digital p {
+    height: 110px;
+    width: 231px;
+  }
+  .cards_container .card_telecoms,
+  .cards_container .card_web,
+  .cards_container .card_cyber {
+    height: 290px;
+    width: 455px;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -627,6 +970,22 @@ header .nav_menu {
   }
   .slideshow_container .slide {
     height: 697px;
+  }
+  .cards_container {
+    width: 1200px;
+    height: 684px;
+  }
+  .cards_container .card_bespoke,
+  .cards_container .card_it,
+  .cards_container .card_digital {
+    width: 370px;
+    height: 312px;
+  }
+  .cards_container .card_telecoms,
+  .cards_container .card_web,
+  .cards_container .card_cyber {
+    width: 270px;
+    height: 312px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

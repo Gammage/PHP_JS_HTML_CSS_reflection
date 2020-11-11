@@ -1,45 +1,130 @@
 
+// #region Old Mixins
+
+
 // card_container styles -------------------
-
+/*
 @mixin card_default {
-    height: 290px;
-    padding: 30px;
-    margin: 30px 15px 0px 15px;
+    // height: 290px;
+    // padding: 30px;
+    // margin: 30px 15px 0px 15px; // -15px margin left/right refer netmatters parent container
 
-    text-align: center;
-    border: 1px solid black;
+    // text-align: center;
+    // border: 1px solid black;
 
-    .icon {
-        margin: auto;
-    }
+    // .icon {
+    //     margin: 0px auto 17px auto;
+    //     width: 60px;
+    //     height: 60px;
+    //     background-color: black;
+    //     border-radius: 50%;
+    //     margin-bottom: 17px;
+    //     line-height: 60px;
 
-    h2 {
-        font-size: 18px;
-        text-transform: capitalize;
-    }
-
-    // .card_line {
-    //     display: block;
-    //     height: 5px;
-    //     width: 33px;
-    //     background-color:black;
-    //     margin-bottom: 5px;
-    //     margin-left: auto;
-    //     margin-right: auto;
+    //     i {
+    //         font-size: 16px;
+    //     }
     // }
 
-    .p {
-        font-size: 13px;
+    // h2 {
+    //     font-size: 18px;
+    //     text-transform: capitalize;
+    //     padding-bottom: 17px;
+    //     margin-bottom: 11px;
+    // }
 
+    // p {
+    //     margin-bottom: 13px;
+    // }
+
+    // // .card_line {
+    // //     display: block;
+    // //     height: 5px;
+    // //     width: 40px;
+    // //     background-color:black;
+    // //     margin-bottom: 5px;
+    // //     margin-left: auto;
+    // //     margin-right: auto;
+    // // }
+
+    // .p {
+    //     font-size: 13px;
+
+    // }
+
+    // .read_more {
+    //     display: block;
+    //     height: 47px;
+    //     width: 129px;
+    //     padding: 5px 15px;
+    //     border-radius: 3px;
+    //     background-color: black;
+    //     font-size: 17px;
+    //     margin: auto;
+    //     line-height: 37px; // height - 5px padding top + bottom
+    //     text-transform: uppercase;
+    // }
+
+}
+
+// card colours ----------------------------------------------------
+
+@mixin Bespoke_theme {
+    .icon,
+    .read_more {
+        background-color: $bespoke;
+    }
+}
+
+@mixin it_theme {
+
+}
+
+@mixin digital_theme {}
+
+@mixin telecom_theme {}
+
+@mixin web_theme {}
+
+@mixin cyber_theme {}
+
+@mixin dev_theme {}
+*/
+// #endregion
+
+
+@import "_variables.scss";
+
+// NAVIGATON BAR MIXIN
+
+// SLIDESHOW MIXIN 
+
+
+
+// CARD MIXN
+//                                      variable group name
+@each $name, $light_colour, $dark_colour in $colours {
+    .card_#{$name} { // compiles into .card_web
+        .icon {
+            background-color: $light_colour;
+        }
+    }
+    .read_more_#{$name} {
+        background-color: $light_colour;
     }
 
-    span {
-        height: 47px;
-        width: 129px;
-        padding: 5px 15px;
+    .card_#{$name}:hover {
+        background-color: $light_colour;
+        color: white; // Make all text white on hover
+        .icon {
+            background-color: white;
+            i {
+                color: $light_colour;
+            }
+        }
+        .read_more_#{$name} {
+            background-color: white;
+            color: $light_colour;
+        }
     }
-
-
-
-
 }

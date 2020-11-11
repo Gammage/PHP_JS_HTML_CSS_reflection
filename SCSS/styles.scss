@@ -2,7 +2,6 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-
 // SHORTCUTS
 
 // CTRL + K, then CTRL + 0 (zero)
@@ -293,9 +292,79 @@ header {
     margin-top: 20px;
     
     div[class*=card_]{
-        @include card_default;
-    }
+        // @include card_default;
+        display: block;
+        height: 350px; // bootstrap modifies padding, so 290px + 60px (padding doesnt stretch container)
+        // height: 290px;
+        padding: 30px 30px; //content positioning
+        margin: 30px 15px 0px 15px; // -15px margin left/right refer netmatters parent container
 
+        text-align: center;
+        border: 1px solid black;
+
+        .icon {
+            margin: 0px auto 17px auto;
+            width: 60px;
+            height: 60px;
+            // background-color: black;
+            border-radius: 50%;
+            margin-bottom: 17px;
+            line-height: 60px;
+            color: white;
+
+            i {
+                font-size: 16px;
+            }
+        }
+
+        h2 {     
+            line-height: 19px;
+            font-size: 18px;
+            text-transform: capitalize;
+            padding-bottom: 17px;
+            margin-bottom: 11px;
+        }
+
+        p {
+            line-height: 22px;
+            margin-bottom: 13px;
+        }
+
+        // #region
+        // .card_line {
+        //     display: block;
+        //     height: 5px;
+        //     width: 40px;
+        //     background-color:black;
+        //     margin-bottom: 5px;
+        //     margin-left: auto;
+        //     margin-right: auto;
+        // }
+        // #endregion
+
+        .p {
+            font-size: 13px;
+        }
+
+
+        a {
+            display: block;
+            height: 47px;
+            width: 129px;
+            // padding: 5px 15px;
+            border-radius: 3px;
+            font-size: 17px;
+            margin: auto;
+            line-height: 47px;
+            text-transform: uppercase;
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -387,8 +456,52 @@ header {
         }
     }
 
-    // .cards_container {
-    // }
+    .cards_container {
+        // border: 1px solid black;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 1644px;
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .card_bespoke,
+        .card_it,
+        .card_digital {
+            width: 720px;
+            height: 350px; //minus padding, bc bootstrap. -60 (padding 30 ea)
+
+            .h2 {
+                height: 36px;
+                width: 658px;
+            }
+
+            .p {
+                height: 44px;
+                width: 658px;
+            }
+        }
+
+        .card_telecoms,
+        .card_web,
+        .card_cyber {
+            width: 312px; // - 60
+            height: 345px;
+            // margin: 0;
+            // padding: 0;
+            // margin: 15px 15px -15px 15px; // -15 top and bottom from original, to include outer box
+            
+            h2 {
+                width: 283px;
+                height: 36px;
+            }
+
+            p {
+                width: 283px;
+                height: 66px;
+            }
+        }
+    }
 } // -----------------------webpage------------------------ scrollbar
 
 @media (min-width: 992px) {
@@ -641,8 +754,37 @@ header {
         }
     }
 
-    // .cards_container {
-    // }
+    .cards_container {
+        // style size etc for cards NOT COLOURS
+        // Where you need to specify cards for 3 on top 4 on bottom.
+        // Use the specific card names (card_bespoke, card_it card_digital) are one width, rest are another width
+        // border: 1px solid red;
+
+        height: 1056px;
+        width: 970px;
+
+        .card_bespoke,
+        .card_it,
+        .card_digital {
+            height: 356px;
+            width: 293px;
+
+            p {
+                height: 110px;
+                width: 231px;
+            }
+        }
+
+        .card_telecoms,
+        .card_web,
+        .card_cyber {
+
+            height: 290px;
+            width: 455px;
+        }
+   
+
+    }
 
 }       
 
@@ -733,6 +875,23 @@ header {
         }
     }
 
-    // .cards_container {
-    // }
+    .cards_container {
+
+        width: 1200px;
+        height: 684px;
+
+        .card_bespoke,
+        .card_it,
+        .card_digital {
+            width: 370px;
+            height: 312px;
+        }
+
+        .card_telecoms,
+        .card_web,
+        .card_cyber {
+            width: 270px;
+            height: 312px;
+        }
+    }
 }
