@@ -9,7 +9,8 @@
 //
 body {
     font-family: "Poppins", sans-serif;
-    background-color: grey;
+    letter-spacing: 0.4px;
+    background-color: lightgray;
     margin: 0;
     box-sizing: border-box;
     height: 5000px;
@@ -385,12 +386,10 @@ header {
     height: auto;
     padding: 50px 15px;
     margin-top: 50px; // eyeballed it m8!
-
     background-color: #333645;
 
     .content {
         color: white;
-        letter-spacing: 0.4px;
 
         h1 {
             text-transform: uppercase;
@@ -446,6 +445,115 @@ header {
         padding: 40px 0px;
         font-size: 20px;
         line-height: 22px;
+    }
+}
+
+.news_container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 50px 15px;
+    height: auto;
+
+    div[class*=news_entry]{
+        display: block;
+        width: auto;
+        border: 1px solid lightgray;
+        border-radius: 3px;
+        margin-bottom: 30px;
+
+        .news_image {
+            height: 100px;
+            width: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            // background-size: cover;
+        }
+
+        .news_info {
+            
+            margin: 30px;
+
+            h3 {
+                font-size: 16px;
+                line-height: 24px;
+                color: #926fb1;
+            }
+            
+            p {
+                font-size: 13px;
+                line-height: 22px;
+            }
+
+            .news_button {
+                display: block;
+                text-align: center;
+                height: 47px;
+                width: 129px;
+                border-radius: 3px;
+                font-size: 17px;
+                margin: left;
+                line-height: 47px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: white;
+                background-color: #926fb1;
+            }
+
+            .news_author {
+                display: flex;
+                border-top: 1px solid lightgray;
+                width: auto;
+                height: 78px;
+                // padding-top: 30px 0px 0px 0px;
+                margin-top: 30px;
+                // line-height: 78px;
+
+                .author_image {
+                    margin-top: 28px;
+                    height: 50px;
+                    width: 50px;
+                    background-color: lightgray;
+                    border-radius: 50%;
+                }
+
+                .posted_by {
+                    margin-top: 39px;
+                    display: block;
+                    width: auto;
+                    font-size: 14px;
+                    margin-left: 20px;
+
+                    p {
+                        line-height: 0px;
+                    }
+                }
+            }
+        }
+    }
+
+    .news_entry_one {
+
+        .news_image {    
+
+            background-image: url(../images/news_image_one.jpg);
+        }
+    }
+
+    .news_entry_two {
+
+        .news_image {    
+
+            background-image: url(../images/news_image_two.jpg);
+        }
+    }
+
+    .news_entry_three {
+
+        .news_image {    
+
+            background-image: url(../images/news_image_three.jpg);
+        }
     }
 }
 
@@ -992,3 +1100,4 @@ header {
         }
     }
 }
+
