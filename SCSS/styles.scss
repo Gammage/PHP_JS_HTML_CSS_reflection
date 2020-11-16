@@ -380,16 +380,15 @@ header {
 
 .background_culture {
 
-    // height: 523px;
     display: block;
     width: auto;
     height: auto;
-    padding: 50px 15px;
     margin-top: 50px; // eyeballed it m8!
     background-color: #333645;
 
     .content {
         color: white;
+        padding: 50px 15px 50px 15px;
 
         h1 {
             text-transform: uppercase;
@@ -463,11 +462,35 @@ header {
         margin-bottom: 30px;
 
         .news_image {
-            height: 100px;
-            width: auto;
-            background-position: center;
-            background-repeat: no-repeat;
+            position: relative;
+
+
+            img {
+                height: auto;
+                width: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
             // background-size: cover;
+            }
+
+            .news_button {
+                display: block;
+                position: absolute;
+                top: 10px;
+                right: 0px;
+                display: block;
+                height: 23px;
+                width: 56px;
+                padding: 0px 10px;
+                background-color: red;
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 23px;
+                font-weight: bold;
+            }
+            
+
         }
 
         .news_info {
@@ -510,11 +533,16 @@ header {
                 // line-height: 78px;
 
                 .author_image {
+                    display: block;
                     margin-top: 28px;
                     height: 50px;
                     width: 50px;
-                    background-color: lightgray;
+                    // background-color: lightgray;
                     border-radius: 50%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-image: url(Images/tessa_image_small.jpg);
                 }
 
                 .posted_by {
@@ -534,10 +562,16 @@ header {
 
     .news_entry_one {
 
-        .news_image {    
+        .news_info {
+            
+            .news_author {
 
-            background-image: url(../images/news_image_one.jpg);
+                .author_image {
+                    background-image: url(/Images/tessa_image_small.jpg);
+                }
+            }
         }
+
     }
 
     .news_entry_two {
@@ -683,6 +717,19 @@ header {
                 width: 283px;
                 height: 66px;
             }
+        }
+    }
+
+    .background_culture {
+        height: 493px;
+        // padding: 0px 15px;
+
+        .content {
+            width: 750px;
+            height: 493px;
+            padding: 50px 15px;
+            margin: auto;
+
         }
     }
 
@@ -978,8 +1025,12 @@ header {
 
     }
 
-    // .background_culture { LF image
-    // }
+    .background_culture { 
+
+      .content {
+          width: 970px;
+      }
+    }
 
 }       
 
@@ -1097,6 +1148,16 @@ header {
                 height: 66px;
                 width: 208px;
             }
+        }
+    }
+
+    .background_culture {
+        height: 553px;
+
+        .content {
+            height: 453px;
+            width: 600px;
+            margin-left: 15px;
         }
     }
 }

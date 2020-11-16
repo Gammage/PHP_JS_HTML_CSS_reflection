@@ -601,13 +601,13 @@ header .nav_menu {
   display: block;
   width: auto;
   height: auto;
-  padding: 50px 15px;
   margin-top: 50px;
   background-color: #333645;
 }
 
 .background_culture .content {
   color: white;
+  padding: 50px 15px 50px 15px;
 }
 
 .background_culture .content h1 {
@@ -685,10 +685,31 @@ header .nav_menu {
 }
 
 .news_container div[class*=news_entry] .news_image {
-  height: 100px;
-  width: auto;
+  position: relative;
+}
+
+.news_container div[class*=news_entry] .news_image img {
+  height: auto;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.news_container div[class*=news_entry] .news_image .news_button {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  display: block;
+  height: 23px;
+  width: 56px;
+  padding: 0px 10px;
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 23px;
+  font-weight: bold;
 }
 
 .news_container div[class*=news_entry] .news_info {
@@ -732,11 +753,15 @@ header .nav_menu {
 }
 
 .news_container div[class*=news_entry] .news_info .news_author .author_image {
+  display: block;
   margin-top: 28px;
   height: 50px;
   width: 50px;
-  background-color: lightgray;
   border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(Images/tessa_image_small.jpg);
 }
 
 .news_container div[class*=news_entry] .news_info .news_author .posted_by {
@@ -751,8 +776,8 @@ header .nav_menu {
   line-height: 0px;
 }
 
-.news_container .news_entry_one .news_image {
-  background-image: url(../images/news_image_one.jpg);
+.news_container .news_entry_one .news_info .news_author .author_image {
+  background-image: url(/Images/tessa_image_small.jpg);
 }
 
 .news_container .news_entry_two .news_image {
@@ -864,6 +889,15 @@ header .nav_menu {
   .cards_container .card_cyber p {
     width: 283px;
     height: 66px;
+  }
+  .background_culture {
+    height: 493px;
+  }
+  .background_culture .content {
+    width: 750px;
+    height: 493px;
+    padding: 50px 15px;
+    margin: auto;
   }
 }
 
@@ -1084,6 +1118,9 @@ header .nav_menu {
     margin-left: auto;
     margin-right: auto;
   }
+  .background_culture .content {
+    width: 970px;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -1171,6 +1208,14 @@ header .nav_menu {
   .cards_container .card_cyber p {
     height: 66px;
     width: 208px;
+  }
+  .background_culture {
+    height: 553px;
+  }
+  .background_culture .content {
+    height: 453px;
+    width: 600px;
+    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
