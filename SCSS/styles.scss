@@ -564,6 +564,8 @@ header {
 
 }
 
+
+
 @media (min-width: 768px) {
 
     header {
@@ -1040,6 +1042,28 @@ header {
         .news_entry_two {
             width: 455px;
             height: 663px;
+        }
+
+        .news_entry_one,
+        .news_entry_two,
+        .news_entry_three {
+
+            .news_image {
+
+                overflow: hidden;
+
+                img {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+
+                    &:hover {
+                        transform: scale(1.05, 1.05);
+                        opacity: 0.75;
+                        transition: all .2s;
+
+                    }
+                }
+            }
         }
     }
 
