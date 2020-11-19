@@ -477,7 +477,7 @@ header {
 
             }
 
-            .news_button {
+            .news_button_small {
                 display: block;
                 position: absolute;
                 top: 10px;
@@ -486,14 +486,69 @@ header {
                 height: 23px;
                 width: 56px;
                 padding: 0px 10px;
-                background-color: #926fb1;
-                color: white;
+                background-color: #4183d7;
                 text-transform: uppercase;
                 font-size: 12px;
                 line-height: 23px;
                 font-weight: bold;
+
+                a {
+                    color: white;
+                }
+
+                .news_button_hover_ctn {
+                    display: none;
+                    height: 62px;
+                    width: 170px;
+                    padding: 5px 0px;
+                    margin-top: -3px;
+                    position: absolute;
+                    // border: 1px solid black;
+                    // background-color: #333645;
+                    top: -63px;
+                    left: -56px; 
+    
+                    .hover_box {
+                        width: 100%;
+                        height: 52px;
+                        padding: 10px 15px;
+                        background-color: #333645;
+                        text-transform: capitalize;
+                        line-height: 16px;
+                        text-align: center;
+                        color: white;
+                        opacity: 85%;
+                        letter-spacing: 0.4px;
+                        font-weight: normal;
+    
+                        .arrow_box {
+                            position: absolute;
+                            bottom: -1px;
+                            left: 80px;
+                            width: 0;
+                            height: 0;
+                            border-left: 7px solid transparent;
+                            border-right: 7px solid transparent;
+                            border-top: 10px solid #333645;
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    a {
+                    color: white;
+                    }
+
+                    .news_button_hover_ctn {
+                        display: block;
+                    }
+                }
+
+
             }
             
+
 
         }
 
@@ -523,10 +578,38 @@ header {
                 text-decoration: none;
                 color: white;
                 background-color: #926fb1;
+                position: relative;
+                z-index: 0;
 
-                    &:hover {
-                        background-color: #7e57a0;
+                &:hover {
+                    background-color: #7e57a0;
+                }       
+            }
+
+            .news_button_hover_ctn {
+                display: block;
+                height: 62px;
+                width: 158px;
+                padding: 5px 0px;
+                margin-top: -3px;
+                position: absolute;
+                background-color: #333645;
+                border: 1px solid red;
+                left: 75%; 
+                z-index: 1;
+
+                .hover_box {
+                    width: 100%;
+                    height: 52px;
+                    padding: 10px 15px;
+                    background-color: #333645;
+
+                    .arrow_box {
+                        background-color: black;
+                        width: 10px;
+                        height: 5px;
                     }
+                }
             }
 
             .news_author {
@@ -559,9 +642,7 @@ header {
                 }
             }
         }
-
     }
-
 }
 
 .clients_section {
@@ -899,6 +980,12 @@ header {
             margin: auto;
 
         }
+    }
+
+    .latest_breakpoint {
+        width: 720px;
+        padding: 0 15px;
+        margin: 0 auto;
     }
 
     .news_container {
@@ -1260,6 +1347,11 @@ header {
       }
     }
 
+    .latest_breakpoint {
+        width: 940px;
+        padding: 0;
+    }
+
     .news_container {
         width: 970px;
 
@@ -1275,8 +1367,6 @@ header {
 
             .news_image {
 
-                overflow: hidden;
-
                 img {
                     background-size: cover;
                     background-repeat: no-repeat;
@@ -1285,9 +1375,9 @@ header {
                         transform: scale(1.05, 1.05);
                         opacity: 0.75;
                         transition: all .2s;
-
+                        overflow: hidden;
                     }
-                }
+                }  
             }
         }
     }
@@ -1453,6 +1543,10 @@ header {
             width: 600px;
             margin-left: 15px;
         }
+    }
+
+    .latest_breakpoint {
+        width: 1170px;
     }
 
     .news_container {
