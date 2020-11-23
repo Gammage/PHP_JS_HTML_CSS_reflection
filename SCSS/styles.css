@@ -89,6 +89,10 @@
   background-color: #926fb1;
 }
 
+.card_web h2, .card_web p, .card_web span {
+  color: black;
+}
+
 .read_more_web {
   background-color: #926fb1;
 }
@@ -106,6 +110,10 @@
   color: #926fb1;
 }
 
+.card_web:hover h2, .card_web:hover p, .card_web:hover span {
+  color: white;
+}
+
 .card_web:hover .read_more_web {
   background-color: white;
   color: #926fb1;
@@ -113,6 +121,10 @@
 
 .card_it .icon {
   background-color: #4183d7;
+}
+
+.card_it h2, .card_it p, .card_it span {
+  color: black;
 }
 
 .read_more_it {
@@ -132,6 +144,10 @@
   color: #4183d7;
 }
 
+.card_it:hover h2, .card_it:hover p, .card_it:hover span {
+  color: white;
+}
+
 .card_it:hover .read_more_it {
   background-color: white;
   color: #4183d7;
@@ -139,6 +155,10 @@
 
 .card_telecoms .icon {
   background-color: #d64541;
+}
+
+.card_telecoms h2, .card_telecoms p, .card_telecoms span {
+  color: black;
 }
 
 .read_more_telecoms {
@@ -158,6 +178,10 @@
   color: #d64541;
 }
 
+.card_telecoms:hover h2, .card_telecoms:hover p, .card_telecoms:hover span {
+  color: white;
+}
+
 .card_telecoms:hover .read_more_telecoms {
   background-color: white;
   color: #d64541;
@@ -165,6 +189,10 @@
 
 .card_bespoke .icon {
   background-color: #67809f;
+}
+
+.card_bespoke h2, .card_bespoke p, .card_bespoke span {
+  color: black;
 }
 
 .read_more_bespoke {
@@ -184,6 +212,10 @@
   color: #67809f;
 }
 
+.card_bespoke:hover h2, .card_bespoke:hover p, .card_bespoke:hover span {
+  color: white;
+}
+
 .card_bespoke:hover .read_more_bespoke {
   background-color: white;
   color: #67809f;
@@ -191,6 +223,10 @@
 
 .card_digital .icon {
   background-color: #2eec71;
+}
+
+.card_digital h2, .card_digital p, .card_digital span {
+  color: black;
 }
 
 .read_more_digital {
@@ -210,6 +246,10 @@
   color: #2eec71;
 }
 
+.card_digital:hover h2, .card_digital:hover p, .card_digital:hover span {
+  color: white;
+}
+
 .card_digital:hover .read_more_digital {
   background-color: white;
   color: #2eec71;
@@ -217,6 +257,10 @@
 
 .card_cyber .icon {
   background-color: #f62459;
+}
+
+.card_cyber h2, .card_cyber p, .card_cyber span {
+  color: black;
 }
 
 .read_more_cyber {
@@ -234,6 +278,10 @@
 
 .card_cyber:hover .icon i {
   color: #f62459;
+}
+
+.card_cyber:hover h2, .card_cyber:hover p, .card_cyber:hover span {
+  color: white;
 }
 
 .card_cyber:hover .read_more_cyber {
@@ -300,6 +348,10 @@ header .header_container .netmatters_nav_container_inner .actions_container {
       flex-wrap: nowrap;
   padding: 7px 0;
   margin-left: 20px;
+}
+
+header .header_container .netmatters_nav_container_inner .actions_container a {
+  text-decoration: none;
 }
 
 header .header_container .netmatters_nav_container_inner .actions_container .support_button,
@@ -464,13 +516,14 @@ header .header_container .mobile_search_field {
 
 header .header_container .mobile_search_field input {
   border: solid 1px lightgray;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.75) inset 0px 0px 4px 0px;
-          box-shadow: rgba(0, 0, 0, 0.75) inset 0px 0px 4px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
+          box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
   border-radius: 2px;
   height: 46px;
   width: 100%;
   padding: 5px 40px 5px 15px;
   margin: 0;
+  background-color: rgba(55, 55, 55, 0.1);
 }
 
 header .header_container .mobile_search_field a {
@@ -495,14 +548,16 @@ header .nav_menu {
 }
 
 .slideshow_container .slide {
-  background-image: -webkit-gradient(linear, left top, right top, color-stop(10%, rgba(0, 0, 0, 0.93)), color-stop(65%, rgba(0, 0, 0, 0.65))), url("../images/web_design_slide_image.jpg");
-  background-image: linear-gradient(left, rgba(0, 0, 0, 0.93) 10%, rgba(0, 0, 0, 0.65) 65%), url("../images/web_design_slide_image.jpg");
+  background-image: url("../images/web_design_slide_image.jpg");
+  -webkit-box-shadow: inset 50px 3px 28px 11px rgba(0, 0, 0, 0.44);
+          box-shadow: inset 50px 3px 28px 11px rgba(0, 0, 0, 0.44);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 740px;
   width: auto;
   overflow: hidden;
+  position: relative;
 }
 
 .slideshow_container .slide .slide_content {
@@ -547,6 +602,10 @@ header .nav_menu {
   text-transform: uppercase;
 }
 
+.slideshow_container .slide .slide_content a:hover {
+  background-color: #79539a;
+}
+
 .cards_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -559,7 +618,7 @@ header .nav_menu {
   margin-top: 20px;
 }
 
-.cards_container div[class*=card_] {
+.cards_container a {
   display: block;
   height: 290px;
   padding: 30px 30px;
@@ -569,7 +628,7 @@ header .nav_menu {
   border-color: lightgray;
 }
 
-.cards_container div[class*=card_] .icon {
+.cards_container a .icon {
   margin: 0px auto 17px auto;
   width: 60px;
   height: 60px;
@@ -579,11 +638,11 @@ header .nav_menu {
   color: white;
 }
 
-.cards_container div[class*=card_] .icon i {
+.cards_container a .icon i {
   font-size: 16px;
 }
 
-.cards_container div[class*=card_] h2 {
+.cards_container a h2 {
   line-height: 19px;
   font-size: 18px;
   text-transform: capitalize;
@@ -591,27 +650,28 @@ header .nav_menu {
   margin-bottom: 11px;
 }
 
-.cards_container div[class*=card_] p {
+.cards_container a p {
   font-size: 13px;
   line-height: 22px;
   margin-bottom: 13px;
   width: auto;
 }
 
-.cards_container div[class*=card_] a {
+.cards_container a span {
   display: block;
   height: 47px;
   width: 129px;
+  padding: 5px 15px;
   border-radius: 3px;
   font-size: 17px;
   margin: auto;
-  line-height: 47px;
+  line-height: 37px;
   text-transform: uppercase;
   text-decoration: none;
   color: white;
 }
 
-.cards_container div[class*=card_] a:hover {
+.cards_container a:hover {
   text-decoration: none;
 }
 
@@ -838,7 +898,6 @@ header .nav_menu {
   color: white;
   background-color: #926fb1;
   position: relative;
-  z-index: 0;
 }
 
 .news_container .news_entry_one .news_info .news_button:hover,
@@ -857,9 +916,7 @@ header .nav_menu {
   margin-top: -3px;
   position: absolute;
   background-color: #333645;
-  border: 1px solid red;
   left: 75%;
-  z-index: 1;
 }
 
 .news_container .news_entry_one .news_info .news_button_hover_ctn .hover_box,
@@ -923,9 +980,8 @@ header .nav_menu {
   display: none;
   width: auto;
   height: 145px;
-  padding: 50px 0px;
+  padding: 50px 15px;
   margin: 0 auto;
-  padding-right: 35px;
 }
 
 .clients_section .clients_container {
@@ -959,7 +1015,7 @@ header .nav_menu {
   width: auto;
   height: auto;
   position: absolute;
-  bottom: 100px;
+  bottom: 120px;
   right: -100%;
   left: -100%;
   color: white;
@@ -1035,9 +1091,7 @@ header .nav_menu {
 }
 
 .footer_background .footer_index li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   font-size: 13px;
   list-style: none;
   line-height: 22px;
@@ -1103,6 +1157,7 @@ header .nav_menu {
   font-size: 28px;
   text-align: center;
   line-height: 55px;
+  width: auto;
 }
 
 .footer_background .social_media .social_container a i:active {
@@ -1458,6 +1513,9 @@ header .nav_menu {
     padding: 0 20px;
     color: white;
   }
+  header .nav_menu .nav_menu_buttons div[class*=_container]:hover a {
+    text-decoration: none;
+  }
   header .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_button {
     color: white;
   }
@@ -1769,7 +1827,6 @@ header .nav_menu {
   }
   .footer_background .footer_index {
     width: 1200px;
-    height: 219px;
   }
   .footer_background .footer_index .contact_us,
   .footer_background .footer_index .about_net,

@@ -108,7 +108,12 @@
         .icon {
             background-color: $light_colour;
         }
+
+        h2, p, span {
+            color: black;
+        }
     }
+    
     .read_more_#{$name} {
         background-color: $light_colour;
     }
@@ -122,6 +127,11 @@
                 color: $light_colour;
             }
         }
+
+        h2, p, span {
+            color: white;
+        }
+
         .read_more_#{$name} {
             background-color: white;
             color: $light_colour;

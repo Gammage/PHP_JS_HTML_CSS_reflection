@@ -20,7 +20,6 @@ header {
 
     height: 167px;
     background-color: white;
-    // padding: 20px 0;
 
     .header_container {  
         height: 167px;
@@ -54,6 +53,10 @@ header {
                 flex-wrap: nowrap;
                 padding: 7px 0;
                 margin-left: 20px;
+
+                a {
+                    text-decoration: none;
+                }
 
                 .support_button,
                 .contact_button {
@@ -191,7 +194,6 @@ header {
                             padding: 0;
                             margin: -3px 0px 0px 0px;
                             font-size: 12px;
-            
                         }
                         
                     }
@@ -215,13 +217,14 @@ header {
             
             input {
                 border: solid 1px lightgray;
-                box-shadow: rgba(0, 0, 0, 0.75) inset 0px 0px 4px 0px;
+                box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
                 border-radius: 2px;
                 height: 46px;
                 width: 100%;
                 // width: calc(100% - 55px); //calculate 100% (width in this case) - 55 pixels  55pixels = 40 padding right + 15 padding left.
                 padding: 5px 40px 5px 15px;
                 margin: 0;
+                background-color: rgba(55,55,55, 0.10);
             }
     
             a {
@@ -251,14 +254,15 @@ header {
     // border: solid red 1px;
 
     .slide {
-        background-image: linear-gradient(left, rgba(0, 0, 0, 0.93)10%,
-        rgba(0, 0, 0, 0.65)65%), url("../images/web_design_slide_image.jpg");
+        background-image: url("../images/web_design_slide_image.jpg"); 
+        box-shadow: inset 50px -1px 45px 3px rgba(0,0,0,0.64)
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         height: 740px;
         width: auto;
         overflow: hidden;
+        position: relative;
 
         .slide_content {
             display: block;
@@ -288,21 +292,29 @@ header {
             }
 
             a {
-                // border: 1px solid yellow;
                 display: block;
                 height: 62px;
                 width: 224px;
                 padding: 5px 0px;
-                background-color: #926fb1;
+                background-color: $web;
                 border-radius: 3px;
                 line-height: 50px;
                 margin-left: auto;
                 margin-right: auto;
                 text-decoration: none;
                 text-transform: uppercase;
+
+                &:hover {
+                    background-color: $web_dark;
+                }
             }
         }
+
+
+
     }
+
+
 
 }
 
@@ -313,8 +325,8 @@ header {
     // height: 2152px;
     height: auto;
     margin-top: 20px;
-    
-    div[class*=card_]{
+
+    a {
         // @include card_default;
         display: block;
         height: 290px; // bootstrap modifies padding, so 290px + 60px (padding doesnt stretch container)
@@ -368,22 +380,23 @@ header {
         // }
         // #endregion
 
-        a {
+        span {
             display: block;
             height: 47px;
             width: 129px;
-            // padding: 5px 15px;
+            padding: 5px 15px;
             border-radius: 3px;
             font-size: 17px;
             margin: auto;
-            line-height: 47px;
+            line-height: 37px;
             text-transform: uppercase;
             text-decoration: none;
             color: white;
 
-            &:hover {
-                text-decoration: none;
-            }
+        }
+
+        &:hover {
+            text-decoration: none;
         }
     }
 }
@@ -592,7 +605,6 @@ header {
                 color: white;
                 background-color: #926fb1;
                 position: relative;
-                z-index: 0;
 
                 &:hover {
                     background-color: #7e57a0;
@@ -607,9 +619,7 @@ header {
                 margin-top: -3px;
                 position: absolute;
                 background-color: #333645;
-                border: 1px solid red;
                 left: 75%; 
-                z-index: 1;
 
                 .hover_box {
                     width: 100%;
@@ -662,9 +672,9 @@ header {
     display: none;
     width: auto;
     height: 145px;
-    padding: 50px 0px;
+    padding: 50px 15px;
+    // padding-right: 35px;
     margin: 0 auto;
-    padding-right: 35px;
 
     .clients_container {
         display: flex;
@@ -689,11 +699,12 @@ header {
             }
 
             .large_hover_box {
+                // display: block;
                 display: none;
                 width: auto; 
                 height: auto;
                 position: absolute;
-                bottom: 100px;
+                bottom: 120px;
                 right: -100%;
                 left: -100%;
                 color: white;
@@ -770,7 +781,7 @@ header {
         }
 
         li {
-            display: flex;
+            display: block;
             font-size: 13px;
             list-style: none;
             line-height: 22px;
@@ -802,7 +813,6 @@ header {
 
     .social_media {
 
-
         .social_container {
             margin: -26px -15px 0px -15px;
             height: 170px;
@@ -818,6 +828,7 @@ header {
                 font-size: 28px;
                 text-align: center;
                 line-height: 55px;
+                width: auto;
 
                 i {
                     
@@ -861,8 +872,6 @@ header {
     padding: 50px 0;
     width: auto;
     height: 187px;
-    // align-items: center;
-    // margin: auto;
 
     .partners_container {
         width: 750px;
@@ -1197,6 +1206,8 @@ header {
                             font-size: 10px;
                             line-height: 10px;     
                         }
+
+
                     }   
 
                     .web_button {
@@ -1266,6 +1277,10 @@ header {
                 }
 
                 div[class*=_container]:hover {
+
+                    a {
+                        text-decoration: none;
+                    }
 
                     // Make all text white.
                     .nav_button {
@@ -1371,7 +1386,7 @@ header {
 
         // height: 1056px;
         width: 970px;
-
+  
         .card_bespoke,
         .card_it,
         .card_digital {
@@ -1668,7 +1683,6 @@ header {
         .footer_index {
 
             width: 1200px;
-            height: 219px;
 
             .contact_us,
             .about_net,
