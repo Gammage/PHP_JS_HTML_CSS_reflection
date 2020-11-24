@@ -19,11 +19,11 @@
   background-color: #79539a;
 }
 
-.nav_sub_bar {
+.bar_web a, .bar_web span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_web a:hover {
   color: white;
 }
 
@@ -48,11 +48,11 @@
   background-color: #286abd;
 }
 
-.nav_sub_bar {
+.bar_it a, .bar_it span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_it a:hover {
   color: white;
 }
 
@@ -77,11 +77,11 @@
   background-color: #bc2c28;
 }
 
-.nav_sub_bar {
+.bar_telecoms a, .bar_telecoms span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_telecoms a:hover {
   color: white;
 }
 
@@ -106,11 +106,11 @@
   background-color: #526781;
 }
 
-.nav_sub_bar {
+.bar_bespoke a, .bar_bespoke span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_bespoke a:hover {
   color: white;
 }
 
@@ -135,11 +135,11 @@
   background-color: #25a25a;
 }
 
-.nav_sub_bar {
+.bar_digital a, .bar_digital span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_digital a:hover {
   color: white;
 }
 
@@ -164,11 +164,11 @@
   background-color: #de093f;
 }
 
-.nav_sub_bar {
+.bar_cyber a, .bar_cyber span {
   color: white;
 }
 
-.nav_sub_bar a {
+.bar_cyber a:hover {
   color: white;
 }
 

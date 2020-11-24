@@ -23,7 +23,18 @@
 
     .bar_#{$name} { // compiles into .bar_web
         background-color: $dark_colour;
+
+        a, span {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
     }
+
+  
+    
 
     
 }

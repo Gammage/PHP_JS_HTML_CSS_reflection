@@ -286,7 +286,7 @@ header {
                 height: 62px;
                 width: 224px;
                 padding: 5px 0px;
-                background-color: $web;
+                background-color: #926fb1;
                 border-radius: 3px;
                 line-height: 50px;
                 margin-left: auto;
@@ -295,7 +295,7 @@ header {
                 text-transform: uppercase;
 
                 &:hover {
-                    background-color: $web_dark;
+                    background-color: #79539a
                 }
             }
         }
