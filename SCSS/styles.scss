@@ -2,11 +2,6 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-// SHORTCUTS
-
-// CTRL + K, then CTRL + 0 (zero)
-
-//
 body {
     font-family: "Poppins", sans-serif;
     letter-spacing: 0.4px;
@@ -73,7 +68,6 @@ header {
                     text-decoration: none;
         
                     i {
-                        // line-height: 18px;
                         font-size: 18px;
                         padding-right: 10px;
                     }
@@ -121,7 +115,7 @@ header {
                     justify-content: center;
                     align-items: center;
                     text-align: center;
-                    border-radius: 0 3px 3px 0; // top left   top right    bottom right    bottom left
+                    border-radius: 0 3px 3px 0;
                     height: 56px;
                     width: 63px;
                     background: #999aa2;
@@ -143,7 +137,6 @@ header {
                     width: 56px;
                     text-align: center;
                     padding: 16px; 
-                    // p 16   t 24    p 16  == 56
 
                     i {
                         font-size: 24px;
@@ -221,7 +214,6 @@ header {
                 border-radius: 2px;
                 height: 46px;
                 width: 100%;
-                // width: calc(100% - 55px); //calculate 100% (width in this case) - 55 pixels  55pixels = 40 padding right + 15 padding left.
                 padding: 5px 40px 5px 15px;
                 margin: 0;
                 background-color: rgba(55,55,55, 0.10);
@@ -251,11 +243,9 @@ header {
     height: 740px;
     width: auto;
     margin-top: 0px;
-    // border: solid red 1px;
 
     .slide {
-        background-image: url("../images/web_design_slide_image.jpg"); 
-        box-shadow: inset 50px -1px 45px 3px rgba(0,0,0,0.64)
+        background-image: linear-gradient(260deg, transparent 30%,#000), url("../images/web_design_slide_image.jpg"); 
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -309,13 +299,7 @@ header {
                 }
             }
         }
-
-
-
     }
-
-
-
 }
 
 .cards_container {
@@ -354,11 +338,23 @@ header {
         }
 
         h2 {     
-            line-height: 19px;
+            line-height: 17px;
             font-size: 18px;
             text-transform: capitalize;
             padding-bottom: 17px;
-            margin-bottom: 11px;
+            font-weight: normal;
+        }
+
+        .underline {
+            display: block;
+            height: 3px;
+            width: 30px;
+            margin: auto;
+            background-color: black;
+            padding: 0;
+            margin-bottom: 7px;
+            border-radius: none;
+
         }
 
         p {
@@ -380,7 +376,7 @@ header {
         // }
         // #endregion
 
-        span {
+        span[class*=read_more] {
             display: block;
             height: 47px;
             width: 129px;
@@ -406,7 +402,7 @@ header {
     display: block;
     width: auto;
     height: auto;
-    margin-top: 50px; // eyeballed it m8!
+    margin-top: 50px;
     background-color: #333645;
 
     .content {
@@ -460,14 +456,21 @@ header {
     width: auto;
     margin: 0px 15px;
 
-    span {
-        display: inline-block;
-        // border: 1px solid red;
-        width: 71px;
-        padding: 40px 0px;
+    .latest {
+        display: block;
         font-size: 20px;
-        line-height: 22px;
+        line-height: 96px;
+        text-transform: uppercase;
     }
+
+    .underline {
+        display: block;
+        height: 5px;
+        width: 70px;
+        background-color: black;
+    }
+
+
 }
 
 .news_container {
@@ -477,7 +480,6 @@ header {
     padding: 50px 15px;
     height: auto;
 
-    // div[class*=news_entry]
     .news_entry_one,
     .news_entry_two,
     .news_entry_three{
@@ -673,7 +675,6 @@ header {
     width: auto;
     height: 145px;
     padding: 50px 15px;
-    // padding-right: 35px;
     margin: 0 auto;
 
     .clients_container {
@@ -699,7 +700,6 @@ header {
             }
 
             .large_hover_box {
-                // display: block;
                 display: none;
                 width: auto; 
                 height: auto;
@@ -770,8 +770,6 @@ header {
         width: auto;
         height: 894px;
         padding: 47px 0px 43px 0px;
-        
-        // background-color: #333645;
         color: white;
 
         h4 {
@@ -988,7 +986,7 @@ header {
         height: 796px;
 
         .slide {
-            height: 797px; // added one pixel to netmatters height to hide white
+            height: 797px;
 
             .slide_content {
                 // width: 750px;
@@ -1112,8 +1110,6 @@ header {
     }
 }
 
- // -----------------------webpage------------------------ scrollbar
-
 @media (min-width: 992px) {
 
     header {
@@ -1187,7 +1183,6 @@ header {
                         flex-direction: column;
                         width: 157.5px;
                         height: 99px;
-                        color: white;
                         text-align: center;
                         text-transform: uppercase;
                         font-size: 18px;
@@ -1196,7 +1191,6 @@ header {
                         border-bottom: none;
                         border-left: solid 1px $navigation-border-dark;
                         border-right: solid 1px $navigation-border-light;
-                        // font-weight: bold;  
 
                         i {
                             padding-bottom: 10px;
@@ -1206,52 +1200,15 @@ header {
                             font-size: 10px;
                             line-height: 10px;     
                         }
-
-
                     }   
-
-                    .web_button {
-                        i {
-                            color: $web;
-                        }
-                    }
-
-                    .it_button {
-                        i {
-                            color: $it;
-                        }
-                    }
-
-                    .telecoms_button {
-                        i {
-                            color: $telecoms;
-                        }
-                    }
-                    
-                    .bespoke_button {
-                        i {
-                            color: $bespoke;
-                        }
-                    }
-
-                    .digital_button {
-                        i {
-                            color: $digital;
-                        }
-                    }
-
-                    .cyber_button {
-                        i {
-                            color: $cyber;
-                        }
-                    }
-
+                  
                     .nav_sub_bar {
                         display: none;
                         height: 45px;
                         position: absolute;
                         left: 0;
                         right: 0;
+                        z-index: 1;
 
                         div[class*=_contents] {
                             width: 945px;
@@ -1260,7 +1217,6 @@ header {
                             margin-right: auto;
 
                             a {
-                                color: white;
                                 // padding-left: 20px;
                                 text-transform: uppercase;
                                 line-height: 45px;
@@ -1270,7 +1226,6 @@ header {
 
                             span {
                                 padding: 0 20px;
-                                color: white;
                             }
                         }
                     }
@@ -1282,72 +1237,9 @@ header {
                         text-decoration: none;
                     }
 
-                    // Make all text white.
-                    .nav_button {
-                        color: white;
-                        i {
-                            color: white;
-                        }
-                    }
-
                     .nav_sub_bar {
                         display: block;
                     }
-
-                    // Make button and nav bar the color.
-
-                    // #region Color Values
-                    .web_button {
-                        background-color: $web;
-                    }
-
-                    .web_bar {
-                        background-color: $web_dark;
-                    }
-
-                    .it_button {
-                        background-color: $it;
-                    }
-
-                    .it_bar {
-                        background-color: $it_dark;
-
-                    }
-
-                    .telecoms_button {
-                        background-color: $telecoms;
-                    }
-
-                    .telecoms_bar {
-                        background-color: $telecoms_dark;
-                    }
-
-                    .bespoke_button {
-                        background-color: $bespoke;
-                    }
-
-                    .bespoke_bar {
-                        background-color: $bespoke_dark;
-                    }
-
-                    .digital_button {
-                        background-color: $digital;
-
-                    }
-
-                    .digital_bar {
-                        background-color: $digital_dark;
-                    }
-
-                    .cyber_button {
-                        background-color: $cyber
-                    }
-
-                    .cyber_bar {
-                        background-color: $cyber_dark;
-                    }
-                    // #endregion
-
                 }
             }   
         }
@@ -1379,11 +1271,6 @@ header {
     }
 
     .cards_container {
-        // style size etc for cards NOT COLOURS
-        // Where you need to specify cards for 3 on top 4 on bottom.
-        // Use the specific card names (card_bespoke, card_it card_digital) are one width, rest are another width
-        // border: 1px solid red;
-
         // height: 1056px;
         width: 970px;
   
@@ -1413,9 +1300,7 @@ header {
                 margin-left: auto;
                 margin-right: auto;
             }
-        }
-   
-
+        }  
     }
 
     .background_culture { 

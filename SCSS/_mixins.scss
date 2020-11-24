@@ -1,108 +1,37 @@
-
-// #region Old Mixins
-
-
-// card_container styles -------------------
-/*
-@mixin card_default {
-    // height: 290px;
-    // padding: 30px;
-    // margin: 30px 15px 0px 15px; // -15px margin left/right refer netmatters parent container
-
-    // text-align: center;
-    // border: 1px solid black;
-
-    // .icon {
-    //     margin: 0px auto 17px auto;
-    //     width: 60px;
-    //     height: 60px;
-    //     background-color: black;
-    //     border-radius: 50%;
-    //     margin-bottom: 17px;
-    //     line-height: 60px;
-
-    //     i {
-    //         font-size: 16px;
-    //     }
-    // }
-
-    // h2 {
-    //     font-size: 18px;
-    //     text-transform: capitalize;
-    //     padding-bottom: 17px;
-    //     margin-bottom: 11px;
-    // }
-
-    // p {
-    //     margin-bottom: 13px;
-    // }
-
-    // // .card_line {
-    // //     display: block;
-    // //     height: 5px;
-    // //     width: 40px;
-    // //     background-color:black;
-    // //     margin-bottom: 5px;
-    // //     margin-left: auto;
-    // //     margin-right: auto;
-    // // }
-
-    // .p {
-    //     font-size: 13px;
-
-    // }
-
-    // .read_more {
-    //     display: block;
-    //     height: 47px;
-    //     width: 129px;
-    //     padding: 5px 15px;
-    //     border-radius: 3px;
-    //     background-color: black;
-    //     font-size: 17px;
-    //     margin: auto;
-    //     line-height: 37px; // height - 5px padding top + bottom
-    //     text-transform: uppercase;
-    // }
-
-}
-
-// card colours ----------------------------------------------------
-
-@mixin Bespoke_theme {
-    .icon,
-    .read_more {
-        background-color: $bespoke;
-    }
-}
-
-@mixin it_theme {
-
-}
-
-@mixin digital_theme {}
-
-@mixin telecom_theme {}
-
-@mixin web_theme {}
-
-@mixin cyber_theme {}
-
-@mixin dev_theme {}
-*/
-// #endregion
-
-
 @import "_variables.scss";
 
 // NAVIGATON BAR MIXIN
+@each $name, $light_colour, $dark_colour in $colours {
+    .button_#{$name} { // compiles into .button_web
+
+        i {
+            color: $light_colour;
+        }
+
+        color: white;
+    }
+
+    .button_#{$name}:hover {
+
+        color: white;
+        background-color: $light_colour;
+
+        i {
+            color: white;
+        }
+    }
+
+    .bar_#{$name} { // compiles into .bar_web
+        background-color: $dark_colour;
+    }
+
+    
+}
 
 // SLIDESHOW MIXIN 
 
+// CARD MIXN      
 
-
-// CARD MIXN
-//                                      variable group name
 @each $name, $light_colour, $dark_colour in $colours {
     .card_#{$name} { // compiles into .card_web
         .icon {
@@ -121,7 +50,8 @@
     .card_#{$name}:hover {
         background-color: $light_colour;
         color: white; // Make all text white on hover
-        .icon {
+        .icon,
+        .underline {
             background-color: white;
             i {
                 color: $light_colour;
