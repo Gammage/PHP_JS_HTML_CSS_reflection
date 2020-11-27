@@ -557,6 +557,7 @@ header .header_container .netmatters_nav_container_inner .actions_container .pho
 }
 
 header .header_container .netmatters_nav_container_inner .actions_container .burger_container {
+  display: block;
   margin-left: 20px;
   height: 56px;
 }
@@ -654,7 +655,6 @@ header .nav_menu {
   height: 740px;
   width: auto;
   overflow: hidden;
-  position: relative;
 }
 
 .slideshow_container .slide .slide_content {
@@ -677,8 +677,7 @@ header .nav_menu {
 
 .slideshow_container .slide .slide_content h1 {
   font-size: 48px;
-  margin-bottom: 25px;
-  line-height: 52px;
+  text-transform: uppercase;
 }
 
 .slideshow_container .slide .slide_content p {
@@ -717,7 +716,6 @@ header .nav_menu {
 
 .cards_container a {
   display: block;
-  height: 290px;
   padding: 30px 30px;
   margin: 30px 15px 0px 15px;
   text-align: center;
@@ -743,7 +741,7 @@ header .nav_menu {
   line-height: 17px;
   font-size: 18px;
   text-transform: capitalize;
-  padding-bottom: 17px;
+  padding-bottom: 10px;
   font-weight: normal;
 }
 
@@ -754,7 +752,7 @@ header .nav_menu {
   margin: auto;
   background-color: black;
   padding: 0;
-  margin-bottom: 7px;
+  margin-bottom: 11px;
   border-radius: none;
 }
 
@@ -766,13 +764,12 @@ header .nav_menu {
 }
 
 .cards_container a span[class*=read_more] {
-  display: block;
-  height: 47px;
-  width: 129px;
+  display: inline-block;
+  height: auto;
+  vertical-align: middle;
   padding: 5px 15px;
   border-radius: 3px;
   font-size: 17px;
-  margin: auto;
   line-height: 37px;
   text-transform: uppercase;
   text-decoration: none;
@@ -1204,7 +1201,9 @@ header .nav_menu {
   line-height: 17px;
 }
 
-.footer_background .footer_index li {
+.footer_background .footer_index ul {
+  padding: 0;
+  list-style-type: none;
   display: block;
   font-size: 13px;
   list-style: none;
@@ -1616,22 +1615,23 @@ header .nav_menu {
   .slideshow_container {
     margin-top: 100px;
     height: 697px;
-    width: auto;
   }
   .slideshow_container .slide {
     height: 697px;
   }
   .slideshow_container .slide .slide_content {
-    padding-left: 5%;
-    height: 246px;
-    width: 940px;
-    margin-left: -15px;
-    margin-top: -10px;
+    width: 945px;
     text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 186px 0px;
   }
   .slideshow_container .slide .slide_content a {
     margin: 0;
     text-align: center;
+  }
+  .slideshow_container .slide .slide_content p {
+    width: 400px;
   }
   .cards_container {
     width: 970px;
@@ -1778,11 +1778,9 @@ header .nav_menu {
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
     font-size: 16px;
   }
-  .slideshow_container {
-    height: 697px;
-  }
-  .slideshow_container .slide {
-    height: 697px;
+  .slideshow_container .slide .slide_content {
+    width: 1170px;
+    padding: 186px 0px 246px 0px;
   }
   .cards_container {
     width: 1200px;
