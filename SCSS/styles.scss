@@ -168,7 +168,7 @@ header {
                         border-radius: 3px;
             
                         .line_container {
-
+                            display: block;
                             margin-top: 6px;
 
                             .burger_line {
@@ -322,6 +322,7 @@ header {
         border-color: lightgray;
 
         .icon {
+            display: block;
             margin: 0px auto 17px auto;
             width: 60px;
             height: 60px;

@@ -581,6 +581,7 @@ header .header_container .netmatters_nav_container_inner .actions_container .bur
 }
 
 header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
+  display: block;
   margin-top: 6px;
 }
 
@@ -724,6 +725,7 @@ header .nav_menu {
 }
 
 .cards_container a .icon {
+  display: block;
   margin: 0px auto 17px auto;
   width: 60px;
   height: 60px;
