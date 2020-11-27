@@ -1212,6 +1212,10 @@ header .nav_menu {
   line-height: 22px;
 }
 
+.footer_background .footer_index ul .push_bottom {
+  margin-bottom: 11px;
+}
+
 .footer_background .footer_index .contact_us,
 .footer_background .footer_index .about_net,
 .footer_background .footer_index .website_net,
