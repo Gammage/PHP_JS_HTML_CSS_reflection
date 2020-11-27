@@ -7,4 +7,5 @@ I used font awesome for the icons, they are not exact to netmatters but were fre
 
 To my ability I have tested this project on chrome, firefox and internet explorer.
 
+Iterated changes as advised.
 
