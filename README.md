@@ -9,3 +9,4 @@ To my ability I have tested this project on chrome, firefox and internet explore
 
 Iterated changes as advised.
 
+tested to the best of my ability
