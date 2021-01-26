@@ -3,12 +3,11 @@
     <head>
         <title>Netmatters</title>
         <link rel="stylesheet" href="SCSS/styles.css">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/e50a454eff.js" crossorigin="anonymous"></script>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
     </head>
     <body>
         <header>
@@ -26,7 +25,7 @@
                         </div>
                         <a href="#" class="search_button" ><span class="search_icon"><i class="fas fa-search"></i></span></a>
                         <!-- appears in smallest screen size -->
-                          <a href="#" class="phone_button"><span class="phone_icon"><i class="fas fa-phone"></i></span></a>
+                        <a href="#" class="phone_button"><span class="phone_icon"><i class="fas fa-phone"></i></span></a>
                         <a href="#" class="burger_container">
                             <span class="burger_button">
                                 <span class="line_container">
@@ -38,13 +37,11 @@
                             </span>
                         </a> 
                     </div>
-                </div>
-                
+                </div>                
                 <div class="mobile_search_field">
                     <input type="text" placeholder="Search..">
                     <a href="#"><i class="fas fa-search"></i></a>
-                </div>
-                
+                </div>               
             </div>
 
             <div class="nav_menu">
@@ -161,6 +158,26 @@
                     </div>
                 </div>
             </div>
+
+            <div id="modal_container">
+                <div class="modal_title_container">
+                    <h2>Cookies Policy</h2>
+                </div>
+                <div class="cookie_text" >
+                    <p class="modal_text">
+                        We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.
+                    </p>
+                    <p class="modal_text">
+                        You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
+                    </p>
+                </div>
+                <div class="modal_button_container">
+                    <a>change settings</a>
+                    <a id="Accept_Cookies">accept cookies</a>
+                </div>
+            </div>
+            <div id="modal_overlay"></div>
+
         </header>
         
         <div class="slideshow_container">
@@ -268,13 +285,13 @@
                     </div>
                 </div>
                 <div class="news_info">
-                    <a href="#"><h3>time to kick-start a new career in Developmen...</h3></a>
+                    <a href="#"><h3>Time to kick-start a new career in Developmen...</h3></a>
                     <p class="news_info_p">Give yourself the best chance at a new digital career by applying for one of our FREE trainin...</p>
                     <a href="#" class="news_button">read more</a>
                     <div class="news_author"> <!-- maybe for jscript, this would change -->
                         <img class="author_image" src="images/news_container/tessa_image_small.jpg" alt="image of Tessa Woodrow">
                         <div class="posted_by">
-                            <p><b>posted by Tessa Woodrow</b></p>
+                            <p><b>Posted by Tessa Woodrow</b></p>
                             <p>11th november 2020</p>
                         </div>    
                     </div> 
@@ -298,7 +315,7 @@
                     <div class="news_author"> <!-- maybe for jscript, this would change -->
                         <img class="author_image" src="images/news_container/netmatters_logo_small.png" alt="small netmatters logo">
                         <div class="posted_by">
-                            <p><b>posted by Netmatters Ltd</b></p>
+                            <p><b>Posted by Netmatters Ltd</b></p>
                             <p>11th november 2020</p>
                         </div>  
                     </div>
@@ -322,7 +339,7 @@
                     <div class="news_author"> <!-- maybe for jscript, this would change -->
                         <img class="author_image" src="images/news_container/netmatters_logo_small.png" alt="small netmatters logo">
                         <div class="posted_by">
-                            <p><b>posted by Netmatters Ltd</b></p>
+                            <p><b>Posted by Netmatters Ltd</b></p>
                             <p>6th november 2020</p>
                         </div>                        
                     </div>
@@ -455,4 +472,6 @@
             </div>
         </footer>
     </body>
+    <!-- Import JS Files Here -->
+    <script src="Scripts/modal_overlay.js"></script>
 </html> 
