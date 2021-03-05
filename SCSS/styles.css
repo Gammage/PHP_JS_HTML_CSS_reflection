@@ -742,16 +742,6 @@ header .deactivate {
   margin-top: 0px;
 }
 
-.slideshow_container .slide {
-  background-image: linear-gradient(260deg, transparent 30%, #000), url("../images/web_design_slide_image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 740px;
-  width: auto;
-  overflow: hidden;
-}
-
 .slideshow_container .slide .slide_content {
   display: block;
   margin: auto;
@@ -795,6 +785,16 @@ header .deactivate {
 
 .slideshow_container .slide .slide_content a:hover {
   background-color: #79539a;
+}
+
+.slideshow_container #web_design {
+  background-image: linear-gradient(260deg, transparent 30%, #000), url("../Images/slideshow/web_design_slide_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
 }
 
 .cards_container {

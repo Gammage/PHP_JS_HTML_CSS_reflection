@@ -339,13 +339,15 @@ header {
     margin-top: 0px;
 
     .slide {
-        background-image: linear-gradient(260deg, transparent 30%,#000), url("../images/web_design_slide_image.jpg"); 
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 740px;
-        width: auto;
-        overflow: hidden;
+        // background-image: linear-gradient(260deg, transparent 30%,#000), url("../slideshow/images/web_design_slide_image.jpg"); 
+        
+        // background-image: linear-gradient(260deg, transparent 30%,#000), url("../Images/slideshow/web_design_slide_image.jpg");
+        // background-position: center;
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // height: 100%;
+        // width: auto;
+        // overflow: hidden;
 
         .slide_content {
             display: block;
@@ -392,6 +394,23 @@ header {
             }
         }
     }
+
+    #web_design {
+        background-image: linear-gradient(260deg, transparent 30%,#000), url("../Images/slideshow/web_design_slide_image.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
+
+    #it_support {}
+    #telecoms_services {}
+    #bespoke_software {}
+    #digital_marketing {}
+    #cyber_security {}
+
 }
 
 .cards_container {
