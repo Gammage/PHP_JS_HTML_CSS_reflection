@@ -1,19 +1,22 @@
 {
-    "liveSassCompile.settings.formats": [
-        // This is Default.
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "../CSS"
-        }
+    "liveSassCompile.settings.formats":[
+       {
+           "format": "expanded",
+           "extensionName": ".css",
+           "savePath": "/Project_files/CSS/"
+       }
+   ],
+   "liveSassCompile.settings.excludeList": [
+      "**/node_modules/**",
+      ".vscode/**",
+      "Project_files/"
+   ],
+   "liveSassCompile.settings.includeItems": [
+    "Project_files/SCSS/"
     ],
-    "liveSassCompile.settings.includeItems": [
-        "../SCSS/",
-        "../Plugins/slick/"
-    ],
-    "liveSassCompile.settings.autoprefix": [
-        "> 1%",
-        "last 2 versions"
-    ]
+   "liveSassCompile.settings.generateMap": true,
+   "liveSassCompile.settings.autoprefix": [
+       "> 1%",
+       "last 2 versions"
+   ]
 }
-
