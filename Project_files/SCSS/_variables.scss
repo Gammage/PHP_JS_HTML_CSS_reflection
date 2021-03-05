@@ -16,7 +16,19 @@ $colours: (
     cyber  #f62459 #de093f,
 );
 
+$image_URL: (
+
+    web '../Images/slideshow/web_design_slide_image.jpg', 
+    it '../Images/slideshow/it_support_image.jpg', 
+    telecoms '../Images/slideshow/telecoms_services_image.jpg', 
+    bespoke '../Images/slideshow/bespoke_software_image.jpg', 
+    digital '../Images/slideshow/digital_marketing_image.jpg', 
+    cyber '../Images/slideshow/cyber_security_image.jpg', 
+    
+);
+
 $navigation-back: #333645;
 $navigation-border-light: #857c91;
 $navigation-border-dark: #434550;
+
 

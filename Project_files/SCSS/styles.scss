@@ -334,26 +334,22 @@ header {
 
 .slideshow_container {
     display: block;
-    height: 740px;
+    height: 531px;
     width: auto;
     margin-top: 0px;
+    // overflow: hidden;
+    
+     [class*=slide_] {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
 
-    .slide {
-        // background-image: linear-gradient(260deg, transparent 30%,#000), url("../slideshow/images/web_design_slide_image.jpg"); 
-        
-        // background-image: linear-gradient(260deg, transparent 30%,#000), url("../Images/slideshow/web_design_slide_image.jpg");
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // background-size: cover;
-        // height: 100%;
-        // width: auto;
-        // overflow: hidden;
+        .content {
 
-        .slide_content {
             display: block;
             margin: auto;
-            padding: 246px 0;
-            width: 349px;
+            height: 531px;
+            width: auto;
             text-align: center;
 
             h1, p, a {
@@ -394,23 +390,6 @@ header {
             }
         }
     }
-
-    #web_design {
-        background-image: linear-gradient(260deg, transparent 30%,#000), url("../Images/slideshow/web_design_slide_image.jpg");
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-        width: auto;
-        overflow: hidden;
-    }
-
-    #it_support {}
-    #telecoms_services {}
-    #bespoke_software {}
-    #digital_marketing {}
-    #cyber_security {}
-
 }
 
 .cards_container {
@@ -1117,7 +1096,7 @@ header {
     .slideshow_container {
         height: 796px;
 
-        .slide {
+        [class*=slide_] {
             height: 797px;
 
             .slide_content {
@@ -1381,7 +1360,7 @@ header {
         margin-top: 100px; //height from nav_menu (99px)
         height: 697px;
 
-        .slide {
+        [class*=slide_] {
             height: 697px;
 
             .slide_content {
@@ -1598,17 +1577,13 @@ header {
         }
     }
 
-    .slideshow_container {
+    // .slideshow_container {
+    //     // height: 740px;
 
-        .slide {
-
-            .slide_content {
-                width: 1170px;
-                padding: 186px 0px 246px 0px;
-                // margin-left: 20px;
-            }
-        }
-    }
+    //     // [class*=slide_] {
+    //     //     // height: 940px;
+    //     // }
+    // }
 
     .cards_container {
 

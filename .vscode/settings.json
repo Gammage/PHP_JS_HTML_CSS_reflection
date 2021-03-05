@@ -1,0 +1,19 @@
+{
+    "liveSassCompile.settings.formats": [
+        // This is Default.
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "../CSS"
+        }
+    ],
+    "liveSassCompile.settings.includeItems": [
+        "../SCSS/",
+        "../Plugins/slick/"
+    ],
+    "liveSassCompile.settings.autoprefix": [
+        "> 1%",
+        "last 2 versions"
+    ]
+}
+

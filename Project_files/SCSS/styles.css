@@ -172,6 +172,60 @@
   color: white;
 }
 
+.slide_web {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/web_design_slide_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.slide_it {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/it_support_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.slide_telecoms {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/telecoms_services_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.slide_bespoke {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/bespoke_software_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.slide_digital {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/digital_marketing_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
+.slide_cyber {
+  background-image: linear-gradient(260deg, transparent 0%, #000), url("../Images/slideshow/cyber_security_image.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  overflow: hidden;
+}
+
 .card_web .icon {
   background-color: #926fb1;
 }
@@ -737,39 +791,45 @@ header .deactivate {
 
 .slideshow_container {
   display: block;
-  height: 740px;
+  height: 531px;
   width: auto;
   margin-top: 0px;
 }
 
-.slideshow_container .slide .slide_content {
+.slideshow_container [class*=slide_] {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.slideshow_container [class*=slide_] .content {
   display: block;
   margin: auto;
-  padding: 246px 0;
-  width: 349px;
+  height: 531px;
+  width: auto;
   text-align: center;
 }
 
-.slideshow_container .slide .slide_content h1, .slideshow_container .slide .slide_content p, .slideshow_container .slide .slide_content a {
+.slideshow_container [class*=slide_] .content h1, .slideshow_container [class*=slide_] .content p, .slideshow_container [class*=slide_] .content a {
   color: white;
   font-size: 20px;
   letter-spacing: 0.4px;
 }
 
-.slideshow_container .slide .slide_content h1 i, .slideshow_container .slide .slide_content p i, .slideshow_container .slide .slide_content a i {
+.slideshow_container [class*=slide_] .content h1 i, .slideshow_container [class*=slide_] .content p i, .slideshow_container [class*=slide_] .content a i {
   padding-left: 20px;
 }
 
-.slideshow_container .slide .slide_content h1 {
+.slideshow_container [class*=slide_] .content h1 {
   font-size: 48px;
   text-transform: uppercase;
 }
 
-.slideshow_container .slide .slide_content p {
+.slideshow_container [class*=slide_] .content p {
   line-height: 36px;
 }
 
-.slideshow_container .slide .slide_content a {
+.slideshow_container [class*=slide_] .content a {
   display: block;
   height: 62px;
   width: 224px;
@@ -783,18 +843,8 @@ header .deactivate {
   text-transform: uppercase;
 }
 
-.slideshow_container .slide .slide_content a:hover {
+.slideshow_container [class*=slide_] .content a:hover {
   background-color: #79539a;
-}
-
-.slideshow_container #web_design {
-  background-image: linear-gradient(260deg, transparent 30%, #000), url("../Images/slideshow/web_design_slide_image.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  width: auto;
-  overflow: hidden;
 }
 
 .cards_container {
@@ -1511,10 +1561,10 @@ header .deactivate {
   .slideshow_container {
     height: 796px;
   }
-  .slideshow_container .slide {
+  .slideshow_container [class*=slide_] {
     height: 797px;
   }
-  .slideshow_container .slide .slide_content {
+  .slideshow_container [class*=slide_] .slide_content {
     margin: 0 auto;
   }
   .cards_container {
@@ -1737,21 +1787,21 @@ header .deactivate {
     margin-top: 100px;
     height: 697px;
   }
-  .slideshow_container .slide {
+  .slideshow_container [class*=slide_] {
     height: 697px;
   }
-  .slideshow_container .slide .slide_content {
+  .slideshow_container [class*=slide_] .slide_content {
     width: 945px;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
     padding: 186px 0px;
   }
-  .slideshow_container .slide .slide_content a {
+  .slideshow_container [class*=slide_] .slide_content a {
     margin: 0;
     text-align: center;
   }
-  .slideshow_container .slide .slide_content p {
+  .slideshow_container [class*=slide_] .slide_content p {
     width: 400px;
   }
   .cards_container {
@@ -1898,10 +1948,6 @@ header .deactivate {
   }
   header .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
     font-size: 16px;
-  }
-  .slideshow_container .slide .slide_content {
-    width: 1170px;
-    padding: 186px 0px 246px 0px;
   }
   .cards_container {
     width: 1200px;

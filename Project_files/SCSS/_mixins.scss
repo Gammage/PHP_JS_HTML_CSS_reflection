@@ -32,14 +32,38 @@
             color: white;
         }
     }
-
-  
-    
-
-    
 }
 
 // SLIDESHOW MIXIN 
+
+@each $name, $url in $image_URL {
+    .slide_#{$name} {
+        background-image: linear-gradient(260deg, transparent 0%,#000), url($url);
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+    }
+
+}
+
+
+// SLIDESHOW Heights
+
+@mixin Slideshow_mobile {
+    background-size: 100vw 530px;
+}
+
+@mixin Slideshow_tablet {
+    background-size: 100vw 913px;
+}
+
+@mixin Slideshow_desktop {
+    background-size: 100vw 740px;
+}
+
+
 
 // CARD MIXN      
 
@@ -79,4 +103,6 @@
         }
     }
 }
+
+
 
