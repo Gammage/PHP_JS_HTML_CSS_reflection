@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-
 // Close the modal and overlay
 acceptButton.addEventListener("click", function() {
     hideModal()
