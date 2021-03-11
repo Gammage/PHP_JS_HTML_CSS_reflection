@@ -459,7 +459,13 @@ header {
   background-color: white;
 }
 
-header .header_container {
+header .sticky_head {
+  position: static;
+  top: 0;
+  left: 0;
+}
+
+header .sticky_head #header_container {
   height: 167px;
   padding: 20px 15px;
   display: -webkit-box;
@@ -475,7 +481,7 @@ header .header_container {
   margin: 0px auto;
 }
 
-header .header_container .netmatters_nav_container_inner {
+header .sticky_head #header_container .netmatters_nav_container_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -486,13 +492,13 @@ header .header_container .netmatters_nav_container_inner {
   height: 70px;
 }
 
-header .header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+header .sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
   height: auto;
   width: 100%;
   max-height: 70px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -506,12 +512,12 @@ header .header_container .netmatters_nav_container_inner .actions_container {
   margin-left: 20px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container a {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container a {
   text-decoration: none;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .support_button,
-header .header_container .netmatters_nav_container_inner .actions_container .contact_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -527,38 +533,38 @@ header .header_container .netmatters_nav_container_inner .actions_container .con
   text-decoration: none;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .support_button i,
-header .header_container .netmatters_nav_container_inner .actions_container .contact_button i {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button i,
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button i {
   font-size: 18px;
   padding-right: 10px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .support_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
   display: none;
   width: 144px;
   background: #4183d7;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .support_button:hover {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button:hover {
   background: #2a6ec6;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .contact_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
   display: none;
   background: #999aa2;
   width: 152px;
   margin-left: 20px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .contact_button:hover {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button:hover {
   background: #84858f;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .search_field {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
   display: none;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .search_field input {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field input {
   padding: 0 0 0 10px;
   width: 163px;
   height: 56px;
@@ -569,7 +575,7 @@ header .header_container .netmatters_nav_container_inner .actions_container .sea
   margin: 0;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -584,17 +590,17 @@ header .header_container .netmatters_nav_container_inner .actions_container .sea
   background: #999aa2;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .search_button i {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button i {
   font-size: 24px;
   line-height: 56px;
   color: white;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .search_button:hover {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button:hover {
   background: #84858f;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .phone_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button {
   display: block;
   height: 56px;
   width: 56px;
@@ -602,24 +608,24 @@ header .header_container .netmatters_nav_container_inner .actions_container .pho
   padding: 16px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .phone_button i {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i {
   font-size: 24px;
   line-height: 24px;
   color: #333645;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .phone_button i:hover {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i:hover {
   color: #22242e;
   border-bottom: solid 1px  #22242e;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
   display: block;
   margin-left: 20px;
   height: 56px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,12 +643,12 @@ header .header_container .netmatters_nav_container_inner .actions_container .bur
   border-radius: 3px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
   display: block;
   margin-top: 6px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line {
   display: block;
   height: 3px;
   width: 33px;
@@ -652,7 +658,7 @@ header .header_container .netmatters_nav_container_inner .actions_container .bur
   margin-right: auto;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu {
   color: white;
   text-transform: uppercase;
   padding: 0;
@@ -660,11 +666,11 @@ header .header_container .netmatters_nav_container_inner .actions_container .bur
   font-size: 12px;
 }
 
-header .header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button:hover {
+header .sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button:hover {
   background-color: #22242e;
 }
 
-header .header_container .mobile_search_field {
+header .sticky_head #header_container .mobile_search_field {
   position: relative;
   border-left: none;
   border-right: none;
@@ -672,7 +678,7 @@ header .header_container .mobile_search_field {
   padding: 0;
 }
 
-header .header_container .mobile_search_field input {
+header .sticky_head #header_container .mobile_search_field input {
   border: solid 1px lightgray;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
@@ -684,7 +690,7 @@ header .header_container .mobile_search_field input {
   background-color: rgba(55, 55, 55, 0.1);
 }
 
-header .header_container .mobile_search_field a {
+header .sticky_head #header_container .mobile_search_field a {
   top: 0;
   right: 0;
   position: absolute;
@@ -694,7 +700,7 @@ header .header_container .mobile_search_field a {
   color: #333645;
 }
 
-header .nav_menu {
+header .sticky_head .nav_menu {
   display: none;
 }
 
@@ -1485,22 +1491,22 @@ header .deactivate {
   header {
     height: 110px;
   }
-  header .header_container {
+  header #header_container {
     width: 750px;
     height: 110px;
   }
-  header .header_container .netmatters_nav_container_inner {
+  header #header_container .netmatters_nav_container_inner {
     height: 70px;
   }
-  header .header_container .netmatters_nav_container_inner .netmatters_logo_container {
+  header #header_container .netmatters_nav_container_inner .netmatters_logo_container {
     height: 60px;
     width: 375px;
   }
-  header .header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+  header #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
     height: 60px;
     width: 345px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container {
+  header #header_container .netmatters_nav_container_inner .actions_container {
     padding: 7px 0;
     width: 340px;
     height: 70px;
@@ -1508,33 +1514,33 @@ header .deactivate {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_field,
-  header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #header_container .netmatters_nav_container_inner .actions_container .search_button {
     display: inline-block;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .phone_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .phone_button {
     display: none;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_field {
     width: 163px;
     height: 54px;
     margin: 0;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_button {
     width: 63px;
     height: 56px;
     padding: 0px 20px 0px 20px;
     line-height: 56px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .burger_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .burger_button {
     width: 63px;
     height: 56px;
     margin-left: 20px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .burger_container {
+  header #header_container .netmatters_nav_container_inner .actions_container .burger_container {
     margin: 0;
   }
-  header .header_container .mobile_search_field {
+  header #header_container .mobile_search_field {
     display: none;
   }
   header #modal_container {
@@ -1672,23 +1678,23 @@ header .deactivate {
   header {
     height: 110px;
   }
-  header .header_container {
+  header #header_container {
     width: 975px;
     height: 110px;
   }
-  header .header_container .netmatters_nav_container_inner {
+  header #header_container .netmatters_nav_container_inner {
     height: 70px;
     margin: 0;
   }
-  header .header_container .netmatters_nav_container_inner .nevmatters_logo_container {
+  header #header_container .netmatters_nav_container_inner .nevmatters_logo_container {
     height: 70px;
     width: 404px;
   }
-  header .header_container .netmatters_nav_container_inner .nevmatters_logo_container img {
+  header #header_container .netmatters_nav_container_inner .nevmatters_logo_container img {
     width: 374px;
     height: 65px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container {
+  header #header_container .netmatters_nav_container_inner .actions_container {
     height: 70px;
     width: 565px;
     padding: 7px 0 7px 0;
@@ -1696,15 +1702,15 @@ header .deactivate {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .support_button,
-  header .header_container .netmatters_nav_container_inner .actions_container .contact_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .support_button,
+  header #header_container .netmatters_nav_container_inner .actions_container .contact_button {
     display: block;
     font-size: 18px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_field {
     display: none;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 3px;
     margin-left: 20px;
   }
@@ -1898,38 +1904,38 @@ header .deactivate {
 }
 
 @media (min-width: 1260px) {
-  header .header_container {
+  header #header_container {
     width: 1200px;
   }
-  header .header_container .netmatters_nav_container_inner .netmatters_logo_container {
+  header #header_container .netmatters_nav_container_inner .netmatters_logo_container {
     width: 400px;
     height: 70px;
   }
-  header .header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+  header #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
     height: 65px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container {
+  header #header_container .netmatters_nav_container_inner .actions_container {
     width: auto;
     height: 70px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_field {
     display: inline-block;
     width: 240px;
     height: 56px;
     margin-left: 20px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_field input {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_field input {
     width: 240px;
     height: 56px;
     padding: 0px 0px 0px 15px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 0 3px 3px 0;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .support_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .support_button {
     width: 144px;
   }
-  header .header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #header_container .netmatters_nav_container_inner .actions_container .search_button {
     margin: 0px;
   }
   header .nav_menu .nav_menu_buttons {
