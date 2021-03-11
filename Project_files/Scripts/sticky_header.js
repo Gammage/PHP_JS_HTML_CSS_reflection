@@ -8,18 +8,22 @@ window.scroll = () => {
     scrolling = true;
 };
 
-window.addEventListener('scroll', function() {
+let scrollPosition = 0;
 
+window.addEventListener('scroll', function() {
+    console.log(document.documentElement.scrollTop + ' : ' + scrollPosition);
  
     if (window.pageYOffset > 200){
         stickyHead.style.position = "fixed";
-        console.log('scroll working');
+        // console.log('scroll working');
     } else { 
         stickyHead.style.position = "static";
     }
+
+    scrollPosition = document.documentElement.scrollTop;
 });
 
-setI
+// setI
 
 
 
