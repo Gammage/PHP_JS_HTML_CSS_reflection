@@ -1,11 +1,11 @@
-{
-    "liveSassCompile.settings.formats":[
-       {
-           "format": "expanded",
-           "extensionName": ".css",
-           "savePath": "/Project_files/CSS/"
-       }
-   ]
+// {
+//     "liveSassCompile.settings.formats":[
+//        {
+//            "format": "expanded",
+//            "extensionName": ".css",
+//            "savePath": "/Project_files/SCSS/"
+//        }
+//    ]
 //    "liveSassCompile.settings.excludeList": [
 //       "**/node_modules/**",
 //       ".vscode/**",
@@ -19,4 +19,4 @@
 //        "> 1%",
 //        "last 2 versions"
 //    ]
-}
+// }

@@ -448,6 +448,15 @@
           box-sizing: border-box;
 }
 
+.disableScrolling {
+  height: 100vw;
+  overflow: hidden;
+}
+
+.activate {
+  display: block;
+}
+
 body {
   letter-spacing: 0.4px;
   background-color: lightgray;
@@ -709,7 +718,8 @@ header .sticky_head .nav_menu {
   display: none;
 }
 
-header #modal_container {
+header .modal_container {
+  display: none;
   width: calc(100% - 60px);
   height: auto;
   position: fixed;
@@ -719,15 +729,16 @@ header #modal_container {
           transform: translate(-50%, -50%);
   z-index: 1000;
   background-color: white;
+  border: solid 5px red;
   border-radius: 5px;
 }
 
-header #modal_container .modal_title_container {
+header .modal_container .modal_title_container {
   padding: 15px 20px;
   border-bottom: #999999 1px solid;
 }
 
-header #modal_container .modal_title_container h2 {
+header .modal_container .modal_title_container h2 {
   font-size: 26px;
   line-height: 37.1429px;
   letter-spacing: 0.4px;
@@ -737,23 +748,23 @@ header #modal_container .modal_title_container h2 {
   padding: 0px;
 }
 
-header #modal_container .cookie_text {
+header .modal_container .cookie_text {
   padding: 20px;
   border-bottom: #999999 1px solid;
 }
 
-header #modal_container .cookie_text p {
+header .modal_container .cookie_text p {
   font-size: 16px;
   line-height: 22.8571px;
   letter-spacing: 0.4px;
   color: #666666;
 }
 
-header #modal_container .modal_button_container {
+header .modal_container .modal_button_container {
   padding: 20px;
 }
 
-header #modal_container .modal_button_container a {
+header .modal_container .modal_button_container a {
   display: block;
   color: white;
   padding: 5px 15px;
@@ -765,39 +776,36 @@ header #modal_container .modal_button_container a {
   border-radius: 3px;
 }
 
-header #modal_container .modal_button_container a:hover {
+header .modal_container .modal_button_container a:hover {
   color: white;
 }
 
-header #modal_container .modal_button_container a:first-of-type {
+header .modal_container .modal_button_container a:first-of-type {
   background-color: #999aa2;
   margin-bottom: 25px;
 }
 
-header #modal_container .modal_button_container a:first-of-type:hover {
+header .modal_container .modal_button_container a:first-of-type:hover {
   background-color: #84858f;
 }
 
-header #modal_container .modal_button_container a:last-of-type {
+header .modal_container .modal_button_container a:last-of-type {
   background-color: #926fb1;
 }
 
-header #modal_container .modal_button_container a:last-of-type:hover {
+header .modal_container .modal_button_container a:last-of-type:hover {
   background-color: #7e57a0;
 }
 
-header #modal_overlay {
+header .modal_overlay {
   z-index: 900;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
-}
-
-header .deactivate {
-  display: none;
 }
 
 .slideshow_container {

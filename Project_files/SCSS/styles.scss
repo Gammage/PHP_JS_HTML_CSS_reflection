@@ -7,6 +7,15 @@
     box-sizing: border-box;
 }
 
+// .disableScrolling {
+//     height: 100vw;
+//     overflow: hidden;
+// }
+
+// .activate {
+//     display: block;
+// }
+
 body {
     letter-spacing: 0.4px;
     background-color: lightgray;
@@ -251,7 +260,8 @@ header {
         }
     }
 
-    #modal_container {
+    .modal_container {
+        display: none;
         width: calc(100% - 60px);
         height: auto;
         position: fixed;
@@ -260,6 +270,7 @@ header {
         transform: translate(-50%, -50%);
         z-index: 1000;
         background-color: white;
+        border: solid 5px red;
         border-radius: 5px;
 
         .modal_title_container {
@@ -326,8 +337,9 @@ header {
         }
     }
 
-    #modal_overlay {
+    .modal_overlay {
         z-index: 900;
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -337,9 +349,7 @@ header {
 
     }
 
-    .deactivate {
-        display: none;
-    }
+
 
 }
 
