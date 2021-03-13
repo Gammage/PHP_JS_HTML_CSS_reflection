@@ -11,6 +11,8 @@ const modalOverlay = document.getElementById("modal_overlay")
 
 // Add event listeners
 
+localStorage.setItem("accepted", "false")
+
 document.addEventListener("DOMContentLoaded", function() {
 
     console.log("loaded")
