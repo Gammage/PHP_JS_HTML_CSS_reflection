@@ -19,8 +19,10 @@ window.addEventListener('scroll', function() {
     if (!is_ie) {
         if (newScrollPosition > oldScrollPosition) {
             console.log('going down');
+            stickyHead.style.visibility = "visible";
         } else {
             console.log('going up');
+            stickyHead.style.visibility = "hidden";
         }
 
         oldScrollPosition = newScrollPosition;
@@ -36,8 +38,10 @@ window.addEventListener('scroll', function() {
     if (is_ie && (newScrollPosition - oldScrollPosition) != 0) {
         if (newScrollPosition > oldScrollPosition) {
             console.log('going down');
+            stickyHead.style.visibility = "visible";
         } else {
             console.log('going up');
+            stickyHead.style.visibility = "hidden";
         }
 
         oldScrollPosition = newScrollPosition;

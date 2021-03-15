@@ -23,12 +23,14 @@ header {
 
     #sticky_head {
         display: block;
+        // transform: translate3d(0, 0, 0);
         // display: none;
         position: fixed;
+        // transition: transform 0.4s;
+        // transform: translateY(0%);
+        // transform: translateX(-50%);
 
-        .translate_min {
-            transform: translateY(0px);
-        }
+        
 
         #header_container {  
             height: 167px;
@@ -350,11 +352,9 @@ header {
 
 .slideshow_container {
 
-    // margin-top: 167px;
     display: block;
     height: 531px;
     width: auto;
-    margin-top: 0px;
     // margin-top: 167px;
     // overflow: hidden;
     

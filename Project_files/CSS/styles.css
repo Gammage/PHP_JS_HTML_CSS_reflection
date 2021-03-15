@@ -465,11 +465,6 @@ header #sticky_head {
   position: fixed;
 }
 
-header #sticky_head .translate_min {
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
 header #sticky_head #header_container {
   height: 167px;
   padding: 20px 15px;
@@ -806,7 +801,6 @@ header .activate {
   display: block;
   height: 531px;
   width: auto;
-  margin-top: 0px;
 }
 
 .slideshow_container [class*=slide_] {
