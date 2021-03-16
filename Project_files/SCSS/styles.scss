@@ -17,9 +17,11 @@ body {
 
 header {
 
-    height: 167px;
+    // height: 167px;
     background-color: white;
-    overflow: hidden;
+    // overflow: hidden;
+
+
 
     #sticky_head {
         display: block;
@@ -348,6 +350,12 @@ header {
     .activate {
         display: block;
     }
+}
+
+.height_sticky_push {
+    height: 167px;
+    // border: 1px solid red;
+    width: 100%;
 }
 
 .slideshow_container {
@@ -1023,7 +1031,6 @@ header {
 @media (min-width: 768px) {
 
     header {
-        height: 110px;
 
         #sticky_head {
 
@@ -1116,6 +1123,10 @@ header {
             }
         }
         
+    }
+
+    .height_sticky_push {
+        height: 110px;
     }
 
     .slideshow_container {
@@ -1249,11 +1260,8 @@ header {
 @media (min-width: 992px) {
 
     header {
-        height: 110px;
-        width: 100%;
 
         #sticky_head {
-
 
             #header_container { 
                 // width: 975px;
@@ -1390,10 +1398,13 @@ header {
         }
     }
 
+    .height_sticky_push {
+        height: 209px;
+        width: 100%;
+    }
+
     .slideshow_container {
-        margin-top: 100px; //height from nav_menu (99px)
         height: 697px;
-        padding-top: 299px;
 
         [class*=slide_] {
             height: 697px;

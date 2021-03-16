@@ -17,12 +17,15 @@ window.addEventListener('scroll', function() {
 
     // not IE 
     if (!is_ie) {
+       
         if (newScrollPosition > oldScrollPosition) {
             console.log('going down');
-            stickyHead.style.visibility = "visible";
+            stickyHead.style.visibility = "hidden";
+            
         } else {
             console.log('going up');
-            stickyHead.style.visibility = "hidden";
+            
+            stickyHead.style.visibility = "visible";
         }
 
         oldScrollPosition = newScrollPosition;
@@ -49,5 +52,4 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// when scrolling down header is no longer fixed
 // this does not work when sticky header is seen on top of screen
