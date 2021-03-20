@@ -1,10 +1,19 @@
 // header needs to be fixed when scrolling up
 
-const stickyHead = document.getElementById('sticky_head');
+const staticHead = document.getElementById('static_head');
 
 let buffer = 0
 let oldScrollPosition = 0;
-let newnewScrollPosition
+let newnewScrollPosition;
+
+const afterHeader = staticHead.clientHeight;
+
+const floatyHead = staticHead.cloneNode(true); //copies statichead
+floatyHead.style.visibility = "hidden";
+floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
+
+const headerElement = document.querySelector('header');
+headerElement.appendChild(floatyHead);
 
 // When we detect scrolling
 window.addEventListener('scroll', function() {
@@ -15,40 +24,20 @@ window.addEventListener('scroll', function() {
     /* MSIE used to detect old browsers and Trident used to newer ones*/
     let is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
 
-    // not IE 
-    if (!is_ie) {
-       
-        if (newScrollPosition > oldScrollPosition) {
-            console.log('going down');
-            stickyHead.style.visibility = "hidden";
-            
+    if (!is_ie
+        || (is_ie && (newScrollPosition - oldScrollPosition) != 0)) {    
+        const hasJustScrolledUp = newScrollPosition < oldScrollPosition;
+        const isFarDownPage = newScrollPosition > afterHeader;
+
+        if (hasJustScrolledUp && isFarDownPage) {
+            console.log('show!');
+            floatyHead.style.visibility = "visible";
         } else {
-            console.log('going up');
-            
-            stickyHead.style.visibility = "visible";
+            console.log('hide');
+            floatyHead.style.visibility = "hidden";
         }
 
         oldScrollPosition = newScrollPosition;
-    }
-
-    // IE 'bounces up' when downwards scrolling to help content loading. When comparing 'old' and 'new' this 'bounce up' always returned zero
-    
-    // is IE
-
-    // != means not equal to
-
-    // (newScrollPosition - oldScrollPosition) != 0 checks for the 'bounce up'
-    if (is_ie && (newScrollPosition - oldScrollPosition) != 0) {
-        if (newScrollPosition > oldScrollPosition) {
-            console.log('going down');
-            stickyHead.style.visibility = "visible";
-        } else {
-            console.log('going up');
-            stickyHead.style.visibility = "hidden";
-        }
-
-        oldScrollPosition = newScrollPosition;
-
     }
 });
 

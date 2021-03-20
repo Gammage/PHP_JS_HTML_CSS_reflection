@@ -458,12 +458,21 @@ header {
   background-color: white;
 }
 
-header #sticky_head {
-  display: block;
+header #floaty_head {
   position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-header #sticky_head #header_container {
+header #static_head,
+header #floaty_head {
+  display: block;
+  z-index: 100;
+}
+
+header #static_head #header_container,
+header #floaty_head #header_container {
   height: 167px;
   padding: 20px 15px;
   display: -webkit-box;
@@ -480,7 +489,8 @@ header #sticky_head #header_container {
   background-color: white;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner {
+header #static_head #header_container .netmatters_nav_container_inner,
+header #floaty_head #header_container .netmatters_nav_container_inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -491,13 +501,15 @@ header #sticky_head #header_container .netmatters_nav_container_inner {
   height: 70px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img,
+header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
   height: auto;
   width: 100%;
   max-height: 70px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container {
   height: 70px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -511,12 +523,15 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   margin-left: 20px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container a {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container a,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container a {
   text-decoration: none;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -532,38 +547,46 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   text-decoration: none;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button i,
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button i {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button i,
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button i,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button i,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .contact_button i {
   font-size: 18px;
   padding-right: 10px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
   display: none;
   width: 144px;
   background: #4183d7;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button:hover {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button:hover,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button:hover {
   background: #2a6ec6;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
   display: none;
   background: #999aa2;
   width: 152px;
   margin-left: 20px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button:hover {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button:hover,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .contact_button:hover {
   background: #84858f;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
   display: none;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field input {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field input,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field input {
   padding: 0 0 0 10px;
   width: 163px;
   height: 56px;
@@ -574,7 +597,8 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   margin: 0;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
   display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -589,17 +613,20 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   background: #999aa2;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button i {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button i,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button i {
   font-size: 24px;
   line-height: 56px;
   color: white;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button:hover {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button:hover,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button:hover {
   background: #84858f;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .phone_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .phone_button {
   display: block;
   height: 56px;
   width: 56px;
@@ -607,24 +634,28 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   padding: 16px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i {
   font-size: 24px;
   line-height: 24px;
   color: #333645;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i:hover {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i:hover,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .phone_button i:hover {
   color: #22242e;
   border-bottom: solid 1px  #22242e;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
   display: block;
   margin-left: 20px;
   height: 56px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -642,12 +673,14 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   border-radius: 3px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
   display: block;
   margin-top: 6px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line {
   display: block;
   height: 3px;
   width: 33px;
@@ -657,7 +690,8 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   margin-right: auto;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu {
   color: white;
   text-transform: uppercase;
   padding: 0;
@@ -665,11 +699,13 @@ header #sticky_head #header_container .netmatters_nav_container_inner .actions_c
   font-size: 12px;
 }
 
-header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button:hover {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button:hover,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button:hover {
   background-color: #22242e;
 }
 
-header #sticky_head #header_container .mobile_search_field {
+header #static_head #header_container .mobile_search_field,
+header #floaty_head #header_container .mobile_search_field {
   position: relative;
   border-left: none;
   border-right: none;
@@ -677,7 +713,8 @@ header #sticky_head #header_container .mobile_search_field {
   padding: 0;
 }
 
-header #sticky_head #header_container .mobile_search_field input {
+header #static_head #header_container .mobile_search_field input,
+header #floaty_head #header_container .mobile_search_field input {
   border: solid 1px lightgray;
   -webkit-box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
           box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 3px 0px;
@@ -689,7 +726,8 @@ header #sticky_head #header_container .mobile_search_field input {
   background-color: rgba(55, 55, 55, 0.1);
 }
 
-header #sticky_head #header_container .mobile_search_field a {
+header #static_head #header_container .mobile_search_field a,
+header #floaty_head #header_container .mobile_search_field a {
   top: 0;
   right: 0;
   position: absolute;
@@ -699,7 +737,8 @@ header #sticky_head #header_container .mobile_search_field a {
   color: #333645;
 }
 
-header #sticky_head .nav_menu {
+header #static_head .nav_menu,
+header #floaty_head .nav_menu {
   display: none;
 }
 
@@ -796,11 +835,6 @@ header .activate {
   display: block;
 }
 
-.height_sticky_push {
-  height: 167px;
-  width: 100%;
-}
-
 .slideshow_container {
   display: block;
   height: 531px;
@@ -856,6 +890,10 @@ header .activate {
 
 .slideshow_container [class*=slide_] .content a:hover {
   background-color: #79539a;
+}
+
+.slideshow_container .slick-dots {
+  margin-bottom: 25px;
 }
 
 .cards_container {
@@ -1493,22 +1531,27 @@ header .activate {
 }
 
 @media (min-width: 768px) {
-  header #sticky_head #header_container {
+  header #static_head #header_container,
+  header #floaty_head #header_container {
     width: 100%;
     height: 110px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner {
+  header #static_head #header_container .netmatters_nav_container_inner,
+  header #floaty_head #header_container .netmatters_nav_container_inner {
     height: 70px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
+  header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
     height: 60px;
     width: 375px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+  header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img,
+  header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
     height: 60px;
     width: 345px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container {
     padding: 7px 0;
     width: 340px;
     height: 70px;
@@ -1516,33 +1559,41 @@ header .activate {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     display: inline-block;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .phone_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .phone_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .phone_button {
     display: none;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
     width: 163px;
     height: 54px;
     margin: 0;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     width: 63px;
     height: 56px;
     padding: 0px 20px 0px 20px;
     line-height: 56px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_button {
     width: 63px;
     height: 56px;
     margin-left: 20px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
     margin: 0;
   }
-  header #sticky_head #header_container .mobile_search_field {
+  header #static_head #header_container .mobile_search_field,
+  header #floaty_head #header_container .mobile_search_field {
     display: none;
   }
   header .modal_container {
@@ -1565,9 +1616,6 @@ header .activate {
   header .modal_container .modal_button_container a:first-of-type {
     margin-bottom: 0px;
     margin-right: 30px;
-  }
-  .height_sticky_push {
-    height: 110px;
   }
   .slideshow_container {
     height: 796px;
@@ -1680,24 +1728,29 @@ header .activate {
 }
 
 @media (min-width: 992px) {
-  header #sticky_head #header_container {
+  header #static_head #header_container,
+  header #floaty_head #header_container {
     height: 110px;
     width: 100%;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner {
+  header #static_head #header_container .netmatters_nav_container_inner,
+  header #floaty_head #header_container .netmatters_nav_container_inner {
     height: 70px;
     margin: 0;
     width: 100%;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container {
+  header #static_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container {
     height: 70px;
     width: 100%;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container img {
+  header #static_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container img,
+  header #floaty_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container img {
     width: 374px;
     height: 65px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container {
     height: 70px;
     width: 100%;
     padding: 7px 0 7px 0;
@@ -1705,35 +1758,43 @@ header .activate {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .contact_button {
     display: block;
     font-size: 18px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
     display: none;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 3px;
     margin-left: 20px;
   }
-  header #sticky_head .nav_menu {
+  header #static_head .nav_menu,
+  header #floaty_head .nav_menu {
     display: block;
     width: 100%;
     height: 99px;
     background-color: #333645;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons {
+  header #static_head .nav_menu .nav_menu_buttons,
+  header #floaty_head .nav_menu .nav_menu_buttons {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     margin: 0 auto;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container],
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] {
     width: 157.5px;
     height: 99px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1755,14 +1816,17 @@ header .activate {
     border-left: solid 1px #434550;
     border-right: solid 1px #857c91;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button i {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button i,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button i {
     padding-bottom: 10px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button small {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button small,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button small {
     font-size: 10px;
     line-height: 10px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar {
     display: none;
     height: 45px;
     position: absolute;
@@ -1770,30 +1834,31 @@ header .activate {
     right: 0;
     z-index: 1;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents],
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
     width: 945px;
     height: 45px;
     margin-left: auto;
     margin-right: auto;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
     text-transform: uppercase;
     line-height: 45px;
     text-decoration: none;
     font-size: 13px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] span {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] span,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] span {
     padding: 0 20px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container]:hover a {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container]:hover a,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container]:hover a {
     text-decoration: none;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_sub_bar {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_sub_bar,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container]:hover .nav_sub_bar {
     display: block;
-  }
-  .height_sticky_push {
-    height: 209px;
-    width: 100%;
   }
   .slideshow_container {
     height: 697px;
@@ -1909,55 +1974,69 @@ header .activate {
 }
 
 @media (min-width: 1260px) {
-  header #sticky_head #header_container {
+  header #static_head #header_container,
+  header #floaty_head #header_container {
     width: 1200px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
+  header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
     width: 400px;
     height: 70px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
+  header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img,
+  header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container img {
     height: 65px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container {
     width: auto;
     height: 70px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field {
     display: inline-block;
     width: 240px;
     height: 56px;
     margin-left: 20px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_field input {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_field input,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_field input {
     width: 240px;
     height: 56px;
     padding: 0px 0px 0px 15px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 0 3px 3px 0;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
     width: 144px;
   }
-  header #sticky_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
+  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     margin: 0px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons {
+  header #static_head .nav_menu .nav_menu_buttons,
+  header #floaty_head .nav_menu .nav_menu_buttons {
     width: 1170px;
     margin-left: auto;
     margin-right: auto;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container],
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] {
     width: 194px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_button {
     width: 194px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents],
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] {
     width: 1170px;
   }
-  header #sticky_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
+  header #static_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a,
+  header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] .nav_sub_bar div[class*=_contents] a {
     font-size: 16px;
   }
   .cards_container {

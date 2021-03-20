@@ -22,17 +22,24 @@ header {
     // overflow: hidden;
 
 
+    #floaty_head {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
 
-    #sticky_head {
+    #static_head,
+    #floaty_head {
         display: block;
         // transform: translate3d(0, 0, 0);
         // display: none;
-        position: fixed;
+        
         // transition: transform 0.4s;
         // transform: translateY(0%);
         // transform: translateX(-50%);
 
-
+        z-index: 100;
 
         #header_container {  
             height: 167px;
@@ -352,11 +359,6 @@ header {
     }
 }
 
-.height_sticky_push {
-    height: 167px;
-    // border: 1px solid red;
-    width: 100%;
-}
 
 .slideshow_container {
 
@@ -418,6 +420,9 @@ header {
         }
     }
 
+    .slick-dots {
+        margin-bottom: 25px;
+    }
 }
 
 .cards_container {
@@ -1032,7 +1037,8 @@ header {
 
     header {
 
-        #sticky_head {
+        #static_head,
+        #floaty_head {
 
             #header_container {
                 // width is 18 px smaller than the media query to account for the 19px wide vertical scrollbar width
@@ -1125,9 +1131,6 @@ header {
         
     }
 
-    .height_sticky_push {
-        height: 110px;
-    }
 
     .slideshow_container {
         height: 796px;
@@ -1261,7 +1264,8 @@ header {
 
     header {
 
-        #sticky_head {
+        #static_head,
+        #floaty_head {
 
             #header_container { 
                 // width: 975px;
@@ -1398,10 +1402,6 @@ header {
         }
     }
 
-    .height_sticky_push {
-        height: 209px;
-        width: 100%;
-    }
 
     .slideshow_container {
         height: 697px;
@@ -1547,7 +1547,8 @@ header {
 
     header {
 
-        #sticky_head {
+        #static_head,
+        #floaty_head {
 
             #header_container {
                 width: 1200px;
