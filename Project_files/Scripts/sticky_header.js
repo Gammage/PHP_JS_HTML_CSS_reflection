@@ -11,6 +11,9 @@ const afterHeader = staticHead.clientHeight;
 const floatyHead = staticHead.cloneNode(true); //copies statichead
 floatyHead.style.visibility = "hidden";
 floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
+// add css styling for animation, apply it to cloned floaty_head
+// let floatyAnimateScrollUp = 
+
 
 const headerElement = document.querySelector('header');
 headerElement.appendChild(floatyHead);
@@ -31,10 +34,17 @@ window.addEventListener('scroll', function() {
 
         if (hasJustScrolledUp && isFarDownPage) {
             console.log('show!');
+            floatyHead.classList.remove("floaty_animation_down");
             floatyHead.style.visibility = "visible";
+            floatyHead.classList.add("floaty_animation_up");
         } else {
             console.log('hide');
+            floatyHead.classList.remove("floaty_animation_up");
             floatyHead.style.visibility = "hidden";
+            floatyHead.classList.add("floaty_animation_down");
+            
+            
+            
         }
 
         oldScrollPosition = newScrollPosition;

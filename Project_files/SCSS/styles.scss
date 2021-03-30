@@ -27,18 +27,34 @@ header {
         top: 0;
         left: 0;
         right: 0;
+        
+
+    }
+
+    .floaty_animation_up {
+        animation-name: float_up;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes float_up {
+        from {transform: translateY(-100%);}
+        to {transform:translateY(0%);}
+    }
+
+    .floaty_animation_down {
+        animation-name: float_down;
+        animation-duration: 0.5s;
+    }
+
+    @keyframes float_down {
+        from {transform: translateY(0%);}
+        to {transform: translateY(-100%);}
     }
 
     #static_head,
     #floaty_head {
         display: block;
-        // transform: translate3d(0, 0, 0);
-        // display: none;
         
-        // transition: transform 0.4s;
-        // transform: translateY(0%);
-        // transform: translateX(-50%);
-
         z-index: 100;
 
         #header_container {  
