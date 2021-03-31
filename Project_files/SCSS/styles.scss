@@ -34,21 +34,25 @@ header {
     .floaty_animation_up {
         animation-name: float_up;
         animation-duration: 0.5s;
+        visibility: visible;
     }
 
     @keyframes float_up {
-        from {transform: translateY(-100%);}
-        to {transform:translateY(0%);}
+        0% {transform:translateY(-100%);}
+        100% {transform:translateY(0%);}
     }
 
     .floaty_animation_down {
         animation-name: float_down;
         animation-duration: 0.5s;
+        visibility: hidden;
+        transition: visibility 0.5s;
+        
     }
 
     @keyframes float_down {
-        from {transform: translateY(0%);}
-        to {transform: translateY(-100%);}
+        0% {transform:translateY(0%);}
+        100% {transform:translateY(-100%);}
     }
 
     #static_head,

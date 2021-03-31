@@ -470,25 +470,26 @@ header .floaty_animation_up {
           animation-name: float_up;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  visibility: visible;
 }
 
 @-webkit-keyframes float_up {
-  from {
+  0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  to {
+  100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
 }
 
 @keyframes float_up {
-  from {
+  0% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
-  to {
+  100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
@@ -499,25 +500,28 @@ header .floaty_animation_down {
           animation-name: float_down;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
+  visibility: hidden;
+  -webkit-transition: visibility 0.5s;
+  transition: visibility 0.5s;
 }
 
 @-webkit-keyframes float_down {
-  from {
+  0% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
-  to {
+  100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
 }
 
 @keyframes float_down {
-  from {
+  0% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
   }
-  to {
+  100% {
     -webkit-transform: translateY(-100%);
             transform: translateY(-100%);
   }
