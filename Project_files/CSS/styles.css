@@ -450,8 +450,14 @@
 
 body {
   letter-spacing: 0.4px;
-  background-color: lightgray;
+  background-color: white;
   margin: 0;
+}
+
+.body_modal {
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header {
@@ -465,11 +471,15 @@ header #floaty_head {
   right: 0;
 }
 
+header .floaty_default {
+  visibility: hidden;
+}
+
 header .floaty_animation_up {
   -webkit-animation-name: float_up;
           animation-name: float_up;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   visibility: visible;
 }
 
@@ -498,11 +508,11 @@ header .floaty_animation_up {
 header .floaty_animation_down {
   -webkit-animation-name: float_down;
           animation-name: float_down;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
+  -webkit-animation-duration: 0.3s;
+          animation-duration: 0.3s;
   visibility: hidden;
-  -webkit-transition: visibility 0.5s;
-  transition: visibility 0.5s;
+  -webkit-transition: visibility 0.3s;
+  transition: visibility 0.3s;
 }
 
 @-webkit-keyframes float_down {
@@ -880,17 +890,6 @@ header .modal_container .modal_button_container a:last-of-type {
 
 header .modal_container .modal_button_container a:last-of-type:hover {
   background-color: #7e57a0;
-}
-
-header .modal_overlay {
-  z-index: 100;
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
 }
 
 header .activate {

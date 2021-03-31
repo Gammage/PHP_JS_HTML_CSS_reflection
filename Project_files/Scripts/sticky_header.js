@@ -9,10 +9,11 @@ let newnewScrollPosition;
 const afterHeader = staticHead.clientHeight;
 
 const floatyHead = staticHead.cloneNode(true); //copies statichead
-// floatyHead.style.visibility = "hidden";
+
 floatyHead.id = 'floaty_head'; //gives the cloned header a defined value
-// add css styling for animation, apply it to cloned floaty_head
-// let floatyAnimateScrollUp = 
+floatyHead.classList.add("floaty_default"); // I added this because the default visibility override, and can reference this in if statement to make things easier to read
+
+
 
 
 const headerElement = document.querySelector('header');
@@ -22,7 +23,6 @@ headerElement.appendChild(floatyHead);
 window.addEventListener('scroll', function() {
     // Get the value
     newScrollPosition = document.documentElement.scrollTop
-
     let ua = navigator.userAgent;
     /* MSIE used to detect old browsers and Trident used to newer ones*/
     let is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;
@@ -36,10 +36,12 @@ window.addEventListener('scroll', function() {
             console.log('show!');
             floatyHead.classList.add("floaty_animation_up");
             floatyHead.classList.remove("floaty_animation_down");
+            floatyHead.classList.remove("floaty_default");
         } else {
             console.log('hide');
             floatyHead.classList.remove("floaty_animation_up");
             floatyHead.classList.add("floaty_animation_down");
+            floatyHead.classList.remove("floaty_default");
             
         }
 

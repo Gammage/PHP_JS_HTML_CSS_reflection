@@ -9,8 +9,17 @@
 
 body {
     letter-spacing: 0.4px;
-    background-color: lightgray;
+    // background-color: lightgray;
+    background-color: white;
     margin: 0;
+}
+
+.body_modal {
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    // z-index: 100;
+    // display: none;
 }
 
 
@@ -31,9 +40,13 @@ header {
 
     }
 
+    .floaty_default {
+        visibility:hidden;
+    }
+
     .floaty_animation_up {
         animation-name: float_up;
-        animation-duration: 0.5s;
+        animation-duration: 0.3s;
         visibility: visible;
     }
 
@@ -44,9 +57,9 @@ header {
 
     .floaty_animation_down {
         animation-name: float_down;
-        animation-duration: 0.5s;
+        animation-duration: 0.3s;
         visibility: hidden;
-        transition: visibility 0.5s;
+        transition: visibility 0.3s;
         
     }
 
@@ -362,17 +375,19 @@ header {
         }
     }
 
-    .modal_overlay {
-        z-index: 100;
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: rgba(0, 0, 0, 0.7);
+    // .modal_overlay {
+    //     z-index: 100;
+    //     display: none;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     bottom: 0;
+    //     right: 0;
+    //     background-color: rgba(0, 0, 0, 0.7);
+    //     height: 100vh;
+    //     overflow: hidden;
 
-    }
+    // }
 
     .activate {
         display: block;
