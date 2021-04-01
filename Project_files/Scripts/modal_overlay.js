@@ -4,7 +4,7 @@ const bodyElement = document.getElementById("body")
 const acceptButton = document.getElementById("Accept_Cookies")
 const modalWindow = document.getElementById("modal_container")
 const modalOverlay = document.getElementById("modal_overlay")
-// const modalLayer = document.getElementsByClassName("body_modal")
+const lock = document.getElementsByClassName("modal_lock")
 // let enableScrolling = false
 
 // let  Only available in the scope it is declared in
@@ -52,7 +52,7 @@ function hideModal() {
     console.log("hide")
     modalWindow.classList.remove("activate")
     modalOverlay.classList.remove("activate")
-    bodyElement.classList.remove("body_modal")
+    bodyElement.classList.remove("modal_lock")
     
 }
 
@@ -61,7 +61,7 @@ function showModal() {
     console.log("show")
     modalWindow.classList.add("activate")
     modalOverlay.classList.add("activate")
-    bodyElement.classList.add("body_modal")
+    bodyElement.classList.add("modal_lock")
 }
 
 function disableScrolling() {

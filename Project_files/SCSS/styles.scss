@@ -1,6 +1,7 @@
 @import "_queries.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
+@import "../Plugins/slick/slick-theme.scss";
 
 * {
     font-family: "Poppins", sans-serif;
@@ -14,15 +15,10 @@ body {
     margin: 0;
 }
 
-.body_modal {
+.modal_lock {
     height: 100vh;
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7);
-    // z-index: 100;
-    // display: none;
 }
-
-
 
 header {
 
@@ -36,8 +32,6 @@ header {
         top: 0;
         left: 0;
         right: 0;
-        
-
     }
 
     .floaty_default {
@@ -375,19 +369,19 @@ header {
         }
     }
 
-    // .modal_overlay {
-    //     z-index: 100;
-    //     display: none;
-    //     position: fixed;
-    //     top: 0;
-    //     left: 0;
-    //     bottom: 0;
-    //     right: 0;
-    //     background-color: rgba(0, 0, 0, 0.7);
-    //     height: 100vh;
-    //     overflow: hidden;
+    .modal_overlay {
+        z-index: 100;
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 100vh;
+        overflow: hidden;
 
-    // }
+    }
 
     .activate {
         display: block;
@@ -456,7 +450,12 @@ header {
     }
 
     .slick-dots {
-        margin-bottom: 25px;
+        bottom: 40px;
+        // background-color: white;
+        li {
+            button {
+            }
+        }
     }
 }
 
