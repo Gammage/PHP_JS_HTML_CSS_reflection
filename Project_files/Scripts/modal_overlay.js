@@ -71,3 +71,6 @@ function disableScrolling() {
 function enableScrolling() {
     bodyElement.classList.remove("disableScrolling")
 }
+
+const storageType = localStorage;
+const acceptCookies = '';
