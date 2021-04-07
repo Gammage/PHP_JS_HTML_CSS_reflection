@@ -5,72 +5,30 @@ const acceptButton = document.getElementById("Accept_Cookies")
 const modalWindow = document.getElementById("modal_container")
 const modalOverlay = document.getElementById("modal_overlay")
 const lock = document.getElementsByClassName("modal_lock")
-// let enableScrolling = false
 
-// let  Only available in the scope it is declared in
-// const  Once assigned the value cannot change
+//local storage saved to variable, need to assign value/key
+const storageType = localStorage;
 
-// Add event listeners
+// this is the key, saved to property variable i think
+const acceptCookies = 'cookieaccepted';
 
-//by default, local storage item is set as accepted - false
-localStorage.setItem("accepted", "false")
-
-document.addEventListener("DOMContentLoaded", function() {
-
-    console.log("loaded")
-    // This is the override to test the modal
-    // localStorage.setItem("accepted", "apple")
-
-    if (localStorage.getItem("accepted") == null || 
-        localStorage.getItem("accepted") != "true") {
-        // disableScrolling()
-        console.log("cookies not accepted");
-        showModal();
-    }
-})
+// variable, assigned a function, called storagetype variable above, getting the data from variable accept cookies
+const shouldShowPopup = () => !storageType.getItem(acceptCookies); //! = not true, so by default is false
+const saveToStorage = () => storageType.setItem(acceptCookies, true); // = the value of cookie accepted is set as true
 
 
-// Close the modal and overlay
-acceptButton.addEventListener("click", function() {
-    hideModal();
-    console.log("accept button pressed, cookies accepted");
-    // enableScrolling()
-    localStorage.setItem("accepted", "true");
-})
-
-// Define Functions
-// function noScroll() {
-//     if (!enableScrolling) {
-//         window.scrollTo(0,0);
-//     } else {
-//         document.removeEventListener("scroll", noScroll)
-//     }
-// }
-
-// Only use this when accept button is pressed
-function hideModal() {
-    console.log("hide")
+const accepted = acceptButton.addEventListener("click", function() {
     modalWindow.classList.remove("activate")
     modalOverlay.classList.remove("activate")
     bodyElement.classList.remove("modal_lock")
-    
-}
+    saveToStorage();
+})
 
-// Only use this if they haven't accepted cookies
-function showModal() {
-    console.log("show")
+window.onload = () => {
+ if (shouldShowPopup()) {
     modalWindow.classList.add("activate")
     modalOverlay.classList.add("activate")
     bodyElement.classList.add("modal_lock")
-}
 
-function disableScrolling() {
-    bodyElement.classList.add("disableScrolling")
-}
-
-function enableScrolling() {
-    bodyElement.classList.remove("disableScrolling")
-}
-
-const storageType = localStorage;
-const acceptCookies = '';
+    };    
+};
