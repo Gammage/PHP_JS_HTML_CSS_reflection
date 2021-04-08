@@ -677,12 +677,12 @@ body {
 }
 
 #side_menu .unmarked_list {
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 #side_menu .side_menu_default {
   list-style-type: none;
-  padding: 20px 0px;
+  padding: 0;
 }
 
 #side_menu .side_menu_default .side_menu_links {
