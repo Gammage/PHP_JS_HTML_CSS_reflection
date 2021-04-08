@@ -82,6 +82,8 @@
         background-color: $light_colour;
     }
 
+
+    //MAIN NAVIGATION COLOURS
     .card_#{$name}:hover {
         background-color: $light_colour;
         color: white; // Make all text white on hover
@@ -102,6 +104,8 @@
             color: $light_colour;
         }
     }
+
+    //SIDE BAR COLOURS FROM BURGER MENU
 }
 
 

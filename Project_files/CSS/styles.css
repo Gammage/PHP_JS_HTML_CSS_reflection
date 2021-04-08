@@ -619,8 +619,92 @@
 
 body {
   letter-spacing: 0.4px;
-  background-color: white;
+  margin-right: 275px;
+}
+
+#side_menu {
+  width: 275px;
+  background-color: #333645;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#side_menu .small_screen_menu {
+  padding: 0px 20px 20px 20px;
+}
+
+#side_menu .small_screen_menu a {
+  display: block;
+}
+
+#side_menu .small_screen_menu ul {
+  margin-top: 20px;
+}
+
+#side_menu .small_screen_menu ul li a {
+  padding: 10px;
+}
+
+#side_menu .side_menu_btn {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+#side_menu .side_menu_btn i {
+  display: block;
+}
+
+#side_menu .unmarked_list,
+#side_menu .marked_list {
   margin: 0;
+  padding-left: 0;
+  border: 1px solid #22242e;
+}
+
+#side_menu .unmarked_list li,
+#side_menu .marked_list li {
+  list-style: none;
+  background-color: #22242e;
+}
+
+#side_menu .unmarked_list li a,
+#side_menu .marked_list li a {
+  text-decoration: none;
+  color: white;
+}
+
+#side_menu .unmarked_list {
+  border-radius: 5px;
+}
+
+#side_menu .side_menu_default {
+  list-style-type: none;
+  padding: 20px 0px;
+}
+
+#side_menu .side_menu_default .side_menu_links {
+  text-decoration: none;
+  color: white;
+  display: block;
+  padding: 20px;
+  list-style-type: none;
+}
+
+#side_menu .unmarked_list {
+  text-align: center;
+}
+
+#side_menu .marked_list a {
+  display: block;
+  padding: 15px 0px;
+}
+
+#side_menu .marked_list a:before {
+  content: "»";
+  padding: 0px 15px;
 }
 
 .modal_lock {
@@ -1970,6 +2054,9 @@ header .activate {
 }
 
 @media (min-width: 992px) {
+  .small_screen_menu {
+    display: none;
+  }
   header #static_head #header_container,
   header #floaty_head #header_container {
     height: 110px;
