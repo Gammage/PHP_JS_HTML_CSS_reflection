@@ -619,15 +619,24 @@
 
 body {
   letter-spacing: 0.4px;
+}
+
+.body_push {
   margin-right: 275px;
+  overflow: hidden;
 }
 
 #side_menu {
   width: 275px;
   background-color: #333645;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
+  display: none;
+  height: 100vh;
+  overflow: auto;
+  white-space: nowrap;
+  font-size: 14px;
 }
 
 #side_menu .small_screen_menu {
@@ -1913,6 +1922,7 @@ header .activate {
     width: 63px;
     height: 56px;
     margin-left: 20px;
+    padding: auto;
   }
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container,
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {

@@ -12,19 +12,29 @@ body {
     letter-spacing: 0.4px;
     // background-color: lightgray;
     // background-color: white;
-    margin-right: 275px;
+    // margin-right: 275px;
     // overflow: hidden;
+}
+
+.body_push {
+    margin-right: 275px;
+    overflow: hidden;
 }
 
 #side_menu {
     width: 275px;
     background-color: $navigation-back;  
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
+    display: none;
+    height: 100vh;
+    overflow: auto;
+    white-space: nowrap;
+    // z-index: 5000;
+    font-size: 14px;
 
     .small_screen_menu {
-
         padding: 0px 20px 20px 20px;
 
         a {
@@ -33,7 +43,6 @@ body {
 
         ul {
             margin-top: 20px;
-
             li {
                 a {
                     padding: 10px;
@@ -1227,6 +1236,7 @@ header {
                             width: 63px;
                             height: 56px;
                             margin-left: 20px;
+                            padding: auto;
                         }
 
                         .burger_container {
