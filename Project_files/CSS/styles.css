@@ -984,47 +984,42 @@ header #static_head #header_container .netmatters_nav_container_inner .actions_c
 header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
   display: block;
   margin-left: 20px;
-  height: 56px;
 }
 
-header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button,
-header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger {
+  background-color: #333645;
   height: 56px;
   width: 63px;
-  background: #333645;
+  padding: 5px 15px;
   border-radius: 3px;
 }
 
-header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container,
-header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container {
-  display: block;
-  margin-top: 6px;
-}
-
-header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line,
-header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .line_container .burger_line {
-  display: block;
-  height: 3px;
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box {
+  height: 19px;
   width: 33px;
-  background-color: white;
-  margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu,
-header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_button .burger_menu {
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner {
+  background-color: white;
+  width: 33px;
+  height: 3px;
+  margin-top: 4px;
+}
+
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner::before, header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner::after,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner::before,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .hamburger .hamburger-box .hamburger-inner::after {
+  background-color: white;
+  width: 33px;
+  height: 3px;
+  margin: 2px 0px;
+}
+
+header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_menu,
+header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container .burger_menu {
   color: white;
   text-transform: uppercase;
   padding: 0;

@@ -313,41 +313,46 @@ header {
                         display: block;
 
                         margin-left: 20px;
-                        height: 56px;
-            
-                        .burger_button {
-                            display: flex;
-                            // border: solid 1px red;
-                            justify-content: space-evenly;
-                            flex-direction: column;
-                            text-align: center;
+                        
+                        
+                        .hamburger {
+                            background-color: #333645;
                             height: 56px;
                             width: 63px;
-                            background: #333645;
+                            padding: 5px 15px;
                             border-radius: 3px;
-                
-                            .line_container {
-                                display: block;
-                                margin-top: 6px;
 
-                                .burger_line {
-                                    display: block;
-                                    height: 3px;
-                                    width: 33px;
+                            .hamburger-box {
+
+                                height: 19px;
+                                width: 33px;
+
+                                .hamburger-inner {
                                     background-color: white;
-                                    margin-bottom: 5px;
-                                    margin-left: auto;
-                                    margin-right: auto;
+                                    width: 33px;
+                                    height: 3px;
+                                    margin-top: 4px;
+
+                                    &::before,
+                                    &::after {
+                                        background-color: white;
+                                        width: 33px;
+                                        height: 3px;
+                                        margin: 2px 0px;
+                                    }
                                 }
-                            }
-                            
-                            .burger_menu {
-                                color: white;
-                                text-transform: uppercase;
-                                padding: 0;
-                                margin: -3px 0px 0px 0px;
-                                font-size: 12px;
-                            }
+
+                               
+                            }   
+                        }
+
+
+                        .burger_menu {
+                            color: white;
+                            text-transform: uppercase;
+                            padding: 0;
+                            margin: -3px 0px 0px 0px;
+                            font-size: 12px;
                         }
                 
                         .burger_button:hover {

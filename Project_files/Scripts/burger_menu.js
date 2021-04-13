@@ -8,7 +8,6 @@
 
         const bodyElement = document.getElementById("body");
         const burgerBtn = document.getElementsByClassName("burger_button");
-        const lines = document.getElementsByClassName("burger_line");
         const sideMenu = document.getElementById("side_menu");
         const pushBody = document.getElementsByClassName("body_push");
         // button is true
@@ -26,6 +25,8 @@
            
         }
     };
+
+
 
            //lines will merge
         //     //lines then transform to a cross
