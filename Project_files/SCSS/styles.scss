@@ -16,23 +16,38 @@ body {
     // overflow: hidden;
 }
 
-.body_push {
-    margin-right: 275px;
+.main_push {
+    // margin-right: 275px;
     overflow: hidden;
+    transform: translateX(-275px);
+    transition-duration: 1s;
+    height: 100vh;
 }
 
-#side_menu {
+.main_reverse {
+    transition-duration: 1s;
+    animation: reverse 2s;
+}
+
+@keyframes reverse {
+    0% {transform: translateX(-275px);}
+    100% {transform: translateX(0px);}
+}
+
+
+.side_menu {
     width: 275px;
     background-color: $navigation-back;  
     position: fixed;
     top: 0;
     right: 0;
-    display: none;
     height: 100vh;
     overflow: auto;
     white-space: nowrap;
-    // z-index: 5000;
     font-size: 14px;
+    margin-right: -275px;
+
+
 
     .small_screen_menu {
         padding: 0px 20px 20px 20px;
@@ -119,6 +134,16 @@ body {
     }
 
 }
+
+.side_menu_push {
+    margin-right: 0px;
+}
+
+.side_menu_pull {
+    
+}
+
+
 
 .modal_lock {
     height: 100vh;

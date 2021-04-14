@@ -621,80 +621,112 @@ body {
   letter-spacing: 0.4px;
 }
 
-.body_push {
-  margin-right: 275px;
+.main_push {
   overflow: hidden;
+  -webkit-transform: translateX(-275px);
+          transform: translateX(-275px);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  height: 100vh;
 }
 
-#side_menu {
+.main_reverse {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  animation: reverse 2s;
+}
+
+@-webkit-keyframes reverse {
+  0% {
+    -webkit-transform: translateX(-275px);
+            transform: translateX(-275px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes reverse {
+  0% {
+    -webkit-transform: translateX(-275px);
+            transform: translateX(-275px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+.side_menu {
   width: 275px;
   background-color: #333645;
   position: fixed;
   top: 0;
   right: 0;
-  display: none;
   height: 100vh;
   overflow: auto;
   white-space: nowrap;
   font-size: 14px;
+  margin-right: -275px;
 }
 
-#side_menu .small_screen_menu {
+.side_menu .small_screen_menu {
   padding: 0px 20px 20px 20px;
 }
 
-#side_menu .small_screen_menu a {
+.side_menu .small_screen_menu a {
   display: block;
 }
 
-#side_menu .small_screen_menu ul {
+.side_menu .small_screen_menu ul {
   margin-top: 20px;
 }
 
-#side_menu .small_screen_menu ul li a {
+.side_menu .small_screen_menu ul li a {
   padding: 10px;
 }
 
-#side_menu .side_menu_btn {
+.side_menu .side_menu_btn {
   text-align: center;
   padding: 20px;
   margin-top: 20px;
   text-decoration: none;
 }
 
-#side_menu .side_menu_btn i {
+.side_menu .side_menu_btn i {
   display: block;
 }
 
-#side_menu .unmarked_list,
-#side_menu .marked_list {
+.side_menu .unmarked_list,
+.side_menu .marked_list {
   margin: 0;
   padding-left: 0;
   border: 1px solid #22242e;
 }
 
-#side_menu .unmarked_list li,
-#side_menu .marked_list li {
+.side_menu .unmarked_list li,
+.side_menu .marked_list li {
   list-style: none;
   background-color: #22242e;
 }
 
-#side_menu .unmarked_list li a,
-#side_menu .marked_list li a {
+.side_menu .unmarked_list li a,
+.side_menu .marked_list li a {
   text-decoration: none;
   color: white;
 }
 
-#side_menu .unmarked_list {
+.side_menu .unmarked_list {
   border-radius: 4px;
 }
 
-#side_menu .side_menu_default {
+.side_menu .side_menu_default {
   list-style-type: none;
   padding: 0;
 }
 
-#side_menu .side_menu_default .side_menu_links {
+.side_menu .side_menu_default .side_menu_links {
   text-decoration: none;
   color: white;
   display: block;
@@ -702,18 +734,22 @@ body {
   list-style-type: none;
 }
 
-#side_menu .unmarked_list {
+.side_menu .unmarked_list {
   text-align: center;
 }
 
-#side_menu .marked_list a {
+.side_menu .marked_list a {
   display: block;
   padding: 15px 0px;
 }
 
-#side_menu .marked_list a:before {
+.side_menu .marked_list a:before {
   content: "»";
   padding: 0px 15px;
+}
+
+.side_menu_push {
+  margin-right: 0px;
 }
 
 .modal_lock {
