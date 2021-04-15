@@ -10,28 +10,30 @@
 
 body {
     letter-spacing: 0.4px;
-    // background-color: lightgray;
-    // background-color: white;
-    // margin-right: 275px;
-    // overflow: hidden;
+}
+
+.main {
+
+z-index: 10;
+ 
 }
 
 .main_push {
     // margin-right: 275px;
     overflow: hidden;
     transform: translateX(-275px);
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     height: 100vh;
 }
 
 .main_reverse {
-    transition-duration: 1s;
-    animation: reverse 2s;
+    transition-duration: 0.5s;
+    animation: reverse;
 }
 
 @keyframes reverse {
-    0% {transform: translateX(-275px);}
-    100% {transform: translateX(0px);}
+    0% {transform: translateX(0px);}
+    100% {transform: translateX(275px);}
 }
 
 
@@ -45,8 +47,9 @@ body {
     overflow: auto;
     white-space: nowrap;
     font-size: 14px;
-    margin-right: -275px;
-
+    // margin-right: -275px;
+    visibility: hidden;
+    z-index: -10;
 
 
     .small_screen_menu {
@@ -136,14 +139,14 @@ body {
 }
 
 .side_menu_push {
-    margin-right: 0px;
+    visibility: visible;
 }
 
 .side_menu_pull {
-    
+    visibility: hidden;
+    transition: visibility 0.5s;
+
 }
-
-
 
 .modal_lock {
     height: 100vh;

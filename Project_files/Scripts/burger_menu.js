@@ -20,6 +20,7 @@
             mainPage.classList.add("main_push");
             mainPage.classList.remove("main_reverse");
             sideMenu.classList.add("side_menu_push");
+            sideMenu.classList.remove("side_menu_pull");
             
         } else {
             console.log("no");
@@ -27,6 +28,7 @@
             mainPage.classList.remove("main_push");
             mainPage.classList.add("main_reverse");
             sideMenu.classList.remove("side_menu_push");
+            sideMenu.classList.add("side_menu_pull");
         }
     };
 
