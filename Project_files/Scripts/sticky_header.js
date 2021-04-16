@@ -19,10 +19,12 @@ floatyHead.classList.add("floaty_default"); // I added this because the default 
 const headerElement = document.querySelector('header');
 headerElement.appendChild(floatyHead);
 
+const mainDiv = document.querySelector(".main");
+
 // When we detect scrolling
-window.addEventListener('scroll', function() {
+mainDiv.addEventListener('scroll', function() {
     // Get the value
-    newScrollPosition = document.documentElement.scrollTop
+    newScrollPosition = mainDiv.scrollTop;
     let ua = navigator.userAgent;
     /* MSIE used to detect old browsers and Trident used to newer ones*/
     let is_ie = ua.indexOf("MSIE ") > -1 || ua.indexOf("Trident/") > -1;

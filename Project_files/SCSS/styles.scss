@@ -13,29 +13,34 @@ body {
 }
 
 .main {
-
-z-index: 10;
- 
+    z-index: 10;
+    background-color: white;
+    transition: right 0.5s;
+    position: relative;
+    right: 0;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    // white-space: nowrap;
 }
 
 .main_push {
-    // margin-right: 275px;
-    overflow: hidden;
-    transform: translateX(-275px);
-    transition-duration: 0.5s;
-    height: 100vh;
+    right: 275px;
 }
 
-.main_reverse {
-    transition-duration: 0.5s;
-    animation: reverse;
-}
+.main_overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    right: 0;
+    z-index: 99999999999999;
+    transition: right 0.5s;
 
-@keyframes reverse {
-    0% {transform: translateX(0px);}
-    100% {transform: translateX(275px);}
+    &.overlay_active {
+        width: 100vw;
+        height: 100vh;
+        right: 275px;
+    }
 }
-
 
 .side_menu {
     width: 275px;
@@ -44,12 +49,12 @@ z-index: 10;
     top: 0;
     right: 0;
     height: 100vh;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
     white-space: nowrap;
     font-size: 14px;
     // margin-right: -275px;
     visibility: hidden;
-    z-index: -10;
 
 
     .small_screen_menu {
@@ -165,6 +170,13 @@ header {
         top: 0;
         left: 0;
         right: 0;
+
+        transition: left 0.5s, right 0.5s;
+
+        &.head_push {
+            left: -275px;
+            right: 275px;
+        }
     }
 
     .floaty_default {
@@ -1434,6 +1446,12 @@ header {
 
 @media (min-width: 992px) {
 
+    .main_overlay {
+ 
+        &.overlay_active {
+            right: 350px;
+        }
+    }
     .small_screen_menu {
         display: none;
     }

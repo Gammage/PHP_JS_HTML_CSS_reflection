@@ -623,43 +623,33 @@ body {
 
 .main {
   z-index: 10;
+  background-color: white;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+  position: relative;
+  right: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .main_push {
-  overflow: hidden;
-  -webkit-transform: translateX(-275px);
-          transform: translateX(-275px);
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
+  right: 275px;
+}
+
+.main_overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  right: 0;
+  z-index: 99999999999999;
+  -webkit-transition: right 0.5s;
+  transition: right 0.5s;
+}
+
+.main_overlay.overlay_active {
+  width: 100vw;
   height: 100vh;
-}
-
-.main_reverse {
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-  animation: reverse;
-}
-
-@-webkit-keyframes reverse {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  100% {
-    -webkit-transform: translateX(275px);
-            transform: translateX(275px);
-  }
-}
-
-@keyframes reverse {
-  0% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-  }
-  100% {
-    -webkit-transform: translateX(275px);
-            transform: translateX(275px);
-  }
+  right: 275px;
 }
 
 .side_menu {
@@ -669,11 +659,11 @@ body {
   top: 0;
   right: 0;
   height: 100vh;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   white-space: nowrap;
   font-size: 14px;
   visibility: hidden;
-  z-index: -10;
 }
 
 .side_menu .small_screen_menu {
@@ -777,6 +767,13 @@ header #floaty_head {
   top: 0;
   left: 0;
   right: 0;
+  -webkit-transition: left 0.5s, right 0.5s;
+  transition: left 0.5s, right 0.5s;
+}
+
+header #floaty_head.head_push {
+  left: -275px;
+  right: 275px;
 }
 
 header .floaty_default {
@@ -2106,6 +2103,9 @@ header .activate {
 }
 
 @media (min-width: 992px) {
+  .main_overlay.overlay_active {
+    right: 350px;
+  }
   .small_screen_menu {
     display: none;
   }
