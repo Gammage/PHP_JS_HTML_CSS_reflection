@@ -2119,12 +2119,13 @@ header .activate {
   header #floaty_head #header_container {
     height: 110px;
     width: 100%;
+    margin: auto;
   }
   header #static_head #header_container .netmatters_nav_container_inner,
   header #floaty_head #header_container .netmatters_nav_container_inner {
     height: 70px;
-    margin: 0;
-    width: 100%;
+    margin: auto;
+    width: 945px;
   }
   header #static_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container,
   header #floaty_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container {
@@ -2141,9 +2142,6 @@ header .activate {
     height: 70px;
     width: 100%;
     padding: 7px 0 7px 0;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
   }
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .contact_button,
@@ -2160,6 +2158,7 @@ header .activate {
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 3px;
     margin-left: 20px;
+    margin-right: 20px;
   }
   header #static_head .nav_menu,
   header #floaty_head .nav_menu {
@@ -2173,7 +2172,9 @@ header .activate {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 auto;
+    width: 945px;
+    margin-left: auto;
+    margin-right: auto;
   }
   header #static_head .nav_menu .nav_menu_buttons div[class*=_container],
   header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] {
@@ -2361,9 +2362,12 @@ header .activate {
 }
 
 @media (min-width: 1260px) {
-  header #static_head #header_container,
-  header #floaty_head #header_container {
-    width: 1200px;
+  header #static_head #header_container .netmatters_nav_container_inner,
+  header #floaty_head #header_container .netmatters_nav_container_inner {
+    width: 1170px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container,
   header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
@@ -2395,20 +2399,15 @@ header .activate {
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 0 3px 3px 0;
+    margin-left: 0px;
   }
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .support_button,
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .support_button {
     width: 144px;
   }
-  header #static_head #header_container .netmatters_nav_container_inner .actions_container .search_button,
-  header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
-    margin: 0px;
-  }
   header #static_head .nav_menu .nav_menu_buttons,
   header #floaty_head .nav_menu .nav_menu_buttons {
     width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
   }
   header #static_head .nav_menu .nav_menu_buttons div[class*=_container],
   header #floaty_head .nav_menu .nav_menu_buttons div[class*=_container] {
