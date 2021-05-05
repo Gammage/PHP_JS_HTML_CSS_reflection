@@ -666,12 +666,18 @@ body {
   visibility: hidden;
 }
 
+.side_menu ul {
+  list-style-type: none;
+}
+
 .side_menu .small_screen_menu {
   padding: 0px 20px 20px 20px;
 }
 
 .side_menu .small_screen_menu a {
   display: block;
+  border: 1px solid #434550;
+  color: white;
 }
 
 .side_menu .small_screen_menu ul {
@@ -680,6 +686,7 @@ body {
 
 .side_menu .small_screen_menu ul li a {
   padding: 10px;
+  border: 0.5px #434550;
 }
 
 .side_menu .side_menu_btn {
@@ -1221,34 +1228,34 @@ header .activate {
   width: 100%;
 }
 
-.slideshow_container [class*=slide_] .content {
+.slideshow_container [class*=slide_] .content_slide {
   display: block;
-  margin: auto;
   height: 531px;
   width: auto;
   text-align: center;
+  padding: 75px 0px;
 }
 
-.slideshow_container [class*=slide_] .content h1, .slideshow_container [class*=slide_] .content p, .slideshow_container [class*=slide_] .content a {
+.slideshow_container [class*=slide_] .content_slide h1, .slideshow_container [class*=slide_] .content_slide p, .slideshow_container [class*=slide_] .content_slide a {
   color: white;
   font-size: 20px;
   letter-spacing: 0.4px;
 }
 
-.slideshow_container [class*=slide_] .content h1 i, .slideshow_container [class*=slide_] .content p i, .slideshow_container [class*=slide_] .content a i {
+.slideshow_container [class*=slide_] .content_slide h1 i, .slideshow_container [class*=slide_] .content_slide p i, .slideshow_container [class*=slide_] .content_slide a i {
   padding-left: 20px;
 }
 
-.slideshow_container [class*=slide_] .content h1 {
+.slideshow_container [class*=slide_] .content_slide h1 {
   font-size: 48px;
   text-transform: uppercase;
 }
 
-.slideshow_container [class*=slide_] .content p {
+.slideshow_container [class*=slide_] .content_slide p {
   line-height: 36px;
 }
 
-.slideshow_container [class*=slide_] .content a {
+.slideshow_container [class*=slide_] .content_slide a {
   display: block;
   height: 62px;
   width: 224px;
@@ -1262,7 +1269,7 @@ header .activate {
   text-transform: uppercase;
 }
 
-.slideshow_container [class*=slide_] .content a:hover {
+.slideshow_container [class*=slide_] .content_slide a:hover {
   background-color: #79539a;
 }
 
@@ -1359,7 +1366,6 @@ header .activate {
 
 .background_culture .content {
   color: white;
-  padding: 50px 15px 50px 15px;
 }
 
 .background_culture .content h1 {
@@ -1907,12 +1913,13 @@ header .activate {
 @media (min-width: 768px) {
   header #static_head #header_container,
   header #floaty_head #header_container {
-    width: 100%;
     height: 110px;
   }
   header #static_head #header_container .netmatters_nav_container_inner,
   header #floaty_head #header_container .netmatters_nav_container_inner {
     height: 70px;
+    width: 750px;
+    margin: auto;
   }
   header #static_head #header_container .netmatters_nav_container_inner .netmatters_logo_container,
   header #floaty_head #header_container .netmatters_nav_container_inner .netmatters_logo_container {
@@ -1966,6 +1973,10 @@ header .activate {
   header #static_head #header_container .netmatters_nav_container_inner .actions_container .burger_container,
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .burger_container {
     margin: 0;
+  }
+  header #static_head #header_container .netmatters_nav_container_inner .search_button,
+  header #floaty_head #header_container .netmatters_nav_container_inner .search_button {
+    margin-right: 20px;
   }
   header #static_head #header_container .mobile_search_field,
   header #floaty_head #header_container .mobile_search_field {
@@ -2115,16 +2126,20 @@ header .activate {
   .small_screen_menu {
     display: none;
   }
+  header #static_head.head_push,
+  header #floaty_head.head_push {
+    left: -275px;
+    right: 350px;
+  }
   header #static_head #header_container,
   header #floaty_head #header_container {
     height: 110px;
-    width: 100%;
-    margin: auto;
   }
   header #static_head #header_container .netmatters_nav_container_inner,
   header #floaty_head #header_container .netmatters_nav_container_inner {
     height: 70px;
     margin: auto;
+    width: 100%;
     width: 945px;
   }
   header #static_head #header_container .netmatters_nav_container_inner .nevmatters_logo_container,
@@ -2158,7 +2173,6 @@ header .activate {
   header #floaty_head #header_container .netmatters_nav_container_inner .actions_container .search_button {
     border-radius: 3px;
     margin-left: 20px;
-    margin-right: 20px;
   }
   header #static_head .nav_menu,
   header #floaty_head .nav_menu {
