@@ -1,5 +1,7 @@
 <?php
 
+// backend - create, check to database. verify inputs, inputs send to database. connection closed.
+
 $nameError = false;
 $emailvalid = false;
 $phonevalid = false;
@@ -29,13 +31,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         $nameError = true;
     }
+
     $email =  mysqli_real_escape_string($conn, $_POST['femail']);
+
+    //TODO add regex
+    if(strlen($email) > 0) {
+        $emailvalid = false;
+    } else {
+        $emailvalid = true;
+    }
+
     $telephone =  mysqli_real_escape_string($conn, $_POST['fnumber']);
+
+    //TODO add regex
+    if(strlen($telephone) > 0) {
+        $phonevalid = false;
+    } else {
+        $phonevalid = true;
+    }
+
     $subject =  mysqli_real_escape_string($conn, $_POST['fsubject']);
+
+    //TODO add regex
+    if(strlen($subject) > 0) {
+        $subjectvalid = false;
+    } else {
+        $subjectvalid = true;
+    }
+
     $message =  mysqli_real_escape_string($conn, $_POST['fmessage']);
+
+    //TODO add regex
+    if(strlen($message) > 0) {
+        $messagevalid = false;
+    } else {
+        $messagevalid = true;
+    }
+
     $marketing = isset($_POST['fmarketing']);
 
-    if(!$nameError) {
+    if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
         if(mysqli_query($conn, $sql)){
         echo "Records added successfully.";
