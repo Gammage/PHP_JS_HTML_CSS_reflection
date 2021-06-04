@@ -21,14 +21,15 @@
     
             <div class="main">
             
-                <?php
-                    include 'top_menus.php';
-                ?>
+            <?php
+                include 'top_menus.php';
+            ?>
 
-                <div class="contact_page_head">
-                    <h1>How Can We Help You?</h1>
-                </div>
+            <div class="contact_page_head">
+                <h1>How Can We Help You?</h1>
+            </div>
 
+            <div class="contact_wrap_total">
                 <div class="contact_ctn">
                     <div class="contact_ctn_info">
                         <p><b>Call us on:</b></p>
@@ -50,16 +51,17 @@
                     </div>
                 </div>    
 
-                <!-- blabla <?php echo $nameError; ?> -->
-            <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                <b>Your Name*</b> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname"></br>
-                <b>Your Email*</b> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail"></br>
-                <b>Your telephone number*</b> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber"></br>
-                <b>Subject*</b> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject"></br>
-                <b>message*</b> <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage"></br>
-                <input type="checkbox" name="fmarketing"> <b>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data</b></br>
-                </br><input type="submit" value="Send Enquiry"></br>
-            </form> 
+                    <!-- blabla <?php echo $nameError; ?> -->
+                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" class="contact_ctn_form">
+                    <div class="form_push_this"><b>Your Name*</b> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname"></br></div>
+                    <div class="form_push_this"><b>Your Email*</b> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail"></br></div>
+                    <div class="form_push_this"><b>Your telephone number*</b> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber"></br></div>
+                    <div class="form_push_this"><b>Subject*</b> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject"></br></div>
+                    <div class="form_push_this_large"><b>message*</b> <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage"></br></div>
+                    <div class="checkbox_ctn_outer"><div class="checkbox_ctn_left"><input class="checkbox_ctn" type="checkbox" name="fmarketing"></div><p><b>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data</b></p></br></div>
+                    </br><input type="submit" value="Send Enquiry">
+                </form>
+            </div> 
             
             <?php
                 include 'footer.php';

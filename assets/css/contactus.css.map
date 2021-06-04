@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAEI,IAFA,CAEA,kBAAkB,CAAC;EACf,gBAAgB,EAAE,KAAK;EACvB,MAAM,EAAE,gBAAgB;CAI3B;;AARL,AAKQ,IALJ,CAEA,kBAAkB,CAGd,EAAE,CAAC;EACC,OAAO,EAAE,QAAQ;CACpB;;AAPT,AAaY,IAbR,CAUA,YAAY,CACR,iBAAiB,CAEb,CAAC,CAAC;EACE,KAAK,EAAE,OAAO;EACd,SAAS,EAAE,IAAI;CAClB;;AAhBb,AAoBY,IApBR,CAUA,YAAY,CASR,qBAAqB,CACjB,OAAO,CAAC;EACJ,OAAO,EAAE,IAAI;CAChB",
-    "sources": [
-        "../../public/assets/scss/contactus.scss"
-    ],
-    "names": [],
-    "file": "contactus.css"
-}
