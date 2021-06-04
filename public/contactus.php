@@ -21,7 +21,28 @@
                     include 'top_menus.php';
                 ?>
 
-                blabla <?php echo $nameError; ?>
+                <div class="contact_ctn">
+                    <div class="contact_ctn_info">
+                        <p>Call us on:</p>
+                        <p>Wymondham Office</p>
+                        <p>Gorleston Office</p>
+                        <p>Email us on:</p>
+                        <p>Business Hours:</p>
+                        <p>Monday - Friday 07:00 - 18:00</p>
+                    </div>
+                    <div class="contact_info_ctn">
+                        <div id="dropdown_btn">
+                            <p>Out of Hours IT support</p><i class="fas fa-arrow-down"></i>
+                        </div>
+                        <div class="hidden" id="hidden_content">
+                            <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
+                            <p>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00 Sunday 10:00 - 18:00</p>
+                            <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- blabla <?php echo $nameError; ?> -->
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
                 Name: <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname">
                 Your Email: <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail">
