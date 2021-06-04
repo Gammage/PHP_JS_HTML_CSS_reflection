@@ -28,9 +28,9 @@
                 <div class="contact_ctn">
                     <div class="contact_ctn_info">
                         <p><b>Call us on:</b></p>
-                        <p>Wymondham Office<a>01603 70 40 20</a></p>
-                        <p>Gorleston Office<a>01493 60 32 04</a></p>
-                        <p><b>Email us on:</b><a>Sales@netmatters.com</a></p>
+                        <p>Wymondham Office<br><a>01603 70 40 20</a></p>
+                        <p>Gorleston Office<br><a>01493 60 32 04</a></p>
+                        <p><b>Email us on:</b><br><a>Sales@netmatters.com</a></p>
                         <p><b>Business Hours:</b></p>
                         <p><b>Monday - Friday 07:00 - 18:00</b></p>
                     </div>
