@@ -613,6 +613,7 @@
 
 .contact_page_head {
   padding: 0px 15px;
+  border: 1px solid yellow;
 }
 
 * {
