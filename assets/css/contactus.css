@@ -1,0 +1,18 @@
+body .contact_page_head {
+  background-color: black;
+  border: 1px solid yellow;
+}
+
+body .contact_page_head h1 {
+  padding: 0px 15px;
+}
+
+body .contact_ctn .contact_ctn_info a {
+  color: #926fb1;
+  font-size: 26px;
+}
+
+body .contact_ctn .contact_ctn_dropdown .hidden {
+  display: none;
+}
+/*# sourceMappingURL=contactus.css.map */

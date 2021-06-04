@@ -611,19 +611,6 @@
   opacity: 0.75;
 }
 
-body .contact_page_head h1 {
-  padding: 0px 15px;
-}
-
-body .contact_ctn .contact_ctn_info a {
-  color: #926fb1;
-  font-size: 26px;
-}
-
-body .contact_ctn .contact_ctn_dropdown .hidden {
-  display: none;
-}
-
 * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
@@ -1921,6 +1908,15 @@ header .activate {
 
 .partners_background .partners_container div[class*=pc_]:hover .colour {
   display: block;
+}
+
+.contact_ctn .contact_ctn_info a {
+  color: #926fb1;
+  font-size: 26px;
+}
+
+.contact_ctn .contact_ctn_dropdown .hidden {
+  display: none;
 }
 
 @media (min-width: 768px) {

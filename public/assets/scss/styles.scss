@@ -2,7 +2,7 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "slick-theme.scss";
-@import "_contactus.scss";
+// @import "_contactus.scss";
 
 * {
     font-family: "Poppins", sans-serif;
@@ -1220,6 +1220,24 @@ header {
                 }
             }
         }   
+    }
+}
+
+
+
+.contact_ctn {
+    .contact_ctn_info {
+
+        a {
+            color: #926fb1;
+            font-size: 26px;
+        }
+    }
+
+    .contact_ctn_dropdown {
+        .hidden {
+            display: none;
+        }
     }
 }
 

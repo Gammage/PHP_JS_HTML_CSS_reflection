@@ -1,7 +1,7 @@
 // the link
 
-let dropdownButton = document.querySelector('#dropdown_btn'); 
-let hide = document.querySelector('#hidden_content');
+let dropdownButton = document.getElementById('dropdown_btn'); 
+let hide = document.getElementById('hidden_content');
 let drop = false;
 
 dropdownButton.addEventListener('click', function() {

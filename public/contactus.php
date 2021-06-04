@@ -1,12 +1,16 @@
-<?php include 'contactsubmit.php';?>
-
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <?php
+            include 'header.php';
+        ?>
+    </head>
 
 <?php
-        include 'header.php';
-      ?>
-    <body id="body">
+    include 'contactsubmit.php';
+?>
+
+    <body>
         
         <?php
             include 'side_menu.php';
@@ -28,19 +32,19 @@
                 <div class="contact_ctn">
                     <div class="contact_ctn_info">
                         <p><b>Call us on:</b></p>
-                        <p>Wymondham Office<br><a>01603 70 40 20</a></p>
-                        <p>Gorleston Office<br><a>01493 60 32 04</a></p>
-                        <p><b>Email us on:</b><br><a>Sales@netmatters.com</a></p>
+                        <p>Wymondham Office<br><a href="#">01603 70 40 20</a></p>
+                        <p>Gorleston Office<br><a href="#">01493 60 32 04</a></p>
+                        <p><b>Email us on:</b><br><a href="#">Sales@netmatters.com</a></p>
                         <p><b>Business Hours:</b></p>
                         <p><b>Monday - Friday 07:00 - 18:00</b></p>
                     </div>
                     <div class="contact_ctn_dropdown">
                         <div id="dropdown_btn">
-                            <p>Out of Hours IT support</p><i class="fas fa-arrow-down"></i>
+                            <p><b>Out of Hours IT support</b><i class="fas fa-arrow-down"></i></p>
                         </div>
                         <div class="hidden" id="hidden_content">
                             <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
-                            <p>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00 Sunday 10:00 - 18:00</p>
+                            <p><b>Monday - Friday 18:00 - 22:00</br> Saturday 08:00 - 16:00</br> Sunday 10:00 - 18:00</b></p>
                             <p>To log a critical task, you will need to call our main line number and select Option 2 to leave an Out of Hours  voicemail. A technician will contact you on the number provided within 45 minutes of your call.</p>
                         </div>
                     </div>
@@ -48,13 +52,13 @@
 
                 <!-- blabla <?php echo $nameError; ?> -->
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                <b>Your Name*</b> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname"></span>
-                <b>Your Email*</b> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail">
-                <b>Your telephone number*</b> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber">
-                <b>Subject*</b> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject">
-                <b>message*</b> <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage">
-                <input type="checkbox" name="fmarketing"> <br>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data</br>
-            <input type="submit">
+                <b>Your Name*</b> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname"></br>
+                <b>Your Email*</b> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail"></br>
+                <b>Your telephone number*</b> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber"></br>
+                <b>Subject*</b> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject"></br>
+                <b>message*</b> <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage"></br>
+                <input type="checkbox" name="fmarketing"> <b>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data</b></br>
+                </br><input type="submit" value="Send Enquiry"></br>
             </form> 
             
             <?php

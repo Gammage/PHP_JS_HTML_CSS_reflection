@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
         if(mysqli_query($conn, $sql)){
-        echo "Records added successfully.";
+        // echo "Records added successfully.";
         } else{
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
         }
