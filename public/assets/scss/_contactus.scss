@@ -1,7 +1,15 @@
 
 .contact_page_head {
-    padding: 0px 15px;
-    border: 1px solid yellow;
+
+    h1 {
+        padding: 0px 15px;
+    }
+
+    a {
+        color: #926fb1;
+        font-size: 26px;
+    }
+
 }
 
 @media (min-width: 768px) {}
