@@ -23,12 +23,12 @@
 
                 <div class="contact_ctn">
                     <div class="contact_ctn_info">
-                        <p>Call us on:</p>
+                        <p><b>Call us on:</b></p>
                         <p>Wymondham Office</p>
                         <p>Gorleston Office</p>
-                        <p>Email us on:</p>
-                        <p>Business Hours:</p>
-                        <p>Monday - Friday 07:00 - 18:00</p>
+                        <p><b>Email us on:</b></p>
+                        <p><b>Business Hours:</b></p>
+                        <p><b>Monday - Friday 07:00 - 18:00</b></p>
                     </div>
                     <div class="contact_info_ctn">
                         <div id="dropdown_btn">
