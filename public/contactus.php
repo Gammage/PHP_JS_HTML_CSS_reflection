@@ -48,12 +48,12 @@
 
                 <!-- blabla <?php echo $nameError; ?> -->
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                Name: <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname">
-                Your Email: <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail">
-                Your telephone number: <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber">
-                Subject: <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject">
-                message: <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage">
-                <input type="checkbox" name="fmarketing"> Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data
+                <br>Your Name*</br> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname">
+                <br>Your Email*</br> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail">
+                <br>Your telephone number*</br> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber">
+                <br>Subject*</br> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject">
+                <br>message*</br> <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?>" name="fmessage">
+                <input type="checkbox" name="fmarketing"> <br>Please tick this box if you wish to receive marketing information from us. Please see our <a href="#">Privacy Policy</a>. for more information on how we use your data</br>
             <input type="submit">
             </form> 
             
