@@ -1223,6 +1223,31 @@ header {
     }
 }
 
+// CONTACT PAGE STYLING
+
+.contact_page_head {
+
+    h1 {
+        padding: 0px 15px;
+    }
+}
+
+.contact_ctn {
+    .contact_ctn_info {
+
+        a {
+            color: #926fb1;
+            font-size: 26px;
+        }
+    }
+
+    .contact_ctn_dropdown {
+        .hidden {
+            display: none;
+        }
+    }
+}
+
 @media (min-width: 768px) {
 
     header {
