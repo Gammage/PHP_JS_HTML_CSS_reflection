@@ -48,7 +48,7 @@
 
                 <!-- blabla <?php echo $nameError; ?> -->
             <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                <br>Your Name*</br> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname">
+                <span><br>Your Name*</br> <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname"></span>
                 <br>Your Email*</br> <input type="text" class="form-control <?php if ($emailvalid){echo "has-error";} ?>" name="femail">
                 <br>Your telephone number*</br> <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber">
                 <br>Subject*</br> <input type="text" class="form-control <?php if ($subjectvalid){echo "has-error";} ?>" name="fsubject">
