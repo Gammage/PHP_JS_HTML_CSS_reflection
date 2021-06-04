@@ -21,6 +21,10 @@
                     include 'top_menus.php';
                 ?>
 
+                <div class="contact_page_head">
+                    <h1>How Can We Help You?</h1>
+                </div>
+
                 <div class="contact_ctn">
                     <div class="contact_ctn_info">
                         <p><b>Call us on:</b></p>
@@ -30,7 +34,7 @@
                         <p><b>Business Hours:</b></p>
                         <p><b>Monday - Friday 07:00 - 18:00</b></p>
                     </div>
-                    <div class="contact_info_ctn">
+                    <div class="contact_ctn_dropdown">
                         <div id="dropdown_btn">
                             <p>Out of Hours IT support</p><i class="fas fa-arrow-down"></i>
                         </div>
