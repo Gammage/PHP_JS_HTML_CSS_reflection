@@ -611,6 +611,10 @@
   opacity: 0.75;
 }
 
+.contact_page_head {
+  padding: 0px 15px;
+}
+
 * {
   font-family: "Poppins", sans-serif;
   -webkit-box-sizing: border-box;
