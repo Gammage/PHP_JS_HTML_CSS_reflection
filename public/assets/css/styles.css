@@ -2433,42 +2433,6 @@ header .activate {
   }
 }
 
-.contact_wrap_total {
-  width: 100%;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.contact_wrap_total .contact_ctn {
-  width: 30%;
-}
-
-.contact_wrap_total .contact_ctn_form {
-  display: block;
-  width: 70%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-.contact_wrap_total .contact_ctn_form .form_push_this {
-  width: 50%;
-  height: 25%;
-}
-
-.contact_wrap_total .contact_ctn_form .form_push_large {
-  width: 100%;
-  height: 50%;
-}
-
 @media (min-width: 1260px) {
   header #static_head #header_container .netmatters_nav_container_inner,
   header #floaty_head #header_container .netmatters_nav_container_inner {
@@ -2648,6 +2612,51 @@ header .activate {
     padding: 0 30px;
     height: auto;
     width: auto;
+  }
+  .contact_wrap_total {
+    width: 1200px;
+    padding-bottom: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact_wrap_total .contact_ctn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 30%;
+  }
+  .contact_wrap_total .contact_ctn_form {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .contact_wrap_total .contact_ctn_form .form_push_this {
+    width: 50%;
+    height: 25%;
+  }
+  .contact_wrap_total .contact_ctn_form .form_push_large {
+    width: 100%;
+    height: 25%;
   }
 }
 /*# sourceMappingURL=styles.css.map */
