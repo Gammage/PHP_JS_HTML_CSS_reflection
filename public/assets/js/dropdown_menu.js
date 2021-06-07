@@ -4,12 +4,14 @@ let dropdownButton = document.getElementById('dropdown_btn');
 let hide = document.getElementById('hidden_content');
 let drop = false;
 
+console.log("hidden");
 dropdownButton.addEventListener('click', function() {
     if (drop) {
-        hide.classList.add('hidden')
+        console.log("dropped");
+        hide.classList.remove('hidden');
         drop = false;
     } else {
-        hide.classList.remove('hidden');
+        hide.classList.add('hidden');
         drop = true;
     }
 });
