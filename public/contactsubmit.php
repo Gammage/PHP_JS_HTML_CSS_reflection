@@ -33,9 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $email =  mysqli_real_escape_string($conn, $_POST['femail']);
+    // $emailregex = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
 
     //TODO add regex
-    if(strlen($email) > 0) {
+    if(strlen($email) > 7) {
         $emailvalid = false;
     } else {
         $emailvalid = true;
