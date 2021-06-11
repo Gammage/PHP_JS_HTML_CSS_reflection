@@ -36,7 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // $emailregex = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
 
     //TODO add regex
-    if(strlen($email) > 7) {
+    if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailvalid = false;
     } else {
         $emailvalid = true;
