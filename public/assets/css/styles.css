@@ -1938,6 +1938,10 @@ header .activate {
   border: 1px solid #d64541;
 }
 
+.form-text {
+  height: 100px;
+}
+
 .contact_ctn_form {
   padding: 0px 15px;
 }
@@ -1966,6 +1970,17 @@ header .activate {
   outline: 2px solid #333645;
   border-radius: 3px;
   padding-right: 20px;
+}
+
+.contact_ctn_form .contact_ctn_btn input {
+  background-color: #926fb1;
+  border-color: #926fb1;
+  color: white;
+  width: 150px;
+  height: 50px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 17px;
 }
 
 @media (min-width: 768px) {
@@ -2431,6 +2446,19 @@ header .activate {
     height: 110px;
     max-width: 970px;
   }
+  .contact_page_head {
+    margin: auto;
+    background-color: white;
+  }
+  .contact_page_head h1 {
+    width: 970px;
+    margin: auto;
+    color: #212529;
+  }
+  .contact_wrap_total {
+    width: 970px;
+    margin: auto;
+  }
 }
 
 @media (min-width: 1260px) {
@@ -2613,9 +2641,13 @@ header .activate {
     height: auto;
     width: auto;
   }
+  .contact_page_head h1 {
+    width: 1200px;
+  }
   .contact_wrap_total {
     width: 1200px;
-    padding-bottom: 50px;
+    height: 520px;
+    padding-bottom: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2623,6 +2655,7 @@ header .activate {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin: auto;
   }
   .contact_wrap_total .contact_ctn {
     display: -webkit-box;
@@ -2654,9 +2687,27 @@ header .activate {
     width: 50%;
     height: 25%;
   }
-  .contact_wrap_total .contact_ctn_form .form_push_large {
+  .contact_wrap_total .contact_ctn_form .form_push_this_large {
     width: 100%;
     height: 25%;
+    padding-bottom: 100px;
+  }
+  .contact_wrap_total .contact_ctn_form .checkbox_ctn_outer {
+    padding-top: 50px;
+  }
+  .contact_wrap_total .contact_ctn_form .checkbox_ctn_outer .checkbox_ctn_left {
+    display: inline-block;
+    width: 52px;
+    height: 120px;
+    padding-right: 20px;
+    margin: 0;
+  }
+  .contact_wrap_total .contact_ctn_form .checkbox_ctn_outer .checkbox_ctn_left input.checkbox_ctn {
+    width: 32px;
+    height: 32px;
+    outline: 2px solid #333645;
+    border-radius: 3px;
+    padding-right: 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

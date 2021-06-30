@@ -8,6 +8,7 @@ $phonevalid = false;
 $subjectvalid = false;
 $messagevalid = false;
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $servername = "localhost";
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //TODO add regex
     if(strlen($name) > 0) {
         $nameError = false;
+
     } else {
         $nameError = true;
     }
@@ -71,14 +73,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $marketing = isset($_POST['fmarketing']);
 
+    // $submit = isset($_post['fsubmit']);
+
     if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
+
+        
+
         if(mysqli_query($conn, $sql)){
         // echo "Records added successfully.";
-        } else{
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn);
+
+                $name = '';
+                $email = '';
+                $telephone = '';
+                $subject = '';
+                $message = '';
+
+
+        } else {
+            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn); 
+
         }
-    }
+    } 
 
     $conn->close();
 

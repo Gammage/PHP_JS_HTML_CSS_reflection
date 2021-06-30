@@ -12,7 +12,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT `posted_on`, `posted_by`, `type`, `image_name`, `title`, `text` FROM `news`";
+$sql = "SELECT `posted_on`, `posted_by`, `type`, `image_name`, `title`, `text` FROM `news` LIMIT 3";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
