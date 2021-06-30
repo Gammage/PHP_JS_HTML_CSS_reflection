@@ -1227,6 +1227,7 @@ header {
 
 .contact_page_head {
     background-color: #333645;
+    
 
     h1 {
         color: white;
@@ -1866,6 +1867,7 @@ header {
     .contact_page_head {
         margin: auto;
         background-color: white;
+        padding-top: 50px;
 
         h1 {
             width: 970px;
@@ -2111,8 +2113,8 @@ header {
 
     .contact_wrap_total {
         width: 1200px;
-        height: 520px;
-        padding-bottom: 120px;
+        // height: 520px;
+        // padding-bottom: 120px;
         display: flex;
         flex-direction: row;
         margin: auto;
@@ -2133,13 +2135,11 @@ header {
 
             .form_push_this {
                 width: 50%;
-                height: 25%;
+                // height: 25%;
             }
 
             .form_push_this_large {
                 width: 100%;
-                height: 25%;
-                padding-bottom: 100px;
             }
 
             .checkbox_ctn_outer {

@@ -2449,6 +2449,7 @@ header .activate {
   .contact_page_head {
     margin: auto;
     background-color: white;
+    padding-top: 50px;
   }
   .contact_page_head h1 {
     width: 970px;
@@ -2646,8 +2647,6 @@ header .activate {
   }
   .contact_wrap_total {
     width: 1200px;
-    height: 520px;
-    padding-bottom: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2685,12 +2684,9 @@ header .activate {
   }
   .contact_wrap_total .contact_ctn_form .form_push_this {
     width: 50%;
-    height: 25%;
   }
   .contact_wrap_total .contact_ctn_form .form_push_this_large {
     width: 100%;
-    height: 25%;
-    padding-bottom: 100px;
   }
   .contact_wrap_total .contact_ctn_form .checkbox_ctn_outer {
     padding-top: 50px;
