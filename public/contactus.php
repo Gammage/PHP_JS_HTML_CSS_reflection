@@ -54,7 +54,7 @@
                     <!-- blabla <?php echo $nameError; ?> -->
                 <!-- <div class="contact_ctn_form2">     -->
                 <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>" class="contact_ctn_form">
-                    <div class="form_push_this">
+                    <div class="form_push_this fm_pd">
                         <b>Your Name*</b>
                         <input type="text" class="form-control <?php if ($nameError){echo "has-error";} ?>" name="fname" value="<?php if (empty($name)) {
                             echo '';
@@ -70,7 +70,7 @@
                             echo $email;
                         }?>"></br>
                     </div>
-                    <div class="form_push_this">
+                    <div class="form_push_this fm_pd">
                         <b>Your telephone number*</b>
                         <input type="text" class="form-control <?php if ($phonevalid){echo "has-error";} ?>" name="fnumber" value="<?php if (empty($telephone)) {
                             echo '';
