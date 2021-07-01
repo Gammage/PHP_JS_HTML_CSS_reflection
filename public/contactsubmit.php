@@ -73,8 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $marketing = isset($_POST['fmarketing']);
 
-    // $submit = isset($_post['fsubmit']);
-
     if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
 
@@ -88,6 +86,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $telephone = '';
                 $subject = '';
                 $message = '';
+
+                echo "<script type='text/javascript'>alert('Enquiry sent!')</script>";
 
 
         } else {

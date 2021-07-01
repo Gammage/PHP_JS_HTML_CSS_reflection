@@ -88,11 +88,11 @@
                     </div>
                     <div class="form_push_this_large">
                         <b>message*</b>
-                        <input type="text" class="form-control <?php if ($messagevalid){echo "has-error";} ?> form-text" name="fmessage" value="<?php if (empty($subject)) {
+                        <textarea class="form-control <?php if ($messagevalid){echo "has-error";} ?> form-text" name="fmessage" value="<?php if (empty($subject)) {
                             echo '';
                         } else {
                             echo $subject;
-                        }?>"></br>
+                        }?>"></textarea></br>
                     </div>
                     <div class="checkbox_ctn_outer">
                         <div class="checkbox_ctn_left">
