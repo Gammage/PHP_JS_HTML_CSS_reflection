@@ -87,8 +87,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $subject = '';
                 $message = '';
 
-                echo "<script type='text/javascript'>alert('Enquiry sent!')</script>";
-
+                echo '<script type="text/javascript" src="/public/assets/js/contact_submit.js"></script>';
 
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn); 

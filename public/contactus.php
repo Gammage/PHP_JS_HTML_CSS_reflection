@@ -10,7 +10,7 @@
     include 'contactsubmit.php';
 ?>
 
-    <body>
+    <body id="contact_body">
         
         <?php
             include 'side_menu.php';
@@ -110,6 +110,44 @@
                 include 'footer.php';
             ?>
         </div>
+
+        <div class="success_container" id="success_container">
+                <div class="success_title_container">
+                    <h2>Enquiry Sent</h2>
+                </div>
+                <div class="cookie_text" >
+                    <p class="modal_text">
+                        You will get back to you within a few days. Thankyou for your Enquiry!
+                    </p>
+                </div>
+                <div class="success_button_container">
+                    <a>change settings</a>
+                    <a id="success_return">Return</a>
+                </div>
+            </div>
+
+            <div class="modal_overlay" id="modal_overlay" ></div>
+
+            <!-- <div class="modal_container" id="modal_container">
+                <div class="modal_title_container">
+                    <h2>Cookies Policy</h2>
+                </div>
+                <div class="cookie_text" >
+                    <p class="modal_text">
+                        We use cookies to obtain aggregate data regarding site traffic and interaction, in order to identify user trends and obtain insights in order to continually improve our site. These cookies enable us to improve your customer experience as you use our site and help provide you with relevant online marketing.
+                    </p>
+                    <p class="modal_text">
+                        You can see a list of the other companies who use cookies on this website, by visiting cookie settings at the bottom of each page. For full details of how we use your personal information, and your rights in relation to it, view our privacy policy.
+                    </p>
+                </div>
+                <div class="modal_button_container">
+                    <a>change settings</a>
+                    <a id="Accept_Cookies">accept cookies</a>
+                </div>
+            </div>
+
+            <div class="modal_overlay" id="modal_overlay" ></div> -->
+
     </body>
 
     <script type="text/javascript" src="assets/js/slick.min.js"></script>

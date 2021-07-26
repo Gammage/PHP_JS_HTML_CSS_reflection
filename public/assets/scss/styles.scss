@@ -449,17 +449,7 @@ header {
     }
 
     .modal_container {
-        display: none;
-        width: calc(100% - 60px);
-        height: auto;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1000;
-        background-color: white;
-        // border: solid 5px red;
-        border-radius: 5px;
+        @include popup-container;
 
         .modal_title_container {
             padding: 15px 20px;
@@ -1225,6 +1215,8 @@ header {
 
 //contact page styling
 
+
+
 .contact_page_head {
     background-color: #333645;
     
@@ -1309,6 +1301,84 @@ header {
     }
 }
 
+// contact page success
+
+.success_container {
+    display: none;
+    width: calc(100% - 60px);
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: white;
+    // border: solid 5px red;
+    border-radius: 5px;
+
+    .modal_title_container {
+        padding: 15px 20px;
+        border-bottom: #999999 1px solid;
+
+        h2 {
+            font-size: 26px;
+            line-height: 37.1429px;
+            letter-spacing: 0.4px;
+            color: #333645;
+            font-weight: 100;
+            margin: 0px;
+            padding: 0px;
+
+        }
+    }
+
+    .cookie_text {
+        padding: 20px;
+        border-bottom: #999999 1px solid;
+
+        p {
+            font-size: 16px;
+            line-height: 22.8571px;
+            letter-spacing: 0.4px;
+            color: #666666;
+        }
+    }
+
+    .modal_button_container {
+        padding: 20px;
+
+        a {
+            display: block;
+            color: white;
+            padding: 5px 15px;
+            width: 100%;
+            line-height: 35px;
+            font-size: 16px;
+            text-align: center;
+            text-transform: uppercase;
+            border-radius: 3px;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        a:first-of-type {
+            background-color: #999aa2;
+            margin-bottom: 25px;
+            &:hover {
+                background-color: #84858f;
+            }
+        }
+
+        a:last-of-type {
+            background-color: #926fb1;
+            &:hover {
+                background-color: #7e57a0;
+            }
+        }
+    }
+}
 
 
 @media (min-width: 768px) {
@@ -1882,8 +1952,6 @@ header {
     }
 }
        
-
-
 @media (min-width: 1260px) {
 
     header {
