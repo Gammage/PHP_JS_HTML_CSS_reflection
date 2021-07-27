@@ -10,7 +10,7 @@
     include 'contactsubmit.php';
 ?>
 
-    <body id="contact_body">
+    <body>
         
         <?php
             include 'side_menu.php';
@@ -112,7 +112,7 @@
         </div>
 
         <div class="success_container" id="success_container">
-                <div class="success_title_container">
+                <div class="modal_title_container">
                     <h2>Enquiry Sent</h2>
                 </div>
                 <div class="cookie_text" >
@@ -126,7 +126,6 @@
                 </div>
             </div>
 
-            <div class="modal_overlay" id="modal_overlay" ></div>
 
             <!-- <div class="modal_container" id="modal_container">
                 <div class="modal_title_container">
@@ -150,6 +149,7 @@
 
     </body>
 
+    <script type="text/javascript" src="assets/js/contact_submit.js"></script>
     <script type="text/javascript" src="assets/js/slick.min.js"></script>
     <script src="assets/js/modal_overlay.js"></script>
     <script src="assets/js/sticky_header.js"></script>

@@ -1,3 +1,4 @@
+
 <?php
 
 // backend - create, check to database. verify inputs, inputs send to database. connection closed.
@@ -81,13 +82,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(mysqli_query($conn, $sql)){
         // echo "Records added successfully.";
 
+                // echo "<script type='text/javascript' src='/public/assets/js/contact_submit.js'>
+                // console.log('test')
+                // </script>";
+
                 $name = '';
                 $email = '';
                 $telephone = '';
                 $subject = '';
                 $message = '';
-
-                echo '<script type="text/javascript" src="/public/assets/js/contact_submit.js"></script>';
 
         } else {
             echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn); 

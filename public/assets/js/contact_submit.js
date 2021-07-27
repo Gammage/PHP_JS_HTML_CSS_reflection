@@ -1,17 +1,18 @@
 // Set Variables
-const contactbodyElement = document.getElementById("contact_body")
-const returnButton = document.getElementById("success_return")
-const modalWindow = document.getElementById("modal_container")
-const modalOverlay = document.getElementById("modal_overlay")
-const lock = document.getElementsByClassName("modal_lock")
+// const returnButton = document.getElementById("success_return")
+const successWindow = document.getElementsById("success_container")
+const successOverlay = document.getElementById("modal_overlay") //fine
 
-const accepted = returnButton.addEventListener("click", function() {
-    modalWindow.classList.remove("activate")
-    modalOverlay.classList.remove("activate")
-    contactbodyElement.classList.remove("modal_lock")
+successWindow.classList.add("activate")
+successOverlay.classList.add("activate")
 
-    window.onload = () => {
-           modalWindow.classList.add("activate")
-           modalOverlay.classList.add("activate")
-           contactbodyElement.classList.add("modal_lock")
-       }
+// const success = returnButton.addEventListener("click", function() {
+//     successWindow.classList.remove("activate")
+//     successOverlay.classList.remove("activate")
+//     contactbodyElement.classList.remove("modal_lock")
+
+// })
+
+
+
+     
