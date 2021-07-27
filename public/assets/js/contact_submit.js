@@ -1,17 +1,24 @@
-// Set Variables
+// const successWindow = document.getElementById("success_container")
+// const successOverlay = document.getElementById("modal_overlay") 
 // const returnButton = document.getElementById("success_return")
-const successWindow = document.getElementsById("success_container")
-const successOverlay = document.getElementById("modal_overlay") //fine
+
+let successPopup = false;
+
+if (successPopup = true) {
+
+const successWindow = document.getElementById("success_container")
+const successOverlay = document.getElementById("modal_overlay") 
+const returnButton = document.getElementById("success_return")
 
 successWindow.classList.add("activate")
 successOverlay.classList.add("activate")
 
-// const success = returnButton.addEventListener("click", function() {
-//     successWindow.classList.remove("activate")
-//     successOverlay.classList.remove("activate")
-//     contactbodyElement.classList.remove("modal_lock")
+const success = returnButton.addEventListener("click", function() {
+    successWindow.classList.remove("activate")
+    successOverlay.classList.remove("activate")
+    successPopup = true;
 
-// })
+})};
 
 
 

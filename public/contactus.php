@@ -111,7 +111,7 @@
             ?>
         </div>
 
-        <div class="success_container" id="success_container">
+        <!-- <div class="success_container" id="success_container">
                 <div class="modal_title_container">
                     <h2>Enquiry Sent</h2>
                 </div>
@@ -124,7 +124,7 @@
                     <a>change settings</a>
                     <a id="success_return">Return</a>
                 </div>
-            </div>
+            </div> -->
 
 
             <!-- <div class="modal_container" id="modal_container">

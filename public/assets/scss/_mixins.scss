@@ -112,7 +112,6 @@
 
 @mixin popup-container {
     display: none;
-        width: calc(100% - 60px);
         height: auto;
         position: fixed;
         top: 50%;

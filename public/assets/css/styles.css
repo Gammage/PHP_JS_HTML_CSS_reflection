@@ -1123,7 +1123,6 @@ header #floaty_head .nav_menu {
 
 header .modal_container {
   display: none;
-  width: calc(100% - 60px);
   height: auto;
   position: fixed;
   top: 50%;
@@ -1133,6 +1132,7 @@ header .modal_container {
   z-index: 1000;
   background-color: white;
   border-radius: 5px;
+  width: calc(100% - 60px);
 }
 
 header .modal_container .modal_title_container {
@@ -1985,7 +1985,6 @@ header .activate {
 
 .success_container {
   display: none;
-  width: calc(100% - 60px);
   height: auto;
   position: fixed;
   top: 50%;
@@ -1995,26 +1994,59 @@ header .activate {
   z-index: 1000;
   background-color: white;
   border-radius: 5px;
+  width: calc(100% - 50%);
+  padding: 20px;
+}
+
+.success_container .modal_title_container {
+  text-align: center;
+}
+
+.success_container .cookie_text {
+  text-align: center;
 }
 
 .success_container .success_button_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.success_container .success_button_container a {
+  display: block;
+  color: white;
+  padding: 5px 15px;
+  width: 50%;
+  line-height: 35px;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+.success_container .success_button_container a:hover {
+  color: white;
 }
 
 .success_container .success_button_container a:first-of-type {
-  margin-bottom: 0px;
-  margin-right: 30px;
+  background-color: #999aa2;
+  margin-bottom: 25px;
+}
+
+.success_container .success_button_container a:first-of-type:hover {
+  background-color: #84858f;
+}
+
+.success_container .success_button_container a:last-of-type {
+  background-color: #926fb1;
+}
+
+.success_container .success_button_container a:last-of-type:hover {
+  background-color: #7e57a0;
 }
 
 @media (min-width: 768px) {

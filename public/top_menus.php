@@ -166,5 +166,21 @@
             </div>
 
             <div class="modal_overlay" id="modal_overlay" ></div>
+
+            <!-- contact page success popup -->
+
+            <div class="success_container" id="success_container">
+                <div class="modal_title_container">
+                    <h2>Enquiry Sent</h2>
+                </div>
+                <div class="cookie_text" >
+                    <p class="modal_text">
+                        We will get back to you within a few days. Thankyou for your Enquiry!
+                    </p>
+                </div>
+                <div class="success_button_container">
+                    <a class="success_return" id="success_return">Return</a>
+                </div>
+            </div>
             
         </header>
