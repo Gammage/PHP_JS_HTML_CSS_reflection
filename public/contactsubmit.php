@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
         
-
+        $result = '';
         if(mysqli_query($conn, $sql)){
         // echo "Records added successfully.";
 
@@ -90,11 +90,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $telephone = '';
                 $subject = '';
                 $message = '';
-
+            $result = 'success';
         } else {
-            echo "ERROR: Could not able to execute $sql. " . mysqli_error($conn); 
+            $result = 'failed';
 
         }
+
+        $output = ['result' => $result];
+        header('Content-type: application/json');
+        echo json_encode( $output );
     } 
 
     $conn->close();
