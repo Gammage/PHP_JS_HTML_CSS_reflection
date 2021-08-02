@@ -80,17 +80,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $result = '';
         if(mysqli_query($conn, $sql)){
         // echo "Records added successfully.";
-
-
-                
-
-
-                $name = '';
-                $email = '';
-                $telephone = '';
-                $subject = '';
-                $message = '';
             $result = 'success';
+
+            // $name = '';
+            // $email = '';
+            // $telephone = '';
+            // $subject = '';
+            // $message = '';
+
         } else {
             $result = 'failed';
 
