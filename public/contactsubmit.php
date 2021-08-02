@@ -8,7 +8,9 @@ $emailvalid = false;
 $phonevalid = false;
 $subjectvalid = false;
 $messagevalid = false;
-
+$successMessage = false;
+$failureMessage = false;
+$showModal = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -23,12 +25,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
     }
-
  
     $name =  mysqli_real_escape_string($conn, $_POST['fname']);
 
-    //TODO add regex
-    if(strlen($name) > 0) {
+    if(strlen($name) > 0 && preg_match("/^[a-zA-Z-' ]*$/",$name)) {
         $nameError = false;
 
     } else {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email =  mysqli_real_escape_string($conn, $_POST['femail']);
     // $emailregex = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/";
 
-    //TODO add regex
+    // Filter_validate_email or regex?
     if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailvalid = false;
     } else {
@@ -47,8 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $telephone =  mysqli_real_escape_string($conn, $_POST['fnumber']);
 
-    //TODO add regex
-    if(strlen($telephone) > 0) {
+    if(strlen($telephone) > 0 && preg_match("/^[0-9]*$/",$telephone)) {
         $phonevalid = false;
     } else {
         $phonevalid = true;
@@ -56,7 +55,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $subject =  mysqli_real_escape_string($conn, $_POST['fsubject']);
 
-    //TODO add regex
     if(strlen($subject) > 0) {
         $subjectvalid = false;
     } else {
@@ -65,7 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $message =  mysqli_real_escape_string($conn, $_POST['fmessage']);
 
-    //TODO add regex
     if(strlen($message) > 0) {
         $messagevalid = false;
     } else {
@@ -77,25 +74,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(!$nameError && !$emailvalid && !$phonevalid && !$subjectvalid && !$messagevalid) {
         $sql = "INSERT INTO `contactus`(`name`, `email`, `telephone`, `subject`, `message`, `marketing`) VALUES ('$name','$email','$telephone','$subject','$message','$marketing')";
         
-        $result = '';
         if(mysqli_query($conn, $sql)){
-        // echo "Records added successfully.";
-            $result = 'success';
 
-            // $name = '';
-            // $email = '';
-            // $telephone = '';
-            // $subject = '';
-            // $message = '';
+            $successMessage = true;
+            $showModal = true;
+            
+            $name = '';
+            $email = '';
+            $telephone = '';
+            $subject = '';
+            $message = '';
+            $marketing = '';
 
         } else {
-            $result = 'failed';
-
+            $failureMessage = true;
+            $showModal = true;
         }
-
-        $output = ['result' => $result];
-        header('Content-type: application/json');
-        echo json_encode( $output );
     } 
 
     $conn->close();

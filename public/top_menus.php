@@ -3,12 +3,12 @@
                 <div id="header_container">
                     <div class="netmatters_nav_container_inner">
                         <div class="netmatters_logo_container"> 
-                            <a href="#"><img src="assets/images/f-logo.png" alt="Netmatters logo"></a><!-- Netmatters logo-->
+                            <a href="/public/index.php"><img src="assets/images/f-logo.png" alt="Netmatters logo"></a><!-- Netmatters logo-->
                         </div>
 
                         <div class="actions_container">
                             <a href="#" class="support_button"><i class="fas fa-mouse"></i>SUPPORT</a>
-                            <a href="#" class="contact_button"><i class="fas fa-mouse-pointer"></i>CONTACT</a>
+                            <a href="/public/contactus.php" class="contact_button"><i class="fas fa-mouse-pointer"></i>CONTACT</a>
                             <div class="search_field">
                                 <input type="text" placeholder="Search..">
                             </div>
@@ -165,22 +165,6 @@
                 </div>
             </div>
 
-            <div class="modal_overlay" id="modal_overlay" ></div>
-
-            <!-- contact page success popup -->
-
-            <div class="success_container" id="success_container">
-                <div class="modal_title_container">
-                    <h2>Enquiry Sent</h2>
-                </div>
-                <div class="cookie_text" >
-                    <p class="modal_text">
-                        We will get back to you within a few days. Thankyou for your Enquiry!
-                    </p>
-                </div>
-                <div class="success_button_container">
-                    <a class="success_return" id="success_return">Return</a>
-                </div>
-            </div>
-            
+            <div class="<?php if (!empty($showModal)) {echo "show";} ?> modal_overlay" id="modal_overlay" ></div>
+       
         </header>
