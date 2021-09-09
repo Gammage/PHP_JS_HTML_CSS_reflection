@@ -216,11 +216,11 @@
         
     </body>
     
-    <script type="text/javascript" src="assets/js/slick.min.js"></script>
-    <script src="assets/js/modal_overlay.js"></script>
-    <script src="assets/js/sticky_header.js"></script>
-    <script src="assets/js/burger_menu.js"></script>
-    <script src="assets/js/slideshow.js"></script>
-    <script src="assets/js/dropdown_menu.js"></script>
+    <script type="text/javascript" src="./assets/js/slick.min.js"></script>
+    <script src="./assets/js/modal_overlay.js"></script>
+    <script src="./assets/js/sticky_header.js"></script>
+    <script src="./assets/js/burger_menu.js"></script>
+    <script src="./assets/js/slideshow.js"></script>
+    <script src="./assets/js/dropdown_menu.js"></script>
 
 </html> 
