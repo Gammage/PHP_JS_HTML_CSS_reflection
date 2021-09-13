@@ -1,9 +1,9 @@
 
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "netmatters";
+$username = "bengamma_bengammage";
+$password = "B_202003195502";
+$dbname = "bengamma_portfolio";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
