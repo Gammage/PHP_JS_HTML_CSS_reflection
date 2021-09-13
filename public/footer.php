@@ -47,23 +47,23 @@
 <div class="partners_background">
     <div class="partners_container">
         <div class="pc_google">
-            <img src="assets/images/partners/google_partner.png" alt="google partner badge">
+            <img src="assetsnetmatterstask/images/partners/google_partner.png" alt="google partner badge">
         </div>
         <div class="pc_microsoft">
-            <img src="assets/images/partners/microsoft_partner.jpg" alt="microsoft partner rank silver credential">
+            <img src="assetsnetmatterstask/images/partners/microsoft_partner.jpg" alt="microsoft partner rank silver credential">
         </div>
         <div class="pc_future50">
-            <img src="assets/images/partners/future_50.jpg" alt="future 50 rank member black and white image" class="black_white">
-            <img src="assets/images/partners/hover/future_50_hover.jpg" alt="future 50 rank member in colour when hovered" class="colour">
+            <img src="assetsnetmatterstask/images/partners/future_50.jpg" alt="future 50 rank member black and white image" class="black_white">
+            <img src="assetsnetmatterstask/images/partners/hover/future_50_hover.jpg" alt="future 50 rank member in colour when hovered" class="colour">
 
         </div>
         <div class="pc_qms">
-            <img src="assets/images/partners/qms.jpg" alt="ISO certification with QMS black and white" class="black_white">
-            <img src="assets/images/partners/hover/qms_hover.jpg" alt="ISO certification with QMS in colour when hovered" class="colour">
+            <img src="assetsnetmatterstask/images/partners/qms.jpg" alt="ISO certification with QMS black and white" class="black_white">
+            <img src="assetsnetmatterstask/images/partners/hover/qms_hover.jpg" alt="ISO certification with QMS in colour when hovered" class="colour">
         </div>
         <div class="pc_carbon_charter">
-            <img src="assets/images/partners/norfolk_carbon_charter.jpg" alt="Norfolk Carbon Charter silver badge, 2017 in black and white image" class="black_white">
-            <img src="assets/images/partners/hover/norfolk_charter_hover.jpg" alt="Norfolk Carbon Charter silver badge, 2017 in colour" class="colour">
+            <img src="assetsnetmatterstask/images/partners/norfolk_carbon_charter.jpg" alt="Norfolk Carbon Charter silver badge, 2017 in black and white image" class="black_white">
+            <img src="assetsnetmatterstask/images/partners/hover/norfolk_charter_hover.jpg" alt="Norfolk Carbon Charter silver badge, 2017 in colour" class="colour">
         </div>
     </div>
 </div>

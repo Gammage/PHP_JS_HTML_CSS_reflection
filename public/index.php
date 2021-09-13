@@ -157,8 +157,8 @@
         <div class="clients_section">
             <div class="clients_container">
                 <div class="cl_busseys">
-                    <img src="assets/images/clients_container/Busseys.jpg" alt="Busseys logo, black and white" class="black_white">
-                    <img src="assets/images/clients_container/hover/Busseys_hover.png" alt="Busseys logo, coloured" class="colour">
+                    <img src="assetsnetmatterstask/images/clients_container/Busseys.jpg" alt="Busseys logo, black and white" class="black_white">
+                    <img src="assetsnetmatterstask/images/clients_container/hover/Busseys_hover.png" alt="Busseys logo, coloured" class="colour">
                     <div class="large_hover_box">
                         <div class="large_hover_box_inner">
                             <h3>Busseys</h3>
@@ -169,8 +169,8 @@
                     </div>
                 </div>
                 <div class="cl_crane">
-                    <img src="assets/images/clients_container/Crane.jpg" alt="Crane Garden Builders with crane bird logo, black and white" class="black_white">
-                    <a href="#"><img src="assets/images/clients_container/hover/Crane_hover.png" alt="Crane Garden Builders with crane bird logo, coloured" class="colour"></a>
+                    <img src="assetsnetmatterstask/images/clients_container/Crane.jpg" alt="Crane Garden Builders with crane bird logo, black and white" class="black_white">
+                    <a href="#"><img src="assetsnetmatterstask/images/clients_container/hover/Crane_hover.png" alt="Crane Garden Builders with crane bird logo, coloured" class="colour"></a>
                     <div class="large_hover_box">
                         <div class="large_hover_box_inner">
                             <h3>Crane Garden Builders</h3>
@@ -181,8 +181,8 @@
                     </div>
                 </div>
                 <div class="cl_beat">
-                    <img src="assets/images/clients_container/Beat.jpg" alt="Beat charity logo, black and white" class="black_white">
-                    <img src="assets/images/clients_container/hover/Beat_hover.png" alt="Beat charity logo, coloured" class="colour">
+                    <img src="assetsnetmatterstask/images/clients_container/Beat.jpg" alt="Beat charity logo, black and white" class="black_white">
+                    <img src="assetsnetmatterstask/images/clients_container/hover/Beat_hover.png" alt="Beat charity logo, coloured" class="colour">
                     <div class="large_hover_box">
                         <div class="large_hover_box_inner">
                             <h3>Beat</h3>
@@ -193,8 +193,8 @@
                     </div>    
                 </div>
                 <div class="cl_diver">
-                    <img src="assets/images/clients_container/Northern_diver.jpg" alt="Northern Diver logo, black and white" class="black_white">
-                    <a href="#"><img src="assets/images/clients_container/hover/Northern_diver_hover.png" alt="Northern Diver logo, coloured" class="colour"></a>
+                    <img src="assetsnetmatterstask/images/clients_container/Northern_diver.jpg" alt="Northern Diver logo, black and white" class="black_white">
+                    <a href="#"><img src="assetsnetmatterstask/images/clients_container/hover/Northern_diver_hover.png" alt="Northern Diver logo, coloured" class="colour"></a>
                     <div class="large_hover_box">
                         <div class="large_hover_box_inner">
                             <h3>Northern Diver</h3>
@@ -216,11 +216,11 @@
         
     </body>
     
-    <script type="text/javascript" src="./assets/js/slick.min.js"></script>
-    <script src="assets/js/modal_overlay.js"></script>
-    <script src="assets/js/sticky_header.js"></script>
-    <script src="assets/js/burger_menu.js"></script>
-    <script src="assets/js/slideshow.js"></script>
-    <script src="assets/js/dropdown_menu.js"></script>
+    <script type="text/javascript" src="assetsnetmatterstask/js/slick.min.js"></script>
+    <script src="assetsnetmatterstask/js/modal_overlay.js"></script>
+    <script src="assetsnetmatterstask/js/sticky_header.js"></script>
+    <script src="assetsnetmatterstask/js/burger_menu.js"></script>
+    <script src="assetsnetmatterstask/js/slideshow.js"></script>
+    <script src="assetsnetmatterstask/js/dropdown_menu.js"></script>
 
 </html> 

@@ -3,7 +3,7 @@
                 <div id="header_container">
                     <div class="netmatters_nav_container_inner">
                         <div class="netmatters_logo_container"> 
-                            <a href="/public/index.php"><img src="assets/images/f-logo.png" alt="Netmatters logo"></a><!-- Netmatters logo-->
+                            <a href="/public/index.php"><img src="assetsnetmatterstask/images/f-logo.png" alt="Netmatters logo"></a><!-- Netmatters logo-->
                         </div>
 
                         <div class="actions_container">

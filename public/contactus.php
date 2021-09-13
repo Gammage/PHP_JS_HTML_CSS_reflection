@@ -141,14 +141,14 @@
 
     </body>
 
-    <!-- <script type="text/javascript" src="assets/js/validate_form.js"></script> -->
-    <script type="text/javascript" src="assets/js/contact_submit.js"></script>
-    <script type="text/javascript" src="assets/js/slick.min.js"></script>
-    <script src="assets/js/modal_overlay.js"></script>
-    <script src="assets/js/sticky_header.js"></script>
-    <script src="assets/js/burger_menu.js"></script>
-    <script src="assets/js/slideshow.js"></script>
-    <script src="assets/js/dropdown_menu.js"></script>
+    <!-- <script type="text/javascript" src="assetsnetmatterstask/js/validate_form.js"></script> -->
+    <script type="text/javascript" src="assetsnetmatterstask/js/contact_submit.js"></script>
+    <script type="text/javascript" src="assetsnetmatterstask/js/slick.min.js"></script>
+    <script src="assetsnetmatterstask/js/modal_overlay.js"></script>
+    <script src="assetsnetmatterstask/js/sticky_header.js"></script>
+    <script src="assetsnetmatterstask/js/burger_menu.js"></script>
+    <script src="assetsnetmatterstask/js/slideshow.js"></script>
+    <script src="assetsnetmatterstask/js/dropdown_menu.js"></script>
 
 </html>
 
