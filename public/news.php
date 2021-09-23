@@ -2,7 +2,7 @@
 <?php
 $servername = "localhost";
 $username = "bengamma_bengammage";
-$password = "B_202003195502";
+$password = "C5V8EYVwgSoA";
 $dbname = "bengamma_portfolio";
 
 // Create connection
